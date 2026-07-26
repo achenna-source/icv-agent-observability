@@ -3,8 +3,11 @@
 Data, labels and code for the paper *What Can Be Verified for Free? Charting the
 Observability Boundary of LLM Agent Failures with Tiered In-Chain Verification*.
 
-Anonymised for review. Author and institution names are removed from this repository
-and will be added on acceptance.
+Abdelbassette Chenna, Djallel Eddine Boubiche, Abdellah Chehri and Gwanggil Jeon.
+
+If you use the corpus or the labels, please cite the paper. The annotations are one
+author's work and carry the limitations set out below; they are released so that they
+can be checked, not because they are settled.
 
 ## What is here
 

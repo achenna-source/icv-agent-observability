@@ -49,3 +49,13 @@ Distinct trajectories: 130 of 200.
 Diagnostic. The suite was built to elicit each failure mode reliably, not to represent a
 natural workload, so the mode frequencies are a property of the design. Per-mode
 detection rates are the quantities intended to transfer; the aggregate is not.
+
+## Citation
+
+Chenna, A., Boubiche, D. E., Chehri, A., & Jeon, G. What Can Be Verified for Free?
+Charting the Observability Boundary of LLM Agent Failures with Tiered In-Chain
+Verification. Manuscript under review; this record will be updated on acceptance.
+
+## Contact
+
+Questions about the corpus or the labels: a.chenna@univ-batna2.dz
