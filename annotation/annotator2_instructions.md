@@ -13,7 +13,12 @@ sittings if you prefer — annotation quality drops sharply when tired.
 
 - `sample_packet.md` — 50 trajectories, each with the task, the ground-truth answer from the
   knowledge base, every step the agent took, and its final answer.
-- `annotations_annotator2.csv` — the sheet to fill in (`id,label,confidence,notes`).
+- `annotations_annotator2.xlsx` — the sheet to fill in. Open it in Excel or LibreOffice.
+  The `label` column has a dropdown, so a mistyped code is refused; the second tab holds
+  the codebook and the order of the checks. Return this file as it is, renamed or not.
+  (A plain `annotations_annotator2.csv` is provided as a fallback. If you use it, note
+  that Excel in some locales saves it with semicolons; that is handled, but the .xlsx is
+  the safer route.)
 - The codebook (category definitions and worked examples).
 
 ## The procedure

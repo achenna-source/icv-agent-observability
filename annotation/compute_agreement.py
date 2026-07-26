@@ -61,10 +61,32 @@ def main(sheet):
                 r = json.loads(line)
                 key[r["id"]] = r["label_annotator1"]
 
+    if sheet.lower().endswith((".xlsx", ".xlsm")):
+        from openpyxl import load_workbook
+        ws = load_workbook(sheet, data_only=True)["annotations"]
+        head = [str(c.value or "").strip().lower() for c in next(ws.iter_rows(max_row=1))]
+        returned = [dict(zip(head, [c.value for c in row]))
+                    for row in ws.iter_rows(min_row=2) if row[0].value]
+    elif sheet.lower().endswith((".csv", ".txt")):
+        with open(sheet, encoding="utf-8-sig", newline="") as f:
+            sample = f.read(4096)
+            f.seek(0)
+            # Excel in some locales writes semicolons
+            delim = ";" if sample.count(";") > sample.count(",") else ","
+            returned = list(csv.DictReader(f, delimiter=delim))
+    else:
+        raise SystemExit(f"unrecognised sheet format: {sheet}")
+
     rows, bad, blank = [], [], 0
-    with open(sheet, encoding="utf-8-sig", newline="") as f:
-        for r in csv.DictReader(f):
-            tid, raw = r["id"].strip(), (r.get("label") or "").strip()
+    if True:
+        for r in returned:
+            tid = str(r.get("id") or "").strip()
+            raw = str(r.get("label") or "").strip()
+            if not tid:
+                continue
+            if tid not in key:
+                bad.append((tid, "id not in the sample"))
+                continue
             if not raw:
                 blank += 1
                 continue
