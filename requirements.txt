@@ -1,0 +1,5 @@
+# reproduce.py needs nothing beyond the standard library
+# reproduce.py --full additionally needs:
+torch>=2.0
+transformers>=4.40
+sentence-transformers>=2.2
