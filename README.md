@@ -1,7 +1,7 @@
 # Action-side observability of LLM agent failures — artifact
 
-Data, labels and code for the paper *What Can Be Verified for Free? Charting the
-Observability Boundary of LLM Agent Failures with Tiered In-Chain Verification*.
+Data, labels and code for the paper *What Can Be Verified for Free? The Observability
+Boundary of LLM Agent Failures in Retrieval-and-Arithmetic Tasks*.
 
 Abdelbassette Chenna, Djallel Eddine Boubiche, Abdellah Chehri and Gwanggil Jeon.
 

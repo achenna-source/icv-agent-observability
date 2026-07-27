@@ -52,9 +52,8 @@ detection rates are the quantities intended to transfer; the aggregate is not.
 
 ## Citation
 
-Chenna, A., Boubiche, D. E., Chehri, A., & Jeon, G. What Can Be Verified for Free?
-Charting the Observability Boundary of LLM Agent Failures with Tiered In-Chain
-Verification. Manuscript under review; this record will be updated on acceptance.
+Chenna, A., Boubiche, D. E., Chehri, A., & Jeon, G. What Can Be Verified for Free? The
+Observability Boundary of LLM Agent Failures in Retrieval-and-Arithmetic Tasks. Manuscript under review; this record will be updated on acceptance.
 
 ## Contact
 
