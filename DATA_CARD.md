@@ -21,6 +21,11 @@ instances each.
 | `label_judge_7b` | Qwen 2.5 7B-Instruct's zero-shot label; a few are malformed multi-labels and are kept verbatim |
 | `cluster_id` | identical trajectories share an id |
 
+`results/judge_32b_fr.json` and `results/judge_32b_en.json` carry the 32B judge's label
+for each `id`, keyed the same way, together with the model's raw JSON reply and, for the
+English arm, the machine translation it was shown. They are derived data: the notebook in
+`code/` regenerates them from the corpus.
+
 ## Distribution
 
 Labels: {'F2': 21, 'F3': 69, 'F5': 13, 'F6': 7, 'F7': 18, 'S': 72}

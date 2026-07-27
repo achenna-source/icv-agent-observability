@@ -17,10 +17,17 @@ data/    the 200-trajectory corpus with human labels, F3 sub-codes, judge labels
 code/    the three detection signals as run, and the estimators including the cluster
          correction
 annotation/  the blinded packet for an independent second annotator
+results/     the 32B judge's labels for both language arms, and the run log
 reproduce.py  regenerates every number the paper reports
 MAPPING.md    which script produces which number in which table
 DATA_CARD.md  provenance, construction, and the known defects
 ```
+
+`code/judge_scale_control.ipynb` is the notebook that produced `results/`. It runs on two
+free-tier T4 GPUs and needs no key: it loads Qwen 2.5 32B-Instruct in 4-bit, labels the
+200 trajectories from the French suite, machine-translates the same trajectories into
+English and labels them again. The French arm takes about 68 minutes, the English arm
+about 145 minutes including translation.
 
 ## Reproducing the paper
 
