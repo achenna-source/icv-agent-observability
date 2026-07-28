@@ -23,6 +23,10 @@ MAPPING.md    which script produces which number in which table
 DATA_CARD.md  provenance, construction, and the known defects
 ```
 
+`code/label_sensitivity.py` rescores every detector and both judges under each annotator
+in turn, on the fifty double-labelled trajectories. It is the sensitivity analysis behind
+Section VII.G, and it is the one script here whose result argues against the paper.
+
 `code/judge_scale_control.ipynb` is the notebook that produced `results/`. It runs on two
 free-tier T4 GPUs and needs no key: it loads Qwen 2.5 32B-Instruct in 4-bit, labels the
 200 trajectories from the French suite, machine-translates the same trajectories into

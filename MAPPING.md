@@ -14,6 +14,8 @@ All of these are printed by `reproduce.py`, in this order.
 | §VII.B, Table VI | 32B as binary detector: precision 0.906, recall 0.977, MCC +0.826, 13 false alarms | same block |
 | §VII.B | 44 of the 47 residual F3 flagged by the 32B, 16 by the 7B | same block |
 | Table V | per-mode matches for both judges | same block |
+| §VII.G | every detector rescored under each annotator on the 50 double-labelled items | `code/label_sensitivity.py` |
+| §VII.G | 32B judge: κ 0.421 against annotator 1, 0.202 against annotator 2 | same script |
 | Table VI | Tier 1: 37 TP, 25 FP, MCC −0.060 | `signals.tier1` |
 | Table VI | Tier 2: 39 TP, 0 FP, MCC +0.369 | `signals.tier2` (needs `--full` for the duplicate test; 38 without it) |
 | Table VI | B ∨ C: 68 TP, 25 FP, MCC +0.177 | union |
