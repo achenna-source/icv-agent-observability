@@ -46,14 +46,14 @@ def main(full=False):
     NF, NS = sum(fail), 200 - sum(fail)
     ok_all = True
 
-    print("\n=== Table IV, failure-mode distribution ===")
+    print("\n=== Table 1, failure-mode distribution ===")
     dist = Counter(hum)
     for m, exp in [("S", 72), ("F2", 21), ("F3", 69), ("F5", 13), ("F6", 7), ("F7", 18)]:
         ok_all &= check(m, dist.get(m, 0), exp)
     ok_all &= check("distinct trajectories", len(set(clusters)), 130)
     ok_all &= check("design effect", round(design_effect(clusters), 2), 2.34)
 
-    print("\n=== Section VII.B, the 7B judge ===")
+    print("\n=== Section VI.B, the 7B judge ===")
     jm = [r["label_judge_7b"] for r in corpus]
     lenient = sum(1 for a, b in zip(hum, jm) if a == b or (b not in dist and a in b))
     po = lenient / 200
@@ -70,98 +70,90 @@ def main(full=False):
     ok_all &= check("judge as binary detector, MCC",
                     round(mcc(tp, fp, NF - tp, NS - fp), 3), 0.026)
 
-    print("\n=== Section VII.B, the 32B scale and language control ===")
-    valid = set(dist)
-    j32 = {}
-    for lang in ("fr", "en"):
-        with open(os.path.join(HERE, "results", f"judge_32b_{lang}.json"),
-                  encoding="utf-8") as f:
-            j32[lang] = json.load(f)
-    a2 = {}
-    with open(os.path.join(HERE, "annotation", "annotator2_returned.csv"),
+    print("\n=== Revision R1: Table 3, trajectory-level, with the encoder ===")
+    try:
+        from sentence_transformers import SentenceTransformer
+        enc_r1 = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
+    except Exception as e:
+        enc_r1 = None
+        print("     encoder unavailable (%s); Signal C runs without the duplicate test"
+              % type(e).__name__)
+    Br1 = [tier1(r["trajectory"])[0] for r in corpus]
+    Bxr1 = [tier1_exempt(r["trajectory"])[0] for r in corpus]
+    Cr1 = [tier2(r["trajectory"], enc_r1)[0] for r in corpus]
+
+    def conf(flags):
+        t = sum(1 for i in range(200) if flags[i] and fail[i])
+        f = sum(1 for i in range(200) if flags[i] and not fail[i])
+        return t, f
+
+    for name, flags, p_tp, p_fp, p_pre, p_mcc in [
+            ("B (schema)", Br1, 37, 25, 0.597, -0.060),
+            ("C (consistency)", Cr1, 39, 0, 1.000, 0.369),
+            ("B or C", [a or b for a, b in zip(Br1, Cr1)], 68, 25, 0.731, 0.177),
+            ("B* (exempt)", Bxr1, 21, 0, 1.000, 0.257),
+            ("B* or C", [a or b for a, b in zip(Bxr1, Cr1)], 59, 0, 1.000, 0.485)]:
+        t, f = conf(flags)
+        ok_all &= check("%s: TP" % name, t, p_tp)
+        ok_all &= check("%s: FP" % name, f, p_fp)
+        ok_all &= check("%s: precision" % name,
+                        round(t / (t + f), 3) if t + f else 0.0, p_pre)
+        ok_all &= check("%s: MCC" % name,
+                        round(mcc(t, f, NF - t, NS - f), 3), p_mcc)
+
+    print("\n=== Revision R1: Table 4 and Figure 6, per mode and per signal ===")
+    for m, pb, pc, pu in [("F2", 0, 12, 12), ("F3", 11, 12, 22), ("F5", 13, 1, 13),
+                          ("F6", 6, 1, 6), ("F7", 7, 13, 15)]:
+        sel = [i for i in range(200) if hum[i] == m]
+        ok_all &= check("  %s: B only" % m, sum(1 for i in sel if Br1[i]), pb)
+        ok_all &= check("  %s: C only" % m, sum(1 for i in sel if Cr1[i]), pc)
+        ok_all &= check("  %s: union" % m,
+                        sum(1 for i in sel if Br1[i] or Cr1[i]), pu)
+
+    print("\n=== Revision R1: Section VI.A, the naive success count ===")
+    naive = 0
+    for r in corpus:
+        last = r["trajectory"][-1]
+        if last.get("action") == "finish" and                 str(last.get("input") or "").strip() not in ("", "None"):
+            naive += 1
+    ok_all &= check("naive end-of-run successes", naive, 179)
+    ok_all &= check("inspected successes", NS, 72)
+
+    print("\n=== Revision R1: Section IV.B, Signal A on the pilot ===")
+    with open(os.path.join(HERE, "results", "signal_a_and_pilot_icv.json"),
               encoding="utf-8") as f:
-        for line in list(csv.DictReader(f)):
-            a2[line["id"]] = line["label"].strip()
-    sub = [i for i, r in enumerate(corpus) if r["id"] in a2]
+        icv = json.load(f)
+    sa = icv["signal_A"]
+    ok_all &= check("Signal A, a priori threshold", sa["threshold_apriori"], 0.9)
+    ok_all &= check("Signal A, a priori precision", sa["precision_apriori"], 0.53)
+    ok_all &= check("Signal A, a priori recall", sa["recall_apriori"], 0.47)
+    ok_all &= check("Signal A, F1-optimal threshold", sa["threshold_f1opt"], 0.55)
+    ok_all &= check("Signal A, F1-optimal recall", sa["recall_f1opt"], 1.0)
+    for stack, pf1 in [("B", 0.69), ("B+C", 0.79), ("A+B+C", 0.77)]:
+        ok_all &= check("pilot F1, %s" % stack,
+                        icv["bootstrap_ci"]["results"][stack]["f1"], pf1)
+    print("     bootstrap: %d resamples, seed %s"
+          % (icv["bootstrap_ci"]["n_boot"], icv["bootstrap_ci"]["seed"]))
 
-    def kap(idx, get):
-        return kappa_lenient([hum[i] for i in idx], [get(i) for i in idx], valid)
+    print("\n=== Revision R1: Section VI.D, composition standardisation ===")
+    pilot_bc = {"F1": (3, 3), "F2": (3, 5), "F3": (0, 1),
+                "F4": (0, 2), "F5": (5, 5), "F7": (0, 1)}
+    NFp = sum(n for _, n in pilot_bc.values())
+    ok_all &= check("pilot failures", NFp, 17)
+    ok_all &= check("pilot detected by B or C", sum(d for d, _ in pilot_bc.values()), 11)
+    main_rate, w_pilot, common = {}, {}, []
+    for m in ("F2", "F3", "F5", "F7"):
+        sel = [i for i in range(200) if hum[i] == m]
+        main_rate[m] = sum(1 for i in sel if Br1[i] or Cr1[i]) / len(sel)
+        w_pilot[m] = pilot_bc[m][1] / NFp
+        common.append(m)
+    std = (sum(w_pilot[m] * main_rate[m] for m in common)
+           / sum(w_pilot[m] for m in common))
+    ok_all &= check("main coverage standardised to pilot mix", round(std, 3), 0.751)
+    ok_all &= check("main coverage observed", round(68 / NF, 3), 0.531)
 
-    def boot(idx, get):
-        items = [(clusters[i], (get(i), hum[i])) for i in idx]
-        lo, hi, _ = cluster_bootstrap(
-            items, lambda d: kappa_lenient([r for _, r in d], [p for p, _ in d], valid))
-        return lo, hi
 
-    getters = {
-        "second annotator": lambda i: a2[corpus[i]["id"]],
-        "7B judge":         lambda i: jm[i],
-        "32B judge, fr":    lambda i: j32["fr"][corpus[i]["id"]]["code"],
-        "32B judge, en":    lambda i: j32["en"][corpus[i]["id"]]["code"],
-    }
-    for name, paper in [("second annotator", 0.370), ("7B judge", 0.129),
-                        ("32B judge, fr", 0.421), ("32B judge, en", 0.341)]:
-        k = kap(sub, getters[name])
-        ok_all &= check(f"kappa on the 50, {name}", round(k, 3), paper)
-        print(f"       cluster 95%% CI [%.3f, %.3f]" % boot(sub, getters[name]))
-
-    def paired(idx, a, b):
-        items = [(clusters[i], (getters[a](i), getters[b](i), hum[i])) for i in idx]
-
-        def d(draw):
-            ref = [r for _, _, r in draw]
-            return (kappa_lenient(ref, [x for x, _, _ in draw], valid) -
-                    kappa_lenient(ref, [y for _, y, _ in draw], valid))
-        lo, hi, vals = cluster_bootstrap(items, d)
-        p_le = sum(1 for v in vals if v <= 0) / len(vals)
-        return kap(idx, getters[a]) - kap(idx, getters[b]), lo, hi, \
-            min(1.0, 2 * min(p_le, 1 - p_le))
-
-    for a, b, paper in [("second annotator", "32B judge, fr", -0.051),
-                        ("32B judge, fr", "7B judge", 0.292)]:
-        obs, lo, hi, p = paired(sub, a, b)
-        ok_all &= check(f"d.kappa, {a} - {b}", round(obs, 3), paper)
-        print(f"       cluster 95%% CI [%+.3f, %+.3f], P = %.3f" % (lo, hi, p))
-
-    everything = list(range(200))
-    for name, paper in [("32B judge, fr", 0.401), ("32B judge, en", 0.383)]:
-        ok_all &= check(f"kappa on the 200, {name}",
-                        round(kap(everything, getters[name]), 3), paper)
-    obs, lo, hi, p = paired(everything, "32B judge, fr", "32B judge, en")
-    ok_all &= check("d.kappa, French - English on the 200", round(obs, 3), 0.018)
-    print(f"       cluster 95%% CI [%+.3f, %+.3f], P = %.3f" % (lo, hi, p))
-
-    g32 = getters["32B judge, fr"]
-    tp = sum(1 for i in everything if g32(i) != "S" and fail[i])
-    fp = sum(1 for i in everything if g32(i) != "S" and not fail[i])
-    ok_all &= check("32B as binary detector, precision",
-                    round(tp / (tp + fp), 3), 0.906)
-    ok_all &= check("32B as binary detector, recall", round(tp / NF, 3), 0.977)
-    ok_all &= check("32B as binary detector, MCC",
-                    round(mcc(tp, fp, NF - tp, NS - fp), 3), 0.826)
-    ok_all &= check("32B as binary detector, false alarms", fp, 13)
-
-    resid = [i for i, r in enumerate(corpus)
-             if hum[i] == "F3" and not (tier1(r["trajectory"])[0]
-                                        or tier2(r["trajectory"])[0])]
-    ok_all &= check("residual F3 the free tiers leave", len(resid), 47)
-    ok_all &= check("32B flags on the residual",
-                    sum(1 for i in resid if g32(i) != "S"), 44)
-    ok_all &= check("7B flags on the residual",
-                    sum(1 for i in resid if jm[i] != "S"), 16)
-
-    print("\n     per mode, matched against the first annotator (Table V)")
-    for m, p7, p32 in [("S", 30, 59), ("F2", 0, 21), ("F3", 11, 12),
-                       ("F5", 4, 11), ("F6", 0, 0), ("F7", 15, 0)]:
-        sel = [i for i in everything if hum[i] == m]
-
-        def matched(get):
-            return sum(1 for i in sel
-                       if get(i) == m or (get(i) not in valid and m in get(i)))
-        ok_all &= check(f"  {m}: matched by 7B", matched(lambda i: jm[i]), p7)
-        ok_all &= check(f"  {m}: matched by 32B", matched(g32), p32)
-
-    print("\n=== Table VI, detection performance ===")
+    print("\n=== Additional: the same detectors, scored as in the companion manuscript ===")
     B = [tier1(r["trajectory"])[0] for r in corpus]
     Bx = [tier1_exempt(r["trajectory"])[0] for r in corpus]
     if full:
@@ -189,7 +181,7 @@ def main(full=False):
         print("     (Tier 2's duplicate test is skipped without --full. It accounts for "
               "one of Tier 2's 39 true positives, so the contradiction test alone gives 38.)")
 
-    print("\n=== Section VII.C, observability classes ===")
+    print("\n=== Additional, companion manuscript: observability classes ===")
     BC = [B[i] or C[i] for i in range(200)]
     FORM, MEAN = {"F5", "F6", "F7"}, {"F2", "F3"}
     for name, modes, paper in [("c_F", FORM, 0.895), ("c_M", MEAN, 0.378)]:
@@ -199,14 +191,14 @@ def main(full=False):
         ok_all &= check(name, round(d / len(idx), 3), paper)
         print(f"       cluster-corrected 95% CI [{lo:.3f}, {hi:.3f}]")
 
-    print("\n=== Section VII.E, lead time ===")
+    print("\n=== Additional, companion manuscript: detection lead time ===")
     tp_rows = [(len(r["trajectory"]), tier1(r["trajectory"])[1])
                for i, r in enumerate(corpus) if B[i] and fail[i]]
     early = sum(1 for L, k in tp_rows if L - 1 - k > 0)
     ok_all &= check("Tier 1, true positives firing early", early, 25)
     ok_all &= check("of true positives", len(tp_rows), 37)
 
-    print("\n=== Section VII.F, entailment tier ===")
+    print("\n=== Additional, companion manuscript: entailment tier ===")
     if full:
         import torch
         from transformers import AutoTokenizer, AutoModelForSequenceClassification
