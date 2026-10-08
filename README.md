@@ -8,7 +8,7 @@ study. **Read the tag, not the branch**, if you are reviewing one of them.
 | tag | manuscript | what the tag holds |
 |---|---|---|
 | **`neucom-d-26-17269-r1`** | *Structural Signals Are Insufficient for Detecting Reasoning Failures: A Taxonomy and In-Chain Verification Study of LLM Agents*, Neurocomputing, first revision | Everything the revision's data availability statement names, and nothing later. Frozen. |
-| *(branch `master`)* | *What Can Be Verified for Free? The Observability Boundary of LLM Agent Failures in Retrieval-and-Arithmetic Tasks*, in preparation | The above plus later work that is **not** part of the Neurocomputing submission: a 32B judge scale and language control, and a label-uncertainty sensitivity analysis. |
+| *(branch `master`, this state)* | *What Can Be Verified for Free? The Observability Boundary of LLM Agent Failures in Retrieval-and-Arithmetic Tasks*, in preparation | The above plus later work that is **not** part of the Neurocomputing submission: a 32B judge scale and language control, and a label-uncertainty sensitivity analysis. `reproduce.py` here verifies both manuscripts' figures. |
 
 If you arrived here from the Neurocomputing manuscript, check out the tag:
 
