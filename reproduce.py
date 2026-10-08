@@ -44,6 +44,7 @@ def main(full=False):
     clusters = [r["cluster_id"] for r in corpus]
     fail = [h != "S" for h in hum]
     NF, NS = sum(fail), 200 - sum(fail)
+    by_id = {r["id"]: r for r in corpus}
     ok_all = True
 
     print("\n=== Table 1, failure-mode distribution ===")
@@ -134,6 +135,40 @@ def main(full=False):
                         icv["bootstrap_ci"]["results"][stack]["f1"], pf1)
     print("     bootstrap: %d resamples, seed %s"
           % (icv["bootstrap_ci"]["n_boot"], icv["bootstrap_ci"]["seed"]))
+
+    print("\n=== Revision R1: Section VI.B, the two annotators ===")
+    import csv as _csv
+    import subprocess as _sub
+    sys.path.insert(0, os.path.join(HERE, "annotation"))
+    import compute_agreement as _ca
+    _rows = []
+    with open(os.path.join(HERE, "annotation", "annotator2_returned.csv"),
+              encoding="utf-8") as _f:
+        for _r in _csv.DictReader(_f):
+            _tid = _r["id"].strip()
+            _rows.append((_tid, _ca.normalise(_r["label"]),
+                          _ca.normalise(by_id[_tid]["label_human"])))
+    _a2 = [r[1] for r in _rows]
+    _a1 = [r[2] for r in _rows]
+    _cl = [by_id[r[0]]["cluster_id"] for r in _rows]
+    _k, _po, _pe = _ca.kappa(_a1, _a2)
+    ok_all &= check("second annotator, items", len(_rows), 50)
+    ok_all &= check("second annotator, distinct trajectories", len(set(_cl)), 44)
+    ok_all &= check("second annotator, raw agreement", round(_po, 3), 0.460)
+    ok_all &= check("second annotator, kappa", round(_k, 3), 0.370)
+    _lo, _hi = _ca.bootstrap(_a1, _a2, _cl)
+    ok_all &= check("  cluster CI, low", round(_lo, 3), 0.225)
+    ok_all &= check("  cluster CI, high", round(_hi, 3), 0.531)
+    _judge = [_ca.normalise(by_id[r[0]]["label_judge_7b"]) for r in _rows]
+    _kj, _, _ = _ca.kappa(_a1, _judge)
+    ok_all &= check("7B judge on the same 50, kappa", round(_kj, 3), 0.129)
+    _jlo, _jhi = _ca.bootstrap(_a1, _judge, _cl)
+    ok_all &= check("  cluster CI, low", round(_jlo, 3), -0.030)
+    ok_all &= check("  cluster CI, high", round(_jhi, 3), 0.293)
+    _obs, _dlo, _dhi, _pv = _ca.paired_bootstrap(_a1, _a2, _judge, _cl)
+    ok_all &= check("paired difference, annotator minus judge", round(_obs, 3), 0.241)
+    ok_all &= check("  paired CI, low", round(_dlo, 3), 0.078)
+    ok_all &= check("  paired CI, high", round(_dhi, 3), 0.426)
 
     print("\n=== Revision R1: Section VI.D, composition standardisation ===")
     pilot_bc = {"F1": (3, 3), "F2": (3, 5), "F3": (0, 1),
