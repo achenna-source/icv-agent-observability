@@ -1,0 +1,534 @@
+{
+  "signal_B": {
+    "true_positives": 9,
+    "false_positives": 0,
+    "true_negatives": 13,
+    "false_negatives": 8,
+    "precision": 1.0,
+    "recall": 0.5294117647058824,
+    "f1": 0.6923076923076924,
+    "detections": {
+      "0": {
+        "detected": false,
+        "issues": [],
+        "annotation": "S"
+      },
+      "1": {
+        "detected": false,
+        "issues": [],
+        "annotation": "S"
+      },
+      "2": {
+        "detected": false,
+        "issues": [],
+        "annotation": "F4"
+      },
+      "3": {
+        "detected": false,
+        "issues": [],
+        "annotation": "S"
+      },
+      "4": {
+        "detected": false,
+        "issues": [],
+        "annotation": "S"
+      },
+      "5": {
+        "detected": false,
+        "issues": [],
+        "annotation": "F2"
+      },
+      "6": {
+        "detected": true,
+        "issues": [
+          "input_missing"
+        ],
+        "annotation": "F5"
+      },
+      "7": {
+        "detected": true,
+        "issues": [
+          "input_missing"
+        ],
+        "annotation": "F5"
+      },
+      "8": {
+        "detected": false,
+        "issues": [],
+        "annotation": "S"
+      },
+      "9": {
+        "detected": true,
+        "issues": [
+          "input_missing"
+        ],
+        "annotation": "F5"
+      },
+      "10": {
+        "detected": false,
+        "issues": [],
+        "annotation": "S"
+      },
+      "11": {
+        "detected": false,
+        "issues": [],
+        "annotation": "F2"
+      },
+      "12": {
+        "detected": false,
+        "issues": [],
+        "annotation": "S"
+      },
+      "13": {
+        "detected": false,
+        "issues": [],
+        "annotation": "F2"
+      },
+      "14": {
+        "detected": false,
+        "issues": [],
+        "annotation": "S"
+      },
+      "15": {
+        "detected": false,
+        "issues": [],
+        "annotation": "F4"
+      },
+      "16": {
+        "detected": false,
+        "issues": [],
+        "annotation": "S"
+      },
+      "17": {
+        "detected": true,
+        "issues": [
+          "action_missing"
+        ],
+        "annotation": "F1"
+      },
+      "18": {
+        "detected": false,
+        "issues": [],
+        "annotation": "S"
+      },
+      "19": {
+        "detected": true,
+        "issues": [
+          "input_missing"
+        ],
+        "annotation": "F2"
+      },
+      "20": {
+        "detected": false,
+        "issues": [],
+        "annotation": "F2"
+      },
+      "21": {
+        "detected": false,
+        "issues": [],
+        "annotation": "S"
+      },
+      "22": {
+        "detected": false,
+        "issues": [],
+        "annotation": "S"
+      },
+      "23": {
+        "detected": false,
+        "issues": [],
+        "annotation": "S"
+      },
+      "24": {
+        "detected": false,
+        "issues": [],
+        "annotation": "F7"
+      },
+      "25": {
+        "detected": true,
+        "issues": [
+          "action_missing"
+        ],
+        "annotation": "F1"
+      },
+      "26": {
+        "detected": true,
+        "issues": [
+          "input_missing"
+        ],
+        "annotation": "F5"
+      },
+      "27": {
+        "detected": true,
+        "issues": [
+          "action_missing"
+        ],
+        "annotation": "F1"
+      },
+      "28": {
+        "detected": true,
+        "issues": [
+          "input_missing"
+        ],
+        "annotation": "F5"
+      },
+      "29": {
+        "detected": false,
+        "issues": [],
+        "annotation": "F3"
+      }
+    }
+  },
+  "signal_A": {
+    "threshold_apriori": 0.9,
+    "precision_apriori": 0.53,
+    "recall_apriori": 0.47,
+    "f1_apriori": 0.5,
+    "threshold_f1opt": 0.55,
+    "precision_f1opt": 0.59,
+    "recall_f1opt": 1.0,
+    "f1_f1opt": 0.74,
+    "note": "weak standalone, motivates multi-signal design",
+    "entropy_stats": {
+      "0": {
+        "max": 1.0644337565136335,
+        "mean": 0.7703563787129403,
+        "annotation": "S"
+      },
+      "1": {
+        "max": 0.5182136996410083,
+        "mean": 0.5153625980847387,
+        "annotation": "S"
+      },
+      "2": {
+        "max": 1.4103740432563063,
+        "mean": 0.9994415545235121,
+        "annotation": "F4"
+      },
+      "3": {
+        "max": 0.9078352961378793,
+        "mean": 0.7318425887907367,
+        "annotation": "S"
+      },
+      "4": {
+        "max": 0.9298965447226731,
+        "mean": 0.7246064528711202,
+        "annotation": "S"
+      },
+      "5": {
+        "max": 0.90122001783029,
+        "mean": 0.8018876670610657,
+        "annotation": "F2"
+      },
+      "6": {
+        "max": 0.5751840214083053,
+        "mean": 0.5166420981140449,
+        "annotation": "F5"
+      },
+      "7": {
+        "max": 0.5770155249636829,
+        "mean": 0.5310265559938008,
+        "annotation": "F5"
+      },
+      "8": {
+        "max": 0.7173292765842884,
+        "mean": 0.48816058108994703,
+        "annotation": "S"
+      },
+      "9": {
+        "max": 0.6540013911435381,
+        "mean": 0.6409921787334669,
+        "annotation": "F5"
+      },
+      "10": {
+        "max": 0.9407924174994696,
+        "mean": 0.7974051462119678,
+        "annotation": "S"
+      },
+      "11": {
+        "max": 0.702026761865074,
+        "mean": 0.5611260649981977,
+        "annotation": "F2"
+      },
+      "12": {
+        "max": 1.0183909494589898,
+        "mean": 0.8921952301716374,
+        "annotation": "S"
+      },
+      "13": {
+        "max": 0.6694489306832353,
+        "mean": 0.5098961074217466,
+        "annotation": "F2"
+      },
+      "14": {
+        "max": 0.8220049896307162,
+        "mean": 0.6180030430443046,
+        "annotation": "S"
+      },
+      "15": {
+        "max": 1.2868174734332696,
+        "mean": 0.9586376560927874,
+        "annotation": "F4"
+      },
+      "16": {
+        "max": 1.6605154091773633,
+        "mean": 1.0157545936222259,
+        "annotation": "S"
+      },
+      "17": {
+        "max": 1.3772362999323136,
+        "mean": 1.1206826864991712,
+        "annotation": "F1"
+      },
+      "18": {
+        "max": 0.5925092127191175,
+        "mean": 0.46256754500017355,
+        "annotation": "S"
+      },
+      "19": {
+        "max": 0.9480062897521842,
+        "mean": 0.8527967542774196,
+        "annotation": "F2"
+      },
+      "20": {
+        "max": 1.164299279206704,
+        "mean": 0.9264009704581849,
+        "annotation": "F2"
+      },
+      "21": {
+        "max": 1.191564867082634,
+        "mean": 0.8953727446126868,
+        "annotation": "S"
+      },
+      "22": {
+        "max": 0.7314697938022113,
+        "mean": 0.6949980187964266,
+        "annotation": "S"
+      },
+      "23": {
+        "max": 0.8662401844173603,
+        "mean": 0.8376285013805109,
+        "annotation": "S"
+      },
+      "24": {
+        "max": 1.3457674113936566,
+        "mean": 1.1216420897627002,
+        "annotation": "F7"
+      },
+      "25": {
+        "max": 0.7254940537386574,
+        "mean": 0.6558898250483824,
+        "annotation": "F1"
+      },
+      "26": {
+        "max": 0.8078137374977814,
+        "mean": 0.6179548215217213,
+        "annotation": "F5"
+      },
+      "27": {
+        "max": 0.7149263198243272,
+        "mean": 0.469189474400618,
+        "annotation": "F1"
+      },
+      "28": {
+        "max": 0.7036504006537143,
+        "mean": 0.6210621814750608,
+        "annotation": "F5"
+      },
+      "29": {
+        "max": 1.1182844793755022,
+        "mean": 0.9536588567258271,
+        "annotation": "F3"
+      }
+    }
+  },
+  "combinations": {
+    "A": {
+      "precision": 0.53,
+      "recall": 0.47,
+      "f1": 0.5
+    },
+    "B": {
+      "precision": 1.0,
+      "recall": 0.53,
+      "f1": 0.69
+    },
+    "C": {
+      "precision": 1.0,
+      "recall": 0.18,
+      "f1": 0.3
+    },
+    "A+B": {
+      "precision": 0.68,
+      "recall": 0.88,
+      "f1": 0.77
+    },
+    "A+C": {
+      "precision": 0.56,
+      "recall": 0.53,
+      "f1": 0.55
+    },
+    "B+C": {
+      "precision": 1.0,
+      "recall": 0.65,
+      "f1": 0.79
+    },
+    "A+B+C": {
+      "precision": 0.68,
+      "recall": 0.88,
+      "f1": 0.77
+    }
+  },
+  "detection_rates": {
+    "A": {
+      "precision": 0.53,
+      "recall": 0.47,
+      "f1": 0.5,
+      "echecs_detectes": 8,
+      "total_echecs": 17
+    },
+    "B": {
+      "precision": 1.0,
+      "recall": 0.53,
+      "f1": 0.69,
+      "echecs_detectes": 9,
+      "total_echecs": 17
+    },
+    "C": {
+      "precision": 1.0,
+      "recall": 0.18,
+      "f1": 0.3,
+      "echecs_detectes": 3,
+      "total_echecs": 17
+    },
+    "A+B": {
+      "precision": 0.68,
+      "recall": 0.88,
+      "f1": 0.77,
+      "echecs_detectes": 15,
+      "total_echecs": 17
+    },
+    "A+C": {
+      "precision": 0.56,
+      "recall": 0.53,
+      "f1": 0.55,
+      "echecs_detectes": 9,
+      "total_echecs": 17
+    },
+    "B+C": {
+      "precision": 1.0,
+      "recall": 0.65,
+      "f1": 0.79,
+      "echecs_detectes": 11,
+      "total_echecs": 17
+    },
+    "A+B+C": {
+      "precision": 0.68,
+      "recall": 0.88,
+      "f1": 0.77,
+      "echecs_detectes": 15,
+      "total_echecs": 17
+    }
+  },
+  "main_result": {
+    "icv_detection": "15/17",
+    "icv_detection_pct": 88.2,
+    "interpretation": "early-detection rate, not TCR gain (pilot scale)"
+  },
+  "bootstrap_ci": {
+    "n_boot": 5000,
+    "seed": 42,
+    "results": {
+      "A": {
+        "f1": 0.5,
+        "ci_low": 0.26,
+        "ci_high": 0.69
+      },
+      "B": {
+        "f1": 0.69,
+        "ci_low": 0.45,
+        "ci_high": 0.87
+      },
+      "C": {
+        "f1": 0.3,
+        "ci_low": 0.0,
+        "ci_high": 0.55
+      },
+      "A+B": {
+        "f1": 0.77,
+        "ci_low": 0.6,
+        "ci_high": 0.9
+      },
+      "A+C": {
+        "f1": 0.55,
+        "ci_low": 0.32,
+        "ci_high": 0.74
+      },
+      "B+C": {
+        "f1": 0.79,
+        "ci_low": 0.58,
+        "ci_high": 0.93
+      },
+      "A+B+C": {
+        "f1": 0.77,
+        "ci_low": 0.6,
+        "ci_high": 0.89
+      }
+    }
+  },
+  "table4_detection_by_mode": {
+    "F4": {
+      "n": 2,
+      "detected": 2,
+      "by_signal": {
+        "A": 2,
+        "B": 0,
+        "C": 2
+      }
+    },
+    "F2": {
+      "n": 5,
+      "detected": 3,
+      "by_signal": {
+        "A": 3,
+        "B": 1,
+        "C": 0
+      }
+    },
+    "F5": {
+      "n": 5,
+      "detected": 5,
+      "by_signal": {
+        "A": 0,
+        "B": 5,
+        "C": 0
+      }
+    },
+    "F1": {
+      "n": 3,
+      "detected": 3,
+      "by_signal": {
+        "A": 1,
+        "B": 3,
+        "C": 1
+      }
+    },
+    "F7": {
+      "n": 1,
+      "detected": 1,
+      "by_signal": {
+        "A": 1,
+        "B": 0,
+        "C": 0
+      }
+    },
+    "F3": {
+      "n": 1,
+      "detected": 1,
+      "by_signal": {
+        "A": 1,
+        "B": 0,
+        "C": 0
+      }
+    }
+  }
+}

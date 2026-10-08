@@ -1,7 +1,32 @@
-# Action-side observability of LLM agent failures — artifact
+# Action-side observability of LLM agent failures, artifact
 
-Data, labels and code for the paper *What Can Be Verified for Free? The Observability
-Boundary of LLM Agent Failures in Retrieval-and-Arithmetic Tasks*.
+## Which submission does this state support?
+
+This repository carries the data and code for two related manuscripts from the same
+study. **Read the tag, not the branch**, if you are reviewing one of them.
+
+| tag | manuscript | what the tag holds |
+|---|---|---|
+| **`neucom-d-26-17269-r1`** | *Structural Signals Are Insufficient for Detecting Reasoning Failures: A Taxonomy and In-Chain Verification Study of LLM Agents*, Neurocomputing, first revision | Everything the revision's data availability statement names, and nothing later. Frozen. |
+| *(branch `master`)* | *What Can Be Verified for Free? The Observability Boundary of LLM Agent Failures in Retrieval-and-Arithmetic Tasks*, in preparation | The above plus later work that is **not** part of the Neurocomputing submission: a 32B judge scale and language control, and a label-uncertainty sensitivity analysis. |
+
+If you arrived here from the Neurocomputing manuscript, check out the tag:
+
+```
+git clone https://github.com/achenna-source/icv-agent-observability
+cd icv-agent-observability
+git checkout neucom-d-26-17269-r1
+python reproduce.py
+```
+
+The files that belong to the later work, and that the tag therefore does **not**
+contain, are `results/judge_32b_fr.json`, `results/judge_32b_en.json`,
+`results/judge_32b_run.log`, `code/judge_scale_control.ipynb` and
+`code/label_sensitivity.py`. Checking out the tag gives you the Neurocomputing
+artifact and nothing beyond it. They remain on `master`, and in the history, for the
+second manuscript.
+
+Data, labels and code for the study described in the two manuscripts above.
 
 Abdelbassette Chenna, Djallel Eddine Boubiche, Abdellah Chehri and Gwanggil Jeon.
 
@@ -13,11 +38,15 @@ can be checked, not because they are settled.
 
 ```
 data/    the 200-trajectory corpus with human labels, F3 sub-codes, judge labels and
-         cluster ids; the 30-trajectory pilot; the knowledge base as observed
-code/    the three detection signals as run, and the estimators including the cluster
-         correction
-annotation/  the blinded packet for an independent second annotator
-results/     the 32B judge's labels for both language arms, and the run log
+         cluster ids; the 30-trajectory pilot; the knowledge base as defined for the
+         run, with the earlier observation-based reconstruction kept beside it
+code/    the agent with its tool schemas, the benchmark's templates and generation
+         rules, the judge with its exact prompt and inference settings, all three
+         detection signals as run, and the estimators including the cluster correction
+annotation/  the codebook and decision procedure, the blinded packet for an
+         independent second annotator, and the labels returned
+results/     Signal A's pilot results with the per-mode and bootstrap figures;
+         and, on the branch only, the 32B judge's labels for both language arms
 reproduce.py  regenerates every number the paper reports
 MAPPING.md    which script produces which number in which table
 DATA_CARD.md  provenance, construction, and the known defects

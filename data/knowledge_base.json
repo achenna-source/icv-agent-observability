@@ -1,0 +1,41 @@
+{
+ "facts": {
+  "capitale france": "Paris",
+  "capitale algerie": "Alger",
+  "capitale japon": "Tokyo",
+  "capitale italie": "Rome",
+  "capitale espagne": "Madrid",
+  "capitale bresil": "Brasilia",
+  "capitale allemagne": "Berlin",
+  "capitale egypte": "Le Caire",
+  "capitale canada": "Ottawa",
+  "capitale inde": "New Delhi",
+  "population paris": "2100000",
+  "population alger": "3500000",
+  "population tokyo": "13960000",
+  "population rome": "2800000",
+  "population madrid": "3200000",
+  "population berlin": "3600000",
+  "population lyon": "520000",
+  "population osaka": "2700000",
+  "population naples": "960000",
+  "population barcelone": "1620000",
+  "population montreal": "1700000",
+  "population mumbai": "12440000",
+  "superficie france": "551695",
+  "superficie algerie": "2381741",
+  "superficie japon": "377975",
+  "superficie italie": "301340",
+  "superficie espagne": "505990",
+  "superficie bresil": "8515767"
+ },
+ "populations_absent_by_design": [
+  "londres",
+  "lisbonne",
+  "vienne",
+  "athenes",
+  "dublin",
+  "oslo"
+ ],
+ "note": "The store as it was defined for the 200-trajectory run: 28 facts. A query matches a key only if every word of the key appears in it, otherwise the store returns not-found. knowledge_base_observed.json, kept alongside, is the earlier reconstruction from observations and is superseded by this file."
+}

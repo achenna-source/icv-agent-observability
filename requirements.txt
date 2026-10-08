@@ -1,5 +1,15 @@
-# reproduce.py needs nothing beyond the standard library
-# reproduce.py --full additionally needs:
-torch>=2.0
-transformers>=4.40
-sentence-transformers>=2.2
+# reproduce.py needs nothing beyond the standard library.
+#
+# reproduce.py --full, and the generation and judge passes, were run with:
+torch==2.4.0
+transformers==4.44.2
+sentence-transformers==3.0.1
+numpy==1.26.4
+# Optional, only for regenerating Figure 6:
+matplotlib==3.9.2
+#
+# Models, pinned by name as run:
+#   agent   Qwen/Qwen2.5-1.5B-Instruct   greedy, max_new_tokens=150, 6-step budget
+#   judge   Qwen/Qwen2.5-7B-Instruct     greedy, max_new_tokens=250, fp16 on 2x T4
+#   encoder sentence-transformers/all-MiniLM-L6-v2        (Signal C duplicate test)
+#   nli     MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli  (grounding follow-up only)

@@ -29,4 +29,16 @@ All of these are printed by `reproduce.py`, in this order.
 The 32B labels in `results/` are outputs, not inputs: `code/judge_scale_control.ipynb`
 regenerates them from the corpus on two free-tier T4 GPUs in about three and a half hours.
 
+For the Neurocomputing revision specifically:
+
+| paper | quantity | produced by |
+|---|---|---|
+| Table 3 | TP/FP/precision/recall/F1-score/MCC for B, C and their union | `signals.tier1`, `signals.tier2` over `data/trajectories_200.jsonl` |
+| Table 4 | per-mode detection for each signal and the union | same |
+| Figure 6 | the same values, redrawn per signal | same |
+| Section VI.B | kappa = 0.370 two-reader agreement, and its decomposition | `annotation/compute_agreement.py` |
+| Section IV.B | Signal A pilot figures, incremental over B and C, bootstrap intervals | `results/signal_a_and_pilot_icv.json` |
+| Section VI.D | composition standardisation, pilot per mode | `reproduce.py` and the per-mode rates above |
+| Section VI.A | 179/200 naive success count | `signals`-free, final-step check over the corpus |
+
 Figures not regenerated here are plots of the tables above.
