@@ -188,96 +188,106 @@ def main(full=False):
     ok_all &= check("main coverage observed", round(68 / NF, 3), 0.531)
 
 
-    print("\n=== Section VII.B, the 32B scale and language control ===")
-    valid = set(dist)
-    j32 = {}
-    for lang in ("fr", "en"):
-        with open(os.path.join(HERE, "results", f"judge_32b_{lang}.json"),
+    # The 32B scale and language control belongs to a companion manuscript. Its
+    # result files are outside the scope of the Neurocomputing submission tag, so the
+    # section is skipped there instead of aborting the whole script.
+    j32_files = [os.path.join(HERE, "results", f"judge_32b_{lang}.json")
+                 for lang in ("fr", "en")]
+    if not all(os.path.exists(p) for p in j32_files):
+        print("\n=== Section VII.B, the 32B scale and language control ===")
+        print("     skipped; this control belongs to a companion manuscript and its")
+        print("     result files are not part of this tag.")
+    else:
+        print("\n=== Section VII.B, the 32B scale and language control ===")
+        valid = set(dist)
+        j32 = {}
+        for lang in ("fr", "en"):
+            with open(os.path.join(HERE, "results", f"judge_32b_{lang}.json"),
+                      encoding="utf-8") as f:
+                j32[lang] = json.load(f)
+        a2 = {}
+        with open(os.path.join(HERE, "annotation", "annotator2_returned.csv"),
                   encoding="utf-8") as f:
-            j32[lang] = json.load(f)
-    a2 = {}
-    with open(os.path.join(HERE, "annotation", "annotator2_returned.csv"),
-              encoding="utf-8") as f:
-        for line in list(csv.DictReader(f)):
-            a2[line["id"]] = line["label"].strip()
-    sub = [i for i, r in enumerate(corpus) if r["id"] in a2]
+            for line in list(csv.DictReader(f)):
+                a2[line["id"]] = line["label"].strip()
+        sub = [i for i, r in enumerate(corpus) if r["id"] in a2]
 
-    def kap(idx, get):
-        return kappa_lenient([hum[i] for i in idx], [get(i) for i in idx], valid)
+        def kap(idx, get):
+            return kappa_lenient([hum[i] for i in idx], [get(i) for i in idx], valid)
 
-    def boot(idx, get):
-        items = [(clusters[i], (get(i), hum[i])) for i in idx]
-        lo, hi, _ = cluster_bootstrap(
-            items, lambda d: kappa_lenient([r for _, r in d], [p for p, _ in d], valid))
-        return lo, hi
+        def boot(idx, get):
+            items = [(clusters[i], (get(i), hum[i])) for i in idx]
+            lo, hi, _ = cluster_bootstrap(
+                items, lambda d: kappa_lenient([r for _, r in d], [p for p, _ in d], valid))
+            return lo, hi
 
-    getters = {
-        "second annotator": lambda i: a2[corpus[i]["id"]],
-        "7B judge":         lambda i: jm[i],
-        "32B judge, fr":    lambda i: j32["fr"][corpus[i]["id"]]["code"],
-        "32B judge, en":    lambda i: j32["en"][corpus[i]["id"]]["code"],
-    }
-    for name, paper in [("second annotator", 0.370), ("7B judge", 0.129),
-                        ("32B judge, fr", 0.421), ("32B judge, en", 0.341)]:
-        k = kap(sub, getters[name])
-        ok_all &= check(f"kappa on the 50, {name}", round(k, 3), paper)
-        print(f"       cluster 95%% CI [%.3f, %.3f]" % boot(sub, getters[name]))
+        getters = {
+            "second annotator": lambda i: a2[corpus[i]["id"]],
+            "7B judge":         lambda i: jm[i],
+            "32B judge, fr":    lambda i: j32["fr"][corpus[i]["id"]]["code"],
+            "32B judge, en":    lambda i: j32["en"][corpus[i]["id"]]["code"],
+        }
+        for name, paper in [("second annotator", 0.370), ("7B judge", 0.129),
+                            ("32B judge, fr", 0.421), ("32B judge, en", 0.341)]:
+            k = kap(sub, getters[name])
+            ok_all &= check(f"kappa on the 50, {name}", round(k, 3), paper)
+            print(f"       cluster 95%% CI [%.3f, %.3f]" % boot(sub, getters[name]))
 
-    def paired(idx, a, b):
-        items = [(clusters[i], (getters[a](i), getters[b](i), hum[i])) for i in idx]
+        def paired(idx, a, b):
+            items = [(clusters[i], (getters[a](i), getters[b](i), hum[i])) for i in idx]
 
-        def d(draw):
-            ref = [r for _, _, r in draw]
-            return (kappa_lenient(ref, [x for x, _, _ in draw], valid) -
-                    kappa_lenient(ref, [y for _, y, _ in draw], valid))
-        lo, hi, vals = cluster_bootstrap(items, d)
-        p_le = sum(1 for v in vals if v <= 0) / len(vals)
-        return kap(idx, getters[a]) - kap(idx, getters[b]), lo, hi, \
-            min(1.0, 2 * min(p_le, 1 - p_le))
+            def d(draw):
+                ref = [r for _, _, r in draw]
+                return (kappa_lenient(ref, [x for x, _, _ in draw], valid) -
+                        kappa_lenient(ref, [y for _, y, _ in draw], valid))
+            lo, hi, vals = cluster_bootstrap(items, d)
+            p_le = sum(1 for v in vals if v <= 0) / len(vals)
+            return kap(idx, getters[a]) - kap(idx, getters[b]), lo, hi, \
+                min(1.0, 2 * min(p_le, 1 - p_le))
 
-    for a, b, paper in [("second annotator", "32B judge, fr", -0.051),
-                        ("32B judge, fr", "7B judge", 0.292)]:
-        obs, lo, hi, p = paired(sub, a, b)
-        ok_all &= check(f"d.kappa, {a} - {b}", round(obs, 3), paper)
+        for a, b, paper in [("second annotator", "32B judge, fr", -0.051),
+                            ("32B judge, fr", "7B judge", 0.292)]:
+            obs, lo, hi, p = paired(sub, a, b)
+            ok_all &= check(f"d.kappa, {a} - {b}", round(obs, 3), paper)
+            print(f"       cluster 95%% CI [%+.3f, %+.3f], P = %.3f" % (lo, hi, p))
+
+        everything = list(range(200))
+        for name, paper in [("32B judge, fr", 0.401), ("32B judge, en", 0.383)]:
+            ok_all &= check(f"kappa on the 200, {name}",
+                            round(kap(everything, getters[name]), 3), paper)
+        obs, lo, hi, p = paired(everything, "32B judge, fr", "32B judge, en")
+        ok_all &= check("d.kappa, French - English on the 200", round(obs, 3), 0.018)
         print(f"       cluster 95%% CI [%+.3f, %+.3f], P = %.3f" % (lo, hi, p))
 
-    everything = list(range(200))
-    for name, paper in [("32B judge, fr", 0.401), ("32B judge, en", 0.383)]:
-        ok_all &= check(f"kappa on the 200, {name}",
-                        round(kap(everything, getters[name]), 3), paper)
-    obs, lo, hi, p = paired(everything, "32B judge, fr", "32B judge, en")
-    ok_all &= check("d.kappa, French - English on the 200", round(obs, 3), 0.018)
-    print(f"       cluster 95%% CI [%+.3f, %+.3f], P = %.3f" % (lo, hi, p))
+        g32 = getters["32B judge, fr"]
+        tp = sum(1 for i in everything if g32(i) != "S" and fail[i])
+        fp = sum(1 for i in everything if g32(i) != "S" and not fail[i])
+        ok_all &= check("32B as binary detector, precision",
+                        round(tp / (tp + fp), 3), 0.906)
+        ok_all &= check("32B as binary detector, recall", round(tp / NF, 3), 0.977)
+        ok_all &= check("32B as binary detector, MCC",
+                        round(mcc(tp, fp, NF - tp, NS - fp), 3), 0.826)
+        ok_all &= check("32B as binary detector, false alarms", fp, 13)
 
-    g32 = getters["32B judge, fr"]
-    tp = sum(1 for i in everything if g32(i) != "S" and fail[i])
-    fp = sum(1 for i in everything if g32(i) != "S" and not fail[i])
-    ok_all &= check("32B as binary detector, precision",
-                    round(tp / (tp + fp), 3), 0.906)
-    ok_all &= check("32B as binary detector, recall", round(tp / NF, 3), 0.977)
-    ok_all &= check("32B as binary detector, MCC",
-                    round(mcc(tp, fp, NF - tp, NS - fp), 3), 0.826)
-    ok_all &= check("32B as binary detector, false alarms", fp, 13)
+        resid = [i for i, r in enumerate(corpus)
+                 if hum[i] == "F3" and not (tier1(r["trajectory"])[0]
+                                            or tier2(r["trajectory"])[0])]
+        ok_all &= check("residual F3 the free tiers leave", len(resid), 47)
+        ok_all &= check("32B flags on the residual",
+                        sum(1 for i in resid if g32(i) != "S"), 44)
+        ok_all &= check("7B flags on the residual",
+                        sum(1 for i in resid if jm[i] != "S"), 16)
 
-    resid = [i for i, r in enumerate(corpus)
-             if hum[i] == "F3" and not (tier1(r["trajectory"])[0]
-                                        or tier2(r["trajectory"])[0])]
-    ok_all &= check("residual F3 the free tiers leave", len(resid), 47)
-    ok_all &= check("32B flags on the residual",
-                    sum(1 for i in resid if g32(i) != "S"), 44)
-    ok_all &= check("7B flags on the residual",
-                    sum(1 for i in resid if jm[i] != "S"), 16)
+        print("\n     per mode, matched against the first annotator (Table V)")
+        for m, p7, p32 in [("S", 30, 59), ("F2", 0, 21), ("F3", 11, 12),
+                           ("F5", 4, 11), ("F6", 0, 0), ("F7", 15, 0)]:
+            sel = [i for i in everything if hum[i] == m]
 
-    print("\n     per mode, matched against the first annotator (Table V)")
-    for m, p7, p32 in [("S", 30, 59), ("F2", 0, 21), ("F3", 11, 12),
-                       ("F5", 4, 11), ("F6", 0, 0), ("F7", 15, 0)]:
-        sel = [i for i in everything if hum[i] == m]
-
-        def matched(get):
-            return sum(1 for i in sel
-                       if get(i) == m or (get(i) not in valid and m in get(i)))
-        ok_all &= check(f"  {m}: matched by 7B", matched(lambda i: jm[i]), p7)
-        ok_all &= check(f"  {m}: matched by 32B", matched(g32), p32)
+            def matched(get):
+                return sum(1 for i in sel
+                           if get(i) == m or (get(i) not in valid and m in get(i)))
+            ok_all &= check(f"  {m}: matched by 7B", matched(lambda i: jm[i]), p7)
+            ok_all &= check(f"  {m}: matched by 32B", matched(g32), p32)
 
     print("\n=== Additional: the same detectors, scored as in the companion manuscript ===")
     B = [tier1(r["trajectory"])[0] for r in corpus]
