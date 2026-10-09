@@ -126,10 +126,57 @@ def main(full=False):
         icv = json.load(f)
     sa = icv["signal_A"]
     ok_all &= check("Signal A, a priori threshold", sa["threshold_apriori"], 0.9)
-    ok_all &= check("Signal A, a priori precision", sa["precision_apriori"], 0.53)
-    ok_all &= check("Signal A, a priori recall", sa["recall_apriori"], 0.47)
     ok_all &= check("Signal A, F1-optimal threshold", sa["threshold_f1opt"], 0.55)
-    ok_all &= check("Signal A, F1-optimal recall", sa["recall_f1opt"], 1.0)
+
+    # Recomputed from the stored per-step entropies through signal_a(), not read back
+    # out of the summary. Comparing the summary with the paper compares the same
+    # numbers twice and cannot detect a wrong decision rule, which is how an earlier
+    # draft came to describe the cross-step aggregation as a mean when it is a maximum.
+    from signal_a import signal_a as flag_a                             # noqa: E402
+    ent = sa["entropy_stats"]
+    pk = sorted(ent, key=lambda k: int(k))
+    pfail = {k: ent[k]["annotation"] != "S" for k in pk}
+    NFP = sum(pfail.values())
+    # the summary stores the per-step maximum, which is the decision variable; passing
+    # it as a one-element list makes signal_a apply the same rule it applies in full
+    score = {k: [ent[k]["max"]] for k in pk}
+
+    def pilot_prf(th, keys=None):
+        keys = pk if keys is None else keys
+        hit = {k: flag_a(score[k], th)[0] for k in keys}
+        tp = sum(1 for k in keys if hit[k] and pfail[k])
+        fp = sum(1 for k in keys if hit[k] and not pfail[k])
+        fn = sum(1 for k in keys if not hit[k] and pfail[k])
+        if tp == 0:
+            return 0.0, 0.0, 0.0
+        p, r = tp / (tp + fp), tp / (tp + fn)
+        return p, r, 2 * p * r / (p + r)
+
+    p90, r90, f90 = pilot_prf(0.90)
+    ok_all &= check("Signal A, a priori precision", round(p90, 2), 0.53)
+    ok_all &= check("Signal A, a priori recall", round(r90, 2), 0.47)
+    ok_all &= check("Signal A, a priori F1", round(f90, 2), 0.50)
+    p55, r55, f55 = pilot_prf(0.55)
+    ok_all &= check("Signal A, F1-optimal precision", round(p55, 2), 0.59)
+    ok_all &= check("Signal A, F1-optimal recall", round(r55, 2), 1.0)
+    ok_all &= check("Signal A, F1-optimal F1", round(f55, 2), 0.74)
+
+    def pilot_ci(th, n_boot=5000, seed=42):
+        rng = random.Random(seed)
+        vals = []
+        for _ in range(n_boot):
+            draw = [pk[rng.randrange(len(pk))] for _ in range(len(pk))]
+            vals.append(pilot_prf(th, draw)[2])
+        vals.sort()
+        return vals[int(0.025 * len(vals))], vals[int(0.975 * len(vals))]
+
+    lo90, hi90 = pilot_ci(0.90)
+    # wider tolerance: the original resampling order is not preserved in the artifact
+    ok_all &= check("Signal A, a priori F1 CI low", round(lo90, 2), 0.26, tol=0.011)
+    ok_all &= check("Signal A, a priori F1 CI high", round(hi90, 2), 0.69)
+    lo55, hi55 = pilot_ci(0.55)
+    ok_all &= check("Signal A, F1-optimal CI low", round(lo55, 2), 0.57)
+    ok_all &= check("Signal A, F1-optimal CI high", round(hi55, 2), 0.86)
     for stack, pf1 in [("B", 0.69), ("B+C", 0.79), ("A+B+C", 0.77)]:
         ok_all &= check("pilot F1, %s" % stack,
                         icv["bootstrap_ci"]["results"][stack]["f1"], pf1)
