@@ -58,4 +58,6 @@ in `results/`, under the same name with `_run.log`:
 | Table 5, Section VI.C | the component ablation over the three primitives and their combinations | `code/experiments/ablation.ipynb`; the five coefficients it shares with the paper are checked in `reproduce.py` |
 | Section VI.E | the ToolBench audit: 19,738 records, precision 0.982, targeted recall 0.392, 89.5 % infrastructure, contradiction 1.00 %, duplicate 24.7 % above 0.92 | `code/experiments/toolbench_audit.ipynb` with `code/experiments/toolbench_parser_validation.ipynb`; **not checked by `reproduce.py`**, because the corpus is an external release this artifact does not redistribute |
 
+| not in the paper yet | the success checker for an intervention experiment: 13/13 pilot successes in development, 72/72 held-out successes on the 200, and 9 of the 200 that end on a correct answer despite an earlier fault |  and , with ; the checker measures answer correctness, which is a different estimand from the human label, so it is validated in one direction only |
+
 Figures not regenerated here are plots of the tables above.

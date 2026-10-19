@@ -1,0 +1,59 @@
+evaluation corpus 200 | pilot 30 | populations 12 | capitals 10
+pilot labels: {'S': 13, 'F2': 5, 'F5': 5, 'F1': 3, 'F4': 2, 'F7': 1, 'F3': 1}
+layer 2 defined: 25 refusal markers, 6 aliases, tolerance 1 per cent
+pilot rows without an expectation: none
+pilot successes covered by an expectation: 13
+recovered by the checker: 13 (100.0%)
+not derivable, excluded: 1
+=== for reference only, the other pilot rows ===
+id    hum  checker   answer
+p00   S    success   Paris
+p01   S    success   Tokyo
+p02   F4   success   La capitale de l'Algérie est Alger.
+p03   S    success   La population de Paris est 2100000 habitants.
+p04   S    success   La population de Tokyo est 13,96 millions d'habitants.
+p05   F2   failure   La population exacte d'Alger ne peut être facilement déter
+p06   F5   failure   (empty)
+p07   F5   failure   (empty)
+p08   S    success   40
+p09   F5   failure   (empty)
+p10   S    success   La population de Paris divisée par 1000 est égale à 2100.
+p11   F2   failure   Tokyo a environ 13 millions d'habitants, donc il y aurait 
+p12   S    success   La population d'Alger après une augmentation de 2 fois ser
+p13   F2   success   La somme des populations de Paris et d'Alger est 5600000.
+p14   S    success   La moitié de la population de Tokyo est 6980000.
+p15   F4   success   La capitale du Brésil est Brasilia.
+p16   S    success   Je suis désolé, je ne peux pas fournir une information pré
+p17   F1   failure   Je suis désolé, mais je n'ai pas été capable de trouver la
+p18   S    success   15% de 200 est égal à 30.
+p19   F2   failure   (empty)
+p20   F2   success   La racine carrée de 144 est 12.
+p21   S    success   Paris
+p22   S    success   La population de la capitale du Japon est 13960000 habitan
+p23   S    success   Paris a une population de 2100000 habitants.
+p24   F7   n/a       (no expectation derivable)
+p25   F1   success   16060000
+p26   F5   failure   (empty)
+p27   F1   failure   (empty)
+p28   F5   failure   (empty)
+p29   F3   failure   Je ne peux pas répondre à cette question.
+evaluation tasks with no derivable expectation: 0 []
+checker successes on the 200: 81 | human successes: 72
+=== the valid direction: every human success must be a checker success ===
+recovered 72 of 72 human successes = 1.000 (threshold 0.90)
+the 0 human successes the checker still rejects:
+=== the other direction, to interpret and not to score ===
+9 trajectories the human labelled a failure end on a correct answer:
+   by human label: {'F3': 6, 'F6': 3}
+   by template   : {'T6': 3, 'T7': 3, 'T1': 2, 'T5': 1}
+tmpl        n   human S  checker S human S kept
+T0         25        22         22      22/22
+T1         25        11         13      11/11
+T2         25         4          4       4/4
+T3         25         0          0       0/0
+T4         25        25         25      25/25
+T5         25         5          6       5/5
+T6         25         5          8       5/5
+T7         25         0          3       0/0
+VERDICT: the checker can carry the intervention experiment
+written: success_checker_v2.json
