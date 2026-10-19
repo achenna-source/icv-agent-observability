@@ -60,4 +60,6 @@ in `results/`, under the same name with `_run.log`:
 
 | not in the paper yet | the success checker for an intervention experiment: 13/13 pilot successes in development, 72/72 held-out successes on the 200, and 9 of the 200 that end on a correct answer despite an earlier fault |  and , with ; the checker measures answer correctness, which is a different estimand from the human label, so it is validated in one direction only |
 
+| not run yet | the intervention experiment Reviewer 3 asks for, pre-registered: task set, agent, decoding, the two corrective notes verbatim, the intervention cap, the outcome measure, the test, the interval and the predicted direction are all fixed before the run | `code/experiments/intervention_experiment.ipynb`, committed before any execution; it asserts the generator's and the checker's self-checks before it starts, and carries a deviation rule |
+
 Figures not regenerated here are plots of the tables above.
