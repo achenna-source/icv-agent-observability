@@ -1,0 +1,48 @@
+modules loaded from the tag: agent, signals, benchmark, success_checker
+gpus: 2
+generator self-check : {'generated': 200, 'generated_unmatched': 0, 'corpus': 200, 'corpus_unmatched': 0, 'pools_within_declared': True}
+checker self-check   : {'human_successes': 72, 'recovered': 72, 'correct_answer_despite_fault': 9, 'their_labels': ['F3', 'F6']}
+both frozen components verify; the protocol stands
+arm B defined: 2 interventions at most, hard ceiling 10 steps
+Qwen/Qwen2.5-1.5B-Instruct loaded | tasks 200 | templates {'T0': 25, 'T1': 25, 'T2': 25, 'T3': 25, 'T4': 25, 'T5': 25, 'T6': 25, 'T7': 25}
+   [A baseline]  25/200  102 s  finish so far 25
+   [A baseline]  50/200  380 s  finish so far 50
+   [A baseline]  75/200  891 s  finish so far 70
+   [A baseline] 100/200  1464 s  finish so far 95
+   [A baseline] 125/200  1752 s  finish so far 120
+   [A baseline] 150/200  2369 s  finish so far 144
+   [A baseline] 175/200  3045 s  finish so far 169
+   [A baseline] 200/200  3512 s  finish so far 194
+   [A baseline] reaches a finish: 194/200 = 97.0%  (the study corpus: essentially all of them)
+arm A done
+   [B intervene]  25/200  121 s  finish so far 25
+   [B intervene]  50/200  398 s  finish so far 50
+   [B intervene]  75/200  865 s  finish so far 75
+   [B intervene] 100/200  1468 s  finish so far 100
+   [B intervene] 125/200  1756 s  finish so far 125
+   [B intervene] 150/200  2403 s  finish so far 149
+   [B intervene] 175/200  3166 s  finish so far 174
+   [B intervene] 200/200  3812 s  finish so far 192
+   [B intervene] reaches a finish: 192/200 = 96.0%  (the study corpus: essentially all of them)
+arm B done
+arm A success 93/200 = 46.5%
+arm B success 101/200 = 50.5%
+paired difference +4.0 points
+both 88 | only A 5 | only B 13 | neither 94
+exact binomial on the 18 discordant pairs: p = 0.0963
+cluster bootstrap over the 8 templates: +0.040 [-0.015, +0.105]
+eight clusters is few, and the interval is wide for that reason
+tmpl         A        B     diff
+T0          25       23       -2
+T1          21       21       +0
+T2           0        5       +5
+T3          10       14       +4
+T4          20       20       +0
+T5           3        4       +1
+T6          12       12       +0
+T7           2        2       +0
+trajectories with at least one intervention : 101
+interventions by kind                       : {'schema': 112, 'contradiction': 49}
+generated steps, arm B minus arm A          : +120
+intervened and still wrong                  : 72
+written: intervention_result.json
