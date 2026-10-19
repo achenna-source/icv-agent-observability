@@ -55,7 +55,7 @@ in `results/`, under the same name with `_run.log`:
 | Section VI.C | the cutoff sweep from 0.80 to 0.99, duplicate flags and union coverage and precision at each step | `reproduce.py`, one encoder pass over the corpus thresholded at each cutoff; first produced by `code/experiments/threshold_and_cost.ipynb` |
 | Section VI.C | the ten highest maximum pairwise similarities, 1.000, 0.960, then 0.919 down to 0.903 | same block |
 | Section VI.C | per-trajectory cost of each signal, and its non-reproduction across containers | `code/experiments/threshold_and_cost.ipynb` and its log; timings are host-dependent and are not checked by `reproduce.py` |
-| Table 5 | the component ablation over the three primitives and their combinations | `code/experiments/ablation.ipynb`; the five coefficients it shares with the paper are checked in `reproduce.py` |
+| Table 5, Section VI.C | the component ablation over the three primitives and their combinations | `code/experiments/ablation.ipynb`; the five coefficients it shares with the paper are checked in `reproduce.py` |
 | Section VI.E | the ToolBench audit: 19,738 records, precision 0.982, targeted recall 0.392, 89.5 % infrastructure, contradiction 1.00 %, duplicate 24.7 % above 0.92 | `code/experiments/toolbench_audit.ipynb` with `code/experiments/toolbench_parser_validation.ipynb`; **not checked by `reproduce.py`**, because the corpus is an external release this artifact does not redistribute |
 
 Figures not regenerated here are plots of the tables above.
