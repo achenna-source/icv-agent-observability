@@ -43,10 +43,17 @@ data/    the 200-trajectory corpus with human labels, F3 sub-codes, judge labels
 code/    the agent with its tool schemas, the benchmark's templates and generation
          rules, the judge with its exact prompt and inference settings, all three
          detection signals as run, and the estimators including the cluster correction
+code/experiments/  the notebooks for the measurements added during the revision: the
+         second judge family, the judge scale and few-shot sweep, the priming control,
+         the cutoff-and-cost sweep, the component ablation, the absence of planning
+         loops, and the external ToolBench audit with its parser validation
 annotation/  the codebook and decision procedure, the blinded packet for an
-         independent second annotator, and the labels returned
-results/     Signal A's pilot results with the per-mode and bootstrap figures;
-         and, on the branch only, the 32B judge's labels for both language arms
+         independent second annotator, and the labels returned; the ToolBench
+         adaptation of the codebook beside it
+results/     Signal A's pilot results with the per-mode and bootstrap figures; the
+         codes each added judge configuration assigned, one per trajectory; the full
+         printed output of every notebook in code/experiments; and, on the branch
+         only, the 32B judge's labels for both language arms
 reproduce.py  regenerates every number the paper reports
 MAPPING.md    which script produces which number in which table
 DATA_CARD.md  provenance, construction, and the known defects

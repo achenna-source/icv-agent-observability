@@ -1,0 +1,123 @@
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+records pulled: 400
+fields: ['conversations', 'id']
+roles in the first record: ['system', 'user', 'assistant', 'function', 'assistant', 'function', 'assistant']
+records whose tool schemas parse: 399 of 400
+first record declares 3 tools: ['userinfo_for_instagram_cheapest', 'user_medias_for_instagram_cheapest', 'Finish']
+is Finish declared as a tool?
+   declared in 399 of 399 records
+records                    400
+records with >=1 step      400
+steps                      1149
+steps with observation     749
+mean steps per record: 2.87
+shape of Action Input
+   object                     1147
+   unparseable                2
+action name against the declared tool set
+   exact match                        1146
+   no relation to any declared name   3
+flags raised: 9 over 400 records
+   required missing                   4
+   tool not in declared set           3
+   input not an object (unparseable)  2
+NOTE: these are candidate violations, not results. The point of the packet
+below is to decide, by hand, which of them are agent errors at all.
+==============================================================================
+FLAG 1 of 9   record 290, step 0
+reason      : required missing: richmenuid
+action       : 'get_rich_menu_for_line_messaging'
+action input : {}
+required     : ['richmenuid']
+declared     : ['download_rich_menu_image_for_line_messaging', 'get_rich_menu_for_line_messaging', 'get_profile_for_line_messaging', 'profile_prices_for_smsapi_com', 'short_url_links_id_for_smsapi_com', 'subusers_id_for_smsapi_com', 'get_balance_for_sms77io', 'read_for_sms77io', 'get_status_for_sms77io', 'Finish']
+observation  : {"error": "request invalid, data error. status_code=400", "response": ""}
+==============================================================================
+FLAG 2 of 9   record 31, step 2
+reason      : required missing: return_type
+action       : 'Finish'
+action input : {
+  "final_answer": "Sure, let me fetch a random quote in English and a random Lithuanian joke for you."
+}
+required     : ['return_type']
+declared     : ['song_download_for_soundcloud', 'search_for_soundcloud', 'song_info_for_soundcloud', 'charts_track_for_shazam', 'albums_get_related_artist_for_shazam', 'artists_get_latest_release_for_shazam', 'iceland_songs_for_billboard_api', 'billboard_200_albums_greatest_of_all_time_for_billboard_api', 'adult_pop_songs_for_billboard_api', 'Finish']
+observation  : {error:"must have "return_type""}
+==============================================================================
+FLAG 3 of 9   record 313, step 0
+reason      : required missing: newspaperid
+action       : 'get_news_source_feeds_for_climate_change_v31'
+action input : {}
+required     : ['newspaperid']
+declared     : ['gettopics_for_election2020_smartable', 'getsponsorships_for_election2020_smartable', 'getevents_for_election2020_smartable', 'world_climate_change_for_climate_change_v31', 'get_news_source_feeds_for_climate_change_v31', 'specific_publication_articles_for_green_gold', 'all_articles_for_green_gold', 'Finish']
+observation  : {"error": "Function executing from my_tools.News_Media.climate_change_v31.api import get_news_source_feeds error...\nget_news_source_feeds() missing 1 required positional argument: 'newspaperid'", "response": ""}
+==============================================================================
+FLAG 4 of 9   record 237, step 1
+reason      : required missing: make
+action       : 'specs_v1_tier3_for_datamo'
+action input : {
+  "msrp": "economy",
+  "bodytype": "any"
+}
+required     : ['make']
+declared     : ['specs_v1_tier1_for_datamo', 'specs_v1_tier3_for_datamo', 'specs_v1_getmakes_for_datamo', 'specs_v1_tier2_for_datamo', 'Finish']
+observation  : {"error": "Function executing from my_tools.Transportation.datamo.api import specs_v1_tier3 error...\nspecs_v1_tier3() missing 1 required positional argument: 'make'", "response": ""}
+==============================================================================
+FLAG 5 of 9   record 285, step 1
+reason      : input not an object (unparseable)
+action       : 'Finish'
+action input : {
+  "return_type": "give_answer",
+  "final_answer": "Here is the historical weather data for the past week in Paris and Nice:
+Paris:
+- June 26, 2023:
+  - 11:00 AM: 19°C
+  - 1:00 PM: 78°C
+  - 3:00 PM: 67°C
+  - 5:00 PM: 25°C
+  - 7:00 PM: 69°C
+  - 9:00 PM: 93°C
+- June 25, 2023:
+  - 11:00 AM: 48°C
+  -
+required     : ['return_type']
+declared     : ['history_for_france_2d', 'live_for_france_2d', 'Finish']
+==============================================================================
+FLAG 6 of 9   record 373, step 3
+reason      : input not an object (unparseable)
+action       : 'Finish'
+action input : {
+  "return_type": "give_answer",
+  "final_answer": "Here is a list of available language codes and their corresponding names:\n\naf: Afrikaans\nam: Amharic\nar: Arabic\naz: Azerbaijani\nbe: Belarusian\nbg: Bulgarian\nbn: Bengali\nbs: Bosnian\nca: Catalan\nceb: Cebuano\nco: Corsican\ncs: Czech\ncy: 
+required     : ['return_type']
+declared     : ['get_speaker_list_for_anime_voice_waifu_ai_api', 'get_voice_for_anime_voice_waifu_ai_api', 'list_of_available_languages_for_neuro_high_quality_translation', 'ages_by_this_api_endpoint_for_simple_elegant_translation_service', 'languages_for_long_translator', 'supported_languages_list_for_ai_translation_apis', 'Finish']
+==============================================================================
+FLAG 7 of 9   record 292, step 1
+reason      : tool not in declared set
+action       : 'match_details_by_id_for_serie_a'
+action input : {
+  "match_id": "2022-34-INTROM"
+}
+required     : None
+declared     : []
+observation  : {"error": "request invalid, data error. status_code=503", "response": ""}
+==============================================================================
+FLAG 8 of 9   record 292, step 0
+reason      : tool not in declared set
+action       : 'players_stats_by_category_for_serie_a'
+action input : {
+  "category": "goals"
+}
+required     : None
+declared     : []
+observation  : {"error": "request invalid, data error. status_code=503", "response": ""}
+==============================================================================
+FLAG 9 of 9   record 292, step 2
+reason      : tool not in declared set
+action       : 'players_stats_by_category_for_serie_a'
+action input : {
+  "category": "goals"
+}
+required     : None
+declared     : []

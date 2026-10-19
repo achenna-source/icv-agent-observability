@@ -1,0 +1,43 @@
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+records: 20000, seed 20261018
+analysed 19738 records, excluded 262
+schema flags by kind:
+   required argument missing      230
+   input not an object             49
+   tool not declared                2
+the free schema check against the service's own rejection
+   tp   219   fp     4
+   fn 11870   tn 25875
+   precision 0.982 | recall over every rejection 0.018 | MCC +0.110
+   on the fault class the check targets, argument validation:
+      anticipated 154 of 393, recall 0.392
+rejections by kind
+   service fault (5xx)          4088   33.8%
+   timeout or connection        3456   28.6%
+   unclassified                 2755   22.8%
+   tool-side exception           593    4.9%
+   auth or quota                 525    4.3%
+   argument validation           393    3.3%
+   bad request (400)             279    2.3%
+give-up share 33.1% (2600 give_up_and_restart, 5246 give_answer)
+contradiction test fires on 198 of 19738 records (1.00%)
+duplicate test over 1606 trajectories with two or more steps
+   deciles 0.657 0.746 0.795 0.830 0.862 0.886 0.908 0.931 0.952
+   above 0.85 : 54.4%
+   above 0.90 : 33.4%
+   above 0.92 : 24.7%
+   above 0.95 : 10.7%
+=== settled figures for the manuscript ===
+corpus            ToolBench released trajectories, seed 20261018
+records           19738 analysed, 262 excluded
+steps scored      37968 carrying an observation
+schema flags      281
+precision         0.982  (219 of 223 flagged calls the service also rejected)
+recall, targeted  0.392  (154 of 393 argument-validation rejections)
+infrastructure    89.5% of all rejections
+give-up share     33.1%
+contradiction     1.00% of records
+duplicate at 0.92 24.7% of trajectories

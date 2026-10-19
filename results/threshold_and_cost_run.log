@@ -1,0 +1,53 @@
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+trajectories: 200
+failures 128, successes 72
+loaded 3668 bytes of signals.py
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+encoder loaded in 5.4 s (one-off)
+embedded 599 steps over 200 trajectories in 13.11 s
+max pairwise cosine: min 0.332, median 0.626, max 1.000
+Signal B  tp  37  fp  25  precision 0.597  coverage 0.289
+Signal C  tp  39  fp   0  precision 1.000  coverage 0.305
+B or C    tp  68  fp  25  precision 0.731  coverage 0.531
+CHECK: union coverage reproduces the paper's 0.531
+cutoff   dup   C:tp  fp  prec   cov    B or C:tp  fp  prec   cov
+0.80     37     55    9  0.859  0.430       75   30  0.714  0.586
+0.85     27     49    7  0.875  0.383       72   29  0.713  0.562
+0.88     16     43    3  0.935  0.336       70   25  0.737  0.547
+0.90     12     41    2  0.953  0.320       68   25  0.731  0.531
+0.92      2     39    0  1.000  0.305       68   25  0.731  0.531
+0.95      2     39    0  1.000  0.305       68   25  0.731  0.531
+0.98      1     39    0  1.000  0.305       68   25  0.731  0.531
+0.99      1     39    0  1.000  0.305       68   25  0.731  0.531
+trajectories the duplicate test flags at 0.80 and at 0.99: 37 and 1
+range of union coverage across the whole sweep: 0.531 to 0.586
+ten highest max-pairwise similarities in the corpus:
+   1.000  0.960  0.919  0.915  0.915  0.910  0.910  0.908  0.908  0.903
+number of trajectories above each cutoff:
+   > 0.80 : 37
+   > 0.85 : 27
+   > 0.90 : 12
+   > 0.92 : 2
+   > 0.95 : 2
+per trajectory, averaged over 200 trajectories of 3.0 steps on CPU
+   schema validation (Signal B)        0.008 ms
+   contradiction test (Signal C)       0.007 ms
+   duplicate test, encode + cosines   64.293 ms
+   total                              64.308 ms
+encoder load, paid once per process: 5.4 s
+model parameters: 22.7M (all-MiniLM-L6-v2)
+host: x86_64, 4 logical CPUs
+=== what goes into the manuscript ===
+sweep, union of B and C:
+   cutoff 0.80 -> duplicate flags 37, union coverage 0.586, union precision 0.714
+   cutoff 0.85 -> duplicate flags 27, union coverage 0.562, union precision 0.713
+   cutoff 0.88 -> duplicate flags 16, union coverage 0.547, union precision 0.737
+   cutoff 0.90 -> duplicate flags 12, union coverage 0.531, union precision 0.731
+   cutoff 0.92 -> duplicate flags 2, union coverage 0.531, union precision 0.731
+   cutoff 0.95 -> duplicate flags 2, union coverage 0.531, union precision 0.731
+   cutoff 0.98 -> duplicate flags 1, union coverage 0.531, union precision 0.731
+   cutoff 0.99 -> duplicate flags 1, union coverage 0.531, union precision 0.731
+cost per trajectory: B 0.008 ms, contradiction 0.007 ms, duplicate 64.293 ms, total 64.308 ms
+encoder load 5.4 s once per process, 22.7M parameters, CPU only

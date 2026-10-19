@@ -1,0 +1,79 @@
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+main 200, pilot 30
+labels in the pilot : [('S', 13), ('F2', 5), ('F5', 5), ('F1', 3), ('F4', 2), ('F7', 1), ('F3', 1)]
+labels in the main run: [('S', 72), ('F3', 69), ('F2', 21), ('F7', 18), ('F5', 13), ('F6', 7)]
+pilot   30 trajectories, 2.7 steps each
+       with at least one not-found return :   9  (30.0%)
+       with two or more                   :   2  (6.7%)
+main   200 trajectories, 3.0 steps each
+       with at least one not-found return : 108  (54.0%)
+       with two or more                   :  18  (9.0%)
+pilot trajectories labelled F4:
+   p02 : 3 steps, 2 not-found returns
+      knowledge_base   capitale alg�rie                   -> Information non trouv�e
+      knowledge_base   capitale alg�rie                   -> Information non trouv�e
+      finish           La capitale de l'Alg�rie est Alger -> None
+   p15 : 3 steps, 2 not-found returns
+      knowledge_base   capitale br�sil                    -> Information non trouv�e
+      knowledge_base   capitale du Br�sil                 -> Information non trouv�e
+      finish           La capitale du Br�sil est Brasilia -> None
+pilot  trajectories containing a verbatim repeated call :   2 of  30 (6.7%)
+main   trajectories containing a verbatim repeated call :   7 of 200 (3.5%)
+and among trajectories that did meet a not-found return:
+   pilot  1 of 9 repeated a call
+   main   6 of 108 repeated a call
+=== for the manuscript ===
+same backbone, same decoding, same six-action budget in both corpora
+pilot: 9 of 30 trajectories meet a not-found return (30%), and it holds 2 planning loops
+main : 108 of 200 (54%), and it holds none
+main-run trajectories with a verbatim repeated call:
+   t134   label F3   5 steps
+      knowledge_base   population de lyon             -> 520000
+      knowledge_base   population de barcelona        -> Information non trouv�e
+      knowledge_base   population de barcelona        -> Information non trouv�e
+      None             None                           -> Erreur: outil inconnu 'None'
+      finish           Je suis d�sol�, mais je ne peu -> None
+   t149   label F3   5 steps
+      knowledge_base   population of Naples           -> 960000
+      knowledge_base   population of Barcelona        -> Information non trouv�e
+      knowledge_base   population of Barcelona        -> Information non trouv�e
+      calculator       960000 + (1/2)*960000          -> 1440000.0
+      finish           La population moyenne de Naple -> None
+   t167   label F3   6 steps
+      knowledge_base   ville la plus peupl�e (Barcelo -> Information non trouv�e
+      knowledge_base   ville la plus peupl�e (Montrea -> Information non trouv�e
+      calculator       population de Barcelone - popu -> Erreur: invalid syntax (<string>, line 1
+      calculator       population de Barcelone - popu -> Erreur: invalid syntax (<string>, line 1
+      knowledge_base   population de Barcelone        -> 1620000
+      knowledge_base   population de Toronto          -> Information non trouv�e
+   t172   label F3   6 steps
+      knowledge_base   ville la plus peupl�e Osaka    -> Information non trouv�e
+      knowledge_base   ville la plus peupl�e Barcelon -> Information non trouv�e
+      calculator       (population de Barcelone - pop -> Erreur: invalid syntax. Perhaps you forg
+      calculator       ((population de Barcelone - po -> Erreur: invalid syntax. Perhaps you forg
+      calculator       ((population de Barcelone - po -> Erreur: invalid syntax. Perhaps you forg
+      None             None                           -> Erreur: outil inconnu 'None'
+   t174   label S    6 steps
+      knowledge_base   population de Montreal         -> 1700000
+      knowledge_base   population de Mumbai           -> 12440000
+      calculator       12440000 - 1700000             -> 10740000
+      None             None                           -> Erreur: outil inconnu 'None'
+      calculator       12440000 - 1700000             -> 10740000
+      finish           La ville la plus peupl�e est M -> None
+   t183   label F7   6 steps
+      knowledge_base   population of London           -> Information non trouv�e
+      knowledge_base   population of Naples           -> 960000
+      calculator       960000 - 875423                -> 84577
+      None             None                           -> Erreur: outil inconnu 'None'
+      calculator       960000 - 875423                -> 84577
+      None             None                           -> Erreur: outil inconnu 'None'
+   t189   label F3   6 steps
+      knowledge_base   population athens              -> Information non trouv�e
+      knowledge_base   population barcelona           -> Information non trouv�e
+      calculator       (athens_population - barcelona -> Erreur: name 'athens_population' is not 
+      knowledge_base   population of athens           -> Information non trouv�e
+      knowledge_base   population of barcelona        -> Information non trouv�e
+      calculator       (athens_population - barcelona -> Erreur: name 'athens_population' is not 
+their labels: [('F3', 5), ('S', 1), ('F7', 1)]
+near-repetition is what the duplicate test measures; verbatim repetition is stricter.

@@ -1,0 +1,55 @@
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+judge prompt and metric loaded from the released tag
+generation kwargs: {'max_new_tokens': 250, 'do_sample': False}
+trajectories: 200 | facts: 28 | cities absent by design: 6
+cuda devices: 2
+--- prompt as the published builder renders it, first 1200 chars ---
+Tu es un annotateur expert qui classe les trajectoires d'un agent LLM selon leur mode d'echec.
+TAXONOMIE : S=succes ; F1=mauvais outil (inexistant/inadapte) ; F2=hallucination d'argument (invente une valeur absente, sans la reutiliser) ; F3=mauvaise interpretation (lit mal / reponse partielle / echec retrieval d'info presente / erreur de calcul) ; F4=boucle (repete la meme requete) ; F5=terminaison prematuree (finish vide/incomplet) ; F6=incoherence inter-etapes (se contredit) ; F7=cascade (valeur inventee pour une donnee ABSENTE, utilisee comme entree d'un calcul).
+REGLE : code = premiere erreur observable. Aucune erreur -> S. Refus honnete face a info reellement absente -> S. Echec de recuperation d'une info presente -> F3.
+VERITE-TERRAIN :
+  - capitale france = Paris (CORRECTE)
+TRAJECTOIRE :
+Tache : Quelle est la capitale de france ?
+Etapes :
+  Etape 1: Action=knowledge_base, Input="capitale de France" -> Obs: Paris
+  Etape 2: Action=None, Input="None" -> Obs: Erreur: outil inconnu 'None'
+  Etape 3: Action=finish, Input="Paris"
+Reponds UNIQUEMENT en JSON : {"justification":"<raisonne d'abord>","confidence":"<high ou low>","code":"<S ou F1-F7>"}
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+tiiuae/Falcon3-7B-Instruct loaded in 110 s
+device map spread over 2 devices
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer TokenizersBackend. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer TokenizersBackend. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+ 25/200  125 s elapsed
+ 50/200  193 s elapsed
+ 75/200  272 s elapsed
+100/200  338 s elapsed
+125/200  428 s elapsed
+150/200  536 s elapsed
+175/200  659 s elapsed
+200/200  799 s elapsed
+done in 799 s
+replies with no parseable code: 0
+Falcon3-7B-Instruct against the first annotator's labels, 200 trajectories
+   raw agreement 57/200 = 28.5%
+   Cohen's kappa (lenient convention) 0.038
+   published Qwen 2.5 7B result for comparison: 0.115
+distribution of the codes it assigns: {'S': 124, 'F1': 43, 'F3': 17, 'F5': 9, 'F6': 3, 'F4': 2, 'F7': 2}
+distribution of the human labels     : {'S': 72, 'F3': 69, 'F2': 21, 'F7': 18, 'F5': 13, 'F6': 7}
+cluster bootstrap 95% interval: [-0.037, 0.118]
+per mode, matched against the first annotator
+   F2   21 human, matched   0  (0%)
+   F3   69 human, matched   7  (10%)
+   F5   13 human, matched   1  (8%)
+   F6    7 human, matched   0  (0%)
+   F7   18 human, matched   2  (11%)
+   S    72 human, matched  47  (65%)
+=== for the manuscript ===
+Falcon3-7B-Instruct, same prompt, same rules, same 200 trajectories
+raw agreement 28.5%, kappa 0.038, interval [-0.037, 0.118]
+Qwen 2.5 7B, published: raw 30.0%, kappa 0.115

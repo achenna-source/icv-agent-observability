@@ -1,0 +1,40 @@
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+200 trajectories, 128 failures, 72 successes
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+flagged by each primitive: schema 62, schema-exempt 21, duplicate 2, numeric 38
+CHECK: B or C reproduces the paper, tp 68, fp 25, precision 0.731, coverage 0.531
+combination                          tp   fp    prec     cov      F1      MCC
+------------------------------------------------------------------------------
+schema                               37   25   0.597   0.289   0.389   -0.060
+duplicate                             2    0   1.000   0.016   0.031   +0.075
+numeric                              38    0   1.000   0.297   0.458   +0.363
+schema + duplicate                   38   25   0.603   0.297   0.398   -0.052
+schema + numeric                     68   25   0.731   0.531   0.615   +0.177
+duplicate + numeric                  39    0   1.000   0.305   0.467   +0.369
+schema + duplicate + numeric         68   25   0.731   0.531   0.615   +0.177
+with the recovered-detour exemption applied to the schema check:
+schema-exempt                        21    0   1.000   0.164   0.282   +0.257
+schema-exempt + numeric              59    0   1.000   0.461   0.631   +0.485
+schema-exempt + duplicate + numeric   59    0   1.000   0.461   0.631   +0.485
+marginal contribution, failures caught that the other two miss:
+   schema     adds 29 true positives and 25 false alarms
+   duplicate  adds  0 true positives and  0 false alarms
+   numeric    adds 30 true positives and  0 false alarms
+overlap between duplicate and numeric:
+   trajectories flagged by duplicate: 2, of which also by numeric: 1
+mode        n    schema   duplicate   numeric     union
+F2         21         0           0        12        12
+F3         69        11           0        12        22
+F5         13        13           1         0        13
+F6          7         6           0         1         6
+F7         18         7           1        13        15
+=== for the manuscript ===
+schema                   tp 37, fp 25, precision 0.597, coverage 0.289, MCC -0.060
+duplicate                tp  2, fp  0, precision 1.000, coverage 0.016, MCC +0.075
+numeric                  tp 38, fp  0, precision 1.000, coverage 0.297, MCC +0.363
+schema + duplicate       tp 38, fp 25, precision 0.603, coverage 0.297, MCC -0.052
+schema + numeric         tp 68, fp 25, precision 0.731, coverage 0.531, MCC +0.177
+duplicate + numeric      tp 39, fp  0, precision 1.000, coverage 0.305, MCC +0.369
+schema + duplicate + numeric tp 68, fp 25, precision 0.731, coverage 0.531, MCC +0.177

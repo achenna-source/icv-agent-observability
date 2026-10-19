@@ -234,6 +234,129 @@ def main(full=False):
     ok_all &= check("main coverage standardised to pilot mix", round(std, 3), 0.751)
     ok_all &= check("main coverage observed", round(68 / NF, 3), 0.531)
 
+    # The other judge configurations. Each stored file holds the codes one judge
+    # assigned, one per trajectory in corpus order; the coefficient and its interval are
+    # recomputed here by the released metric rather than read back from a summary, so a
+    # wrong scoring convention would show up as a mismatch instead of agreeing with
+    # itself. Generating the predictions needs a GPU, which is why they are shipped.
+    print("\n=== Revision R1: Section VI.B, the other judge configurations ===")
+    _valid = set(hum)
+    _items = lambda pred: [(c, (h, p)) for c, h, p in zip(clusters, hum, pred)]
+    _kap = lambda pred: kappa_lenient([h for h, _ in pred], [p for _, p in pred], _valid)
+
+    def judge_config(preds, label, p_agree, p_kappa, p_lo, p_hi, counts=()):
+        """Score one stored prediction vector against the first annotator's labels."""
+        pred = [p if p else "UNPARSED" for p in preds]
+        good = check("%s, agreement" % label,
+                     sum(1 for a, b in zip(hum, pred) if a == b), p_agree)
+        good &= check("%s, kappa" % label,
+                      round(_kap(list(zip(hum, pred))), 3), p_kappa)
+        lo, hi, _ = cluster_bootstrap(_items(pred), _kap)
+        good &= check("  %s, cluster CI low" % label, round(lo, 3), p_lo)
+        good &= check("  %s, cluster CI high" % label, round(hi, 3), p_hi)
+        seen = Counter(pred)
+        for code, paper_n in counts:
+            good &= check("  %s, assigns %s" % (label, code), seen.get(code, 0), paper_n)
+        return good
+
+    _falcon = os.path.join(HERE, "results", "judge_falcon3_7b.json")
+    if os.path.exists(_falcon):
+        with open(_falcon, encoding="utf-8") as _f:
+            _fal = json.load(_f)
+        ok_all &= check("Falcon3 file, model",
+                        _fal["model"] == "tiiuae/Falcon3-7B-Instruct", True)
+        ok_all &= judge_config(_fal["preds"], "Falcon3-7B zero-shot",
+                               57, 0.038, -0.037, 0.118, counts=(("F1", 43),))
+    else:
+        print("     results/judge_falcon3_7b.json absent; second family skipped")
+
+    _sweep = os.path.join(HERE, "results", "judge_sweep.json")
+    if os.path.exists(_sweep):
+        with open(_sweep, encoding="utf-8") as _f:
+            _sw = {r["tag"]: r for r in json.load(_f)}
+        # The paper's figures for the two configurations the sweep contributes. The 14B
+        # point is absent on purpose: it did not fit in two 16 GB accelerators in half
+        # precision, and Section VI.B reports that rather than a quantised substitute.
+        _expect = {"3B zero-shot": (57, 0.100, 0.012, 0.196, ()),
+                   "7B few-shot": (78, 0.238, 0.122, 0.357,
+                                   (("S", 66), ("F3", 34), ("F7", 49)))}
+        for _tag, (_a, _k, _lo, _hi, _cnt) in _expect.items():
+            if _tag in _sw:
+                ok_all &= judge_config(_sw[_tag]["preds"], "Qwen 2.5 " + _tag,
+                                       _a, _k, _lo, _hi, counts=_cnt)
+            else:
+                print("     %s absent from the sweep file" % _tag)
+        if "7B few-shot set B" in _sw:
+            # The priming control: the same prompt with example classes drawn from
+            # elsewhere in the taxonomy. Section VI.B names it as the measurement the
+            # few-shot result still needs, so it is scored when present and its absence
+            # is stated rather than passed over.
+            _b = _sw["7B few-shot set B"]
+            print("     priming control present: agreement %d, kappa %.3f"
+                  % (_b["agreement"], _b["kappa"]))
+        else:
+            print("     priming control not run; Section VI.B reports it as the")
+            print("     measurement the few-shot result still needs")
+    else:
+        print("     results/judge_sweep.json absent; scale and few-shot skipped")
+
+    # The cutoff sweep of Section VI.C. The duplicate test is the only part of the
+    # framework that needs the encoder, so the whole sweep is derived from one pass of
+    # maximum pairwise similarities rather than from eight passes of tier2: the test is
+    # a threshold on that maximum, so the two are the same predicate.
+    print("\n=== Revision R1: Section VI.C, the 0.80 to 0.99 cutoff sweep ===")
+    if enc_r1 is None:
+        print("     encoder unavailable; the sweep needs it and is skipped")
+    else:
+        import numpy as _np
+        _contra = [tier2(r["trajectory"], encoder=None)[2] for r in corpus]
+        _maxsim = []
+        for _r in corpus:
+            _st = _r["trajectory"]
+            if len(_st) < 2:
+                _maxsim.append(0.0)
+                continue
+            _tx = ["%s %s %s" % (s.get("thought", ""), s.get("action", ""),
+                                 s.get("input", "")) for s in _st]
+            _e = enc_r1.encode([t.strip() for t in _tx], normalize_embeddings=True)
+            _g = _e @ _e.T
+            _np.fill_diagonal(_g, -1.0)
+            _maxsim.append(float(_g.max()))
+        # cutoff -> trajectories the duplicate test flags, union coverage, union precision
+        _paper = {0.80: (37, 0.586, 0.714), 0.85: (27, 0.562, 0.713),
+                  0.88: (16, 0.547, 0.737), 0.90: (12, 0.531, 0.731),
+                  0.92: (2, 0.531, 0.731), 0.95: (2, 0.531, 0.731),
+                  0.98: (1, 0.531, 0.731), 0.99: (1, 0.531, 0.731)}
+        for _t in sorted(_paper):
+            _dup = [s > _t for s in _maxsim]
+            _un = [Br1[i] or _contra[i] or _dup[i] for i in range(200)]
+            _tp = sum(1 for i in range(200) if _un[i] and fail[i])
+            _fp = sum(1 for i in range(200) if _un[i] and not fail[i])
+            _n, _cov, _prec = _paper[_t]
+            ok_all &= check("cutoff %.2f, duplicate flags" % _t, sum(_dup), _n)
+            ok_all &= check("  cutoff %.2f, union coverage" % _t,
+                            round(_tp / NF, 3), _cov)
+            ok_all &= check("  cutoff %.2f, union precision" % _t,
+                            round(_tp / (_tp + _fp), 3), _prec)
+        _top = sorted(_maxsim, reverse=True)[:10]
+        print("     ten highest maximum pairwise similarities: %s"
+              % " ".join("%.3f" % v for v in _top))
+        ok_all &= check("highest similarity", round(_top[0], 3), 1.000)
+        ok_all &= check("second highest", round(_top[1], 3), 0.960)
+        ok_all &= check("third highest, where the cluster starts",
+                        round(_top[2], 3), 0.919)
+
+    # The ToolBench audit of Section VI.E is deliberately not checked here. Its corpus
+    # is an external release of about twenty thousand trajectories that this artifact
+    # does not redistribute, so there is nothing local to recompute from. The notebook
+    # that produced every figure is in code/experiments/toolbench_audit.ipynb and its
+    # full output is in results/toolbench_audit_run.log; comparing the paper with that
+    # log would compare one record of the run with another, which is not a check.
+    print("\n=== Revision R1: Section VI.E, the ToolBench audit ===")
+    print("     not checkable from this tree: the corpus is an external release that")
+    print("     this artifact does not redistribute. See")
+    print("     code/experiments/toolbench_audit.ipynb and")
+    print("     results/toolbench_audit_run.log, which holds the figures as printed.")
 
     # The 32B scale and language control belongs to a companion manuscript. Its
     # result files are outside the scope of the Neurocomputing submission tag, so the
