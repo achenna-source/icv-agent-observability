@@ -1,0 +1,181 @@
+{
+  "question": "What separates F2 from F3 in the reference labels, given that the argument criterion cannot?",
+  "argument_criterion": {
+    "trajectories_with_an_invented_number_in_a_retrieval_argument": 15,
+    "their_reference_labels": {
+      "F3": 9,
+      "F5": 1,
+      "F6": 1,
+      "F7": 4
+    },
+    "reference_F2_total": 21,
+    "reference_F2_matching_the_argument_criterion": 0
+  },
+  "cross_tabulation": {
+    "invented_False__anchored_True": {
+      "S": 30,
+      "F5": 1,
+      "F3": 4,
+      "F6": 4,
+      "F7": 2
+    },
+    "invented_False__anchored_False": {
+      "S": 40,
+      "F6": 3,
+      "F5": 12,
+      "F3": 34,
+      "F2": 4,
+      "F7": 3
+    },
+    "invented_True__anchored_False": {
+      "S": 2,
+      "F3": 6,
+      "F2": 17,
+      "F7": 13
+    },
+    "invented_True__anchored_True": {
+      "F3": 25
+    }
+  },
+  "the_rule_the_reference_actually_applied": {
+    "wholly_invented_answer": {
+      "n": 38,
+      "labels": {
+        "S": 2,
+        "F3": 6,
+        "F2": 17,
+        "F7": 13
+      },
+      "share_F2": 0.447
+    },
+    "partly_grounded_answer_with_an_invented_part": {
+      "n": 25,
+      "labels": {
+        "F3": 25
+      },
+      "share_F3": 1.0
+    },
+    "statement": "On the trajectories whose final answer asserts a number no observation returned, the reference uses F2 when nothing in the answer is grounded and F3 when part of it is. Neither the pivot test nor the position of the invented value distinguishes them, and the name of F2, tool argument hallucination, does not describe them."
+  },
+  "the_twelve_in_the_sample": {
+    "t075": {
+      "reference": "F3",
+      "invented_in_answer": true,
+      "anchored_in_answer": true,
+      "invented_in_a_tool_argument": false
+    },
+    "t063": {
+      "reference": "F2",
+      "invented_in_answer": true,
+      "anchored_in_answer": false,
+      "invented_in_a_tool_argument": false
+    },
+    "t050": {
+      "reference": "F2",
+      "invented_in_answer": true,
+      "anchored_in_answer": false,
+      "invented_in_a_tool_argument": false
+    },
+    "t091": {
+      "reference": "F3",
+      "invented_in_answer": true,
+      "anchored_in_answer": true,
+      "invented_in_a_tool_argument": false
+    },
+    "t052": {
+      "reference": "F2",
+      "invented_in_answer": true,
+      "anchored_in_answer": false,
+      "invented_in_a_tool_argument": false
+    },
+    "t056": {
+      "reference": "F2",
+      "invented_in_answer": true,
+      "anchored_in_answer": false,
+      "invented_in_a_tool_argument": false
+    },
+    "t092": {
+      "reference": "F3",
+      "invented_in_answer": true,
+      "anchored_in_answer": true,
+      "invented_in_a_tool_argument": false
+    },
+    "t094": {
+      "reference": "F3",
+      "invented_in_answer": true,
+      "anchored_in_answer": true,
+      "invented_in_a_tool_argument": false
+    },
+    "t051": {
+      "reference": "F2",
+      "invented_in_answer": true,
+      "anchored_in_answer": false,
+      "invented_in_a_tool_argument": false
+    },
+    "t068": {
+      "reference": "F2",
+      "invented_in_answer": true,
+      "anchored_in_answer": false,
+      "invented_in_a_tool_argument": false
+    },
+    "t081": {
+      "reference": "F3",
+      "invented_in_answer": true,
+      "anchored_in_answer": true,
+      "invented_in_a_tool_argument": false
+    },
+    "t082": {
+      "reference": "F3",
+      "invented_in_answer": true,
+      "anchored_in_answer": true,
+      "invented_in_a_tool_argument": false
+    },
+    "rule_reproduces": "12 of 12"
+  },
+  "template_confound": {
+    "by_template": {
+      "T1|unanchored": {
+        "S": 2,
+        "F3": 2
+      },
+      "T2|unanchored": {
+        "F2": 17
+      },
+      "T3|anchored": {
+        "F3": 25
+      },
+      "T5|unanchored": {
+        "F3": 1
+      },
+      "T6|unanchored": {
+        "F3": 2
+      },
+      "T7|unanchored": {
+        "F7": 13,
+        "F3": 1
+      }
+    },
+    "invented_and_anchored_templates": [
+      "T3"
+    ],
+    "reference_F2_templates": [
+      "T2"
+    ],
+    "reference_F7_templates": [
+      "T7"
+    ],
+    "statement": "The anchoring rule separates the templates the two cells come from, so it reproduces the labels without putting the categories in competition. It is a documentation fix, not an established boundary."
+  },
+  "quoted_counts_hold": {
+    "inventees et ancrees, total": 25,
+    "inventees et ancrees, etiquetees F3": 25,
+    "inventees non ancrees, total": 38,
+    "inventees non ancrees, F2": 17,
+    "inventees non ancrees, F7": 13,
+    "inventees non ancrees, F3": 6,
+    "inventees non ancrees, S": 2,
+    "F2 de la reference": 21,
+    "F2 avec un nombre inexistant dans un argument": 0,
+    "trajectoires avec un nombre inexistant dans un argument": 15
+  }
+}

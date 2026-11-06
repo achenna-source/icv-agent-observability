@@ -1,0 +1,24 @@
+{
+ "what_this_is": "The 200 trajectories of the study regenerated with a second agent backbone, everything else held fixed and taken from the released artefact. No labels: this corpus tests how the signals behave on another backbone, not whether the taxonomy transfers.",
+ "model": "tiiuae/Falcon3-7B-Instruct",
+ "original_model": "Qwen/Qwen2.5-1.5B-Instruct",
+ "deliberate_difference": "each model is prompted through its own chat template, since presenting this model with a prompt written for Qwen would handicap it for an unrelated reason",
+ "also_a_judge_in_the_paper": "this model is used as a second judge on the original corpus; the corpus produced here is new and the judge comparison is scored on the original one, so the roles do not overlap",
+ "frozen": {
+  "system_prompt_sha256": "abf267d5740dd1be0755cfe8d1811aeb28654d2a7dc271339c0965e42b470e12",
+  "tasks_sha256": "544dc6765ff68fa1b5a8b20d3d50613aea2e031056abd59ac69f9e5ecf14d2bf",
+  "tools": [
+   "knowledge_base",
+   "calculator"
+  ],
+  "max_steps": 6,
+  "max_new_tokens": 150,
+  "decoding": "greedy, do_sample=False"
+ },
+ "steps": {
+  "mean": 4.52,
+  "at_budget": 82
+ },
+ "no_finish": 81,
+ "unknown_tool_steps": 16
+}

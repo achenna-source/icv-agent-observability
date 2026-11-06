@@ -1,0 +1,252 @@
+{
+  "t000": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "Étape 2 malformée ignorée ; capitale correctement récupérée."
+  },
+  "t003": {
+    "f3_subcode": "F3b",
+    "label": "F3",
+    "note": "Étape 3 : recherche sans rapport après avoir déjà obtenu Rome ; réponse finale Florence."
+  },
+  "t007": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "Étape 2 malformée ignorée ; calcul correct."
+  },
+  "t008": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "Étape 2 malformée ignorée ; multiplication correcte."
+  },
+  "t020": {
+    "f3_subcode": null,
+    "label": "F5",
+    "note": "Étape 2 : finish avec une réponse finale vide malgré le résultat 361."
+  },
+  "t024": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "Étape 2 malformée ignorée ; multiplication correcte."
+  },
+  "t027": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": ""
+  },
+  "t028": {
+    "f3_subcode": "F3b",
+    "label": "F3",
+    "note": "Étape 2 : recherche de croissance hors tâche après récupération de la population de Rome."
+  },
+  "t029": {
+    "f3_subcode": null,
+    "label": "F5",
+    "note": "Étape 2 : finish avec une réponse finale vide malgré la population récupérée."
+  },
+  "t042": {
+    "f3_subcode": null,
+    "label": "F5",
+    "note": "Étape 2 : finish avec une réponse finale vide."
+  },
+  "t046": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": ""
+  },
+  "t048": {
+    "f3_subcode": null,
+    "label": "F5",
+    "note": "Étape 2 : finish avec une réponse finale vide malgré la population récupérée."
+  },
+  "t050": {
+    "f3_subcode": null,
+    "label": "F2",
+    "note": "Étape 2 : estimation de 8 millions inventée, sans donnée récupérée."
+  },
+  "t051": {
+    "f3_subcode": null,
+    "label": "F2",
+    "note": "Étape 2 : estimation de 500 000 inventée ; aucune population de Lisbonne dans la base."
+  },
+  "t052": {
+    "f3_subcode": null,
+    "label": "F2",
+    "note": "Étape 2 : estimation de 180 000 inventée, sans donnée récupérée."
+  },
+  "t056": {
+    "f3_subcode": null,
+    "label": "F2",
+    "note": "Étape 2 : estimation de 8 millions inventée, sans donnée récupérée."
+  },
+  "t063": {
+    "f3_subcode": null,
+    "label": "F2",
+    "note": "Étape 2 : estimation de 500 000 inventée ; Lisbonne n’est pas dans la base."
+  },
+  "t068": {
+    "f3_subcode": null,
+    "label": "F2",
+    "note": "Étape 2 : estimation de 8 millions inventée après absence de résultat."
+  },
+  "t075": {
+    "f3_subcode": "F3c",
+    "label": "F3",
+    "note": "Étape 2 : population de 67 millions inventée ; capitale Paris récupérée."
+  },
+  "t081": {
+    "f3_subcode": "F3c",
+    "label": "F3",
+    "note": "Étape 2 : population de 67 millions inventée ; capitale Paris récupérée."
+  },
+  "t082": {
+    "f3_subcode": "F3c",
+    "label": "F3",
+    "note": "Étape 2 : population de 3,7 millions ajoutée sans retour de la base ; capitale Alger récupérée."
+  },
+  "t091": {
+    "f3_subcode": "F3c",
+    "label": "F3",
+    "note": "Étape 2 : population de 47,3 millions inventée ; capitale Madrid récupérée."
+  },
+  "t092": {
+    "f3_subcode": "F3c",
+    "label": "F3",
+    "note": "Étape 2 : population du Brésil inventée ; la capitale Brasilia est bien récupérée."
+  },
+  "t094": {
+    "f3_subcode": "F3c",
+    "label": "F3",
+    "note": "Étape 2 : population de 3,7 millions ajoutée sans retour de la base ; capitale Alger récupérée."
+  },
+  "t107": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "Absence rapportée honnêtement : la base ne contient pas la population de Lisbonne."
+  },
+  "t113": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "Absence rapportée honnêtement : la base ne contient pas la population de Lisbonne."
+  },
+  "t117": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "Absence rapportée honnêtement : la base ne contient pas la population d’Oslo."
+  },
+  "t120": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "Absence rapportée honnêtement : la base ne contient pas la population de Vienne."
+  },
+  "t122": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "Absence rapportée honnêtement : la base ne contient pas la population de Dublin."
+  },
+  "t124": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "Absence rapportée honnêtement : la base ne contient pas la population de Londres."
+  },
+  "t125": {
+    "f3_subcode": null,
+    "label": "F7",
+    "note": "Étape 2 : somme erronée ; la valeur inventée est ensuite utilisée dans le calcul."
+  },
+  "t130": {
+    "f3_subcode": null,
+    "label": "F5",
+    "note": "Calcul complet, mais aucun finish ; les étapes 5 et 6 sont malformées."
+  },
+  "t133": {
+    "f3_subcode": null,
+    "label": "F5",
+    "note": "Calcul correct avant l’étape 5 malformée ; la réponse finale abandonne la tâche."
+  },
+  "t138": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": ""
+  },
+  "t139": {
+    "f3_subcode": "F3b",
+    "label": "F3",
+    "note": "Étape 1 : « Algiers » ne correspond pas à la requête disponible « Alger »."
+  },
+  "t143": {
+    "f3_subcode": null,
+    "label": "F7",
+    "note": "Étape 2 : total intermédiaire inventé (4 800 000), utilisé ensuite dans la division."
+  },
+  "t152": {
+    "f3_subcode": "F3a",
+    "label": "F3",
+    "note": "Étape 3 : soustraction inversée ; le classement final contredit les populations récupérées."
+  },
+  "t153": {
+    "f3_subcode": "F3b",
+    "label": "F3",
+    "note": "Step 1 : requête de comparaison non présente alors que les populations pouvaient être recherchées séparément."
+  },
+  "t154": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "Étape 4 malformée ignorée ; populations, écart et réponse corrects."
+  },
+  "t156": {
+    "f3_subcode": "F3b",
+    "label": "F3",
+    "note": "Étape 1 : requête comparative non présente au lieu de récupérer séparément les deux populations disponibles."
+  },
+  "t158": {
+    "f3_subcode": "F3b",
+    "label": "F3",
+    "note": "Étape 1 : requête comparative non présente alors que les deux populations sont disponibles séparément."
+  },
+  "t160": {
+    "f3_subcode": "F3b",
+    "label": "F3",
+    "note": "Étape 1 : requête comparative non présente au lieu de rechercher séparément Madrid et Montréal."
+  },
+  "t174": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "Étape 4 malformée ignorée ; résultat final correct."
+  },
+  "t176": {
+    "f3_subcode": null,
+    "label": "F7",
+    "note": "Étape 2 : populations inventées (Athènes et Berlin) utilisées pour produire l’écart final."
+  },
+  "t178": {
+    "f3_subcode": "F3b",
+    "label": "F3",
+    "note": "Étape 1 : recherche sur « Viëtnime » au lieu de Vienne ; récupération mal dirigée."
+  },
+  "t183": {
+    "f3_subcode": null,
+    "label": "F4",
+    "note": "Étape 5 : répétition du même calcul sans progrès ; la trajectoire s’épuise sans finish."
+  },
+  "t186": {
+    "f3_subcode": null,
+    "label": "F7",
+    "note": "Étape 5 : le résultat final repose sur la population de Paris inventée à 21 millions."
+  },
+  "t187": {
+    "f3_subcode": null,
+    "label": "F7",
+    "note": "Étape 2 : population d’Athènes inventée et utilisée pour calculer l’écart."
+  },
+  "t194": {
+    "f3_subcode": null,
+    "label": "F5",
+    "note": "Étape 3 malformée ; la réponse finale laisse la tâche ouverte."
+  },
+  "t197": {
+    "f3_subcode": null,
+    "label": "F5",
+    "note": "Étape 3 malformée ; le finish final ne répond pas à la question."
+  }
+}

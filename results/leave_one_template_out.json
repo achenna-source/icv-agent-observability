@@ -1,0 +1,430 @@
+{
+  "template_only_control": {
+    "accuracy": 0.86,
+    "corpus_majority": 0.64
+  },
+  "within_template": {
+    "B, schema validation": {
+      "T0": {
+        "tp": 3,
+        "fp": 21,
+        "fn": 0,
+        "tn": 1,
+        "precision": 0.125,
+        "recall": 1.0,
+        "mcc": 0.075
+      },
+      "T1": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 6,
+        "tn": 11,
+        "precision": 1.0,
+        "recall": 0.571,
+        "mcc": 0.608
+      },
+      "T2": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 21,
+        "tn": 4,
+        "precision": null,
+        "recall": 0.0,
+        "mcc": 0.0
+      },
+      "T3": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 25,
+        "tn": 0,
+        "precision": null,
+        "recall": 0.0,
+        "mcc": 0.0
+      },
+      "T4": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 25,
+        "precision": null,
+        "recall": null,
+        "mcc": 0.0
+      },
+      "T5": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 12,
+        "tn": 5,
+        "precision": 1.0,
+        "recall": 0.4,
+        "mcc": 0.343
+      },
+      "T6": {
+        "tp": 7,
+        "fp": 4,
+        "fn": 13,
+        "tn": 1,
+        "precision": 0.636,
+        "recall": 0.35,
+        "mcc": -0.363
+      },
+      "T7": {
+        "tp": 11,
+        "fp": 0,
+        "fn": 14,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 0.44,
+        "mcc": 0.0
+      }
+    },
+    "B, schema validation :: mean_precision_where_firing": 0.752,
+    "B*, schema with the recovery exemption": {
+      "T0": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "tn": 22,
+        "precision": 1.0,
+        "recall": 0.667,
+        "mcc": 0.799
+      },
+      "T1": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 6,
+        "tn": 11,
+        "precision": 1.0,
+        "recall": 0.571,
+        "mcc": 0.608
+      },
+      "T2": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 21,
+        "tn": 4,
+        "precision": null,
+        "recall": 0.0,
+        "mcc": 0.0
+      },
+      "T3": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 25,
+        "tn": 0,
+        "precision": null,
+        "recall": 0.0,
+        "mcc": 0.0
+      },
+      "T4": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 25,
+        "precision": null,
+        "recall": null,
+        "mcc": 0.0
+      },
+      "T5": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 17,
+        "tn": 5,
+        "precision": 1.0,
+        "recall": 0.15,
+        "mcc": 0.185
+      },
+      "T6": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 16,
+        "tn": 5,
+        "precision": 1.0,
+        "recall": 0.2,
+        "mcc": 0.218
+      },
+      "T7": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 21,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 0.16,
+        "mcc": 0.0
+      }
+    },
+    "B*, schema with the recovery exemption :: mean_precision_where_firing": 1.0,
+    "C, consistency": {
+      "T0": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "tn": 22,
+        "precision": 1.0,
+        "recall": 0.333,
+        "mcc": 0.553
+      },
+      "T1": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 14,
+        "tn": 11,
+        "precision": null,
+        "recall": 0.0,
+        "mcc": 0.0
+      },
+      "T2": {
+        "tp": 12,
+        "fp": 0,
+        "fn": 9,
+        "tn": 4,
+        "precision": 1.0,
+        "recall": 0.571,
+        "mcc": 0.419
+      },
+      "T3": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 25,
+        "tn": 0,
+        "precision": null,
+        "recall": 0.0,
+        "mcc": 0.0
+      },
+      "T4": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 25,
+        "precision": null,
+        "recall": null,
+        "mcc": 0.0
+      },
+      "T5": {
+        "tp": 12,
+        "fp": 0,
+        "fn": 8,
+        "tn": 5,
+        "precision": 1.0,
+        "recall": 0.6,
+        "mcc": 0.48
+      },
+      "T6": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 19,
+        "tn": 5,
+        "precision": 1.0,
+        "recall": 0.05,
+        "mcc": 0.102
+      },
+      "T7": {
+        "tp": 13,
+        "fp": 0,
+        "fn": 12,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 0.52,
+        "mcc": 0.0
+      }
+    },
+    "C, consistency :: mean_precision_where_firing": 1.0,
+    "B or C": {
+      "T0": {
+        "tp": 3,
+        "fp": 21,
+        "fn": 0,
+        "tn": 1,
+        "precision": 0.125,
+        "recall": 1.0,
+        "mcc": 0.075
+      },
+      "T1": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 6,
+        "tn": 11,
+        "precision": 1.0,
+        "recall": 0.571,
+        "mcc": 0.608
+      },
+      "T2": {
+        "tp": 12,
+        "fp": 0,
+        "fn": 9,
+        "tn": 4,
+        "precision": 1.0,
+        "recall": 0.571,
+        "mcc": 0.419
+      },
+      "T3": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 25,
+        "tn": 0,
+        "precision": null,
+        "recall": 0.0,
+        "mcc": 0.0
+      },
+      "T4": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 25,
+        "precision": null,
+        "recall": null,
+        "mcc": 0.0
+      },
+      "T5": {
+        "tp": 19,
+        "fp": 0,
+        "fn": 1,
+        "tn": 5,
+        "precision": 1.0,
+        "recall": 0.95,
+        "mcc": 0.89
+      },
+      "T6": {
+        "tp": 7,
+        "fp": 4,
+        "fn": 13,
+        "tn": 1,
+        "precision": 0.636,
+        "recall": 0.35,
+        "mcc": -0.363
+      },
+      "T7": {
+        "tp": 19,
+        "fp": 0,
+        "fn": 6,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 0.76,
+        "mcc": 0.0
+      }
+    },
+    "B or C :: mean_precision_where_firing": 0.793,
+    "B* or C": {
+      "T0": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "tn": 22,
+        "precision": 1.0,
+        "recall": 0.667,
+        "mcc": 0.799
+      },
+      "T1": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 6,
+        "tn": 11,
+        "precision": 1.0,
+        "recall": 0.571,
+        "mcc": 0.608
+      },
+      "T2": {
+        "tp": 12,
+        "fp": 0,
+        "fn": 9,
+        "tn": 4,
+        "precision": 1.0,
+        "recall": 0.571,
+        "mcc": 0.419
+      },
+      "T3": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 25,
+        "tn": 0,
+        "precision": null,
+        "recall": 0.0,
+        "mcc": 0.0
+      },
+      "T4": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 25,
+        "precision": null,
+        "recall": null,
+        "mcc": 0.0
+      },
+      "T5": {
+        "tp": 15,
+        "fp": 0,
+        "fn": 5,
+        "tn": 5,
+        "precision": 1.0,
+        "recall": 0.75,
+        "mcc": 0.612
+      },
+      "T6": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 15,
+        "tn": 5,
+        "precision": 1.0,
+        "recall": 0.25,
+        "mcc": 0.25
+      },
+      "T7": {
+        "tp": 17,
+        "fp": 0,
+        "fn": 8,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 0.68,
+        "mcc": 0.0
+      }
+    },
+    "B* or C :: mean_precision_where_firing": 1.0
+  },
+  "pooled": {
+    "B, schema validation": {
+      "tp": 37,
+      "fp": 25,
+      "fn": 91,
+      "tn": 47,
+      "precision": 0.597,
+      "recall": 0.289,
+      "mcc": -0.06
+    },
+    "B*, schema with the recovery exemption": {
+      "tp": 21,
+      "fp": 0,
+      "fn": 107,
+      "tn": 72,
+      "precision": 1.0,
+      "recall": 0.164,
+      "mcc": 0.257
+    },
+    "C, consistency": {
+      "tp": 39,
+      "fp": 0,
+      "fn": 89,
+      "tn": 72,
+      "precision": 1.0,
+      "recall": 0.305,
+      "mcc": 0.369
+    },
+    "B or C": {
+      "tp": 68,
+      "fp": 25,
+      "fn": 60,
+      "tn": 47,
+      "precision": 0.731,
+      "recall": 0.531,
+      "mcc": 0.177
+    },
+    "B* or C": {
+      "tp": 59,
+      "fp": 0,
+      "fn": 69,
+      "tn": 72,
+      "precision": 1.0,
+      "recall": 0.461,
+      "mcc": 0.485
+    }
+  }
+}

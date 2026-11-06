@@ -18,7 +18,7 @@ import sys
 from collections import Counter, defaultdict
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "code"))
-from signals import tier1, tier1_exempt, tier2                      # noqa: E402
+from signals import TOOLS, tier1, tier1_exempt, tier2, _recovers   # noqa: E402
 from metrics import (wilson, wilson_clustered, design_effect, mcc, balanced_accuracy,
                      kappa_lenient, cluster_bootstrap)                     # noqa: E402
 
@@ -545,6 +545,59 @@ def main(full=False):
             print(f"       {code}: {sum(1 for i in sel if scores[i] < th)}/{len(sel)}")
     else:
         print("     skipped; rerun with --full to download the entailment model")
+
+    print("\n=== Revision R2: the four detection targets, Section VI.C ===")
+    # Le fichier publie est recalcule ici depuis les donnees et le code, pas relu comme
+    # une source de verite : on recompose les quatre cibles et on compare cellule par
+    # cellule. La precision de B et de B ou C contre la cible stricte est analytique,
+    # ce que le fichier declare et que le controle ci-dessous verifie.
+    tpath = os.path.join(HERE, "results", "three_targets.json")
+    if os.path.exists(tpath):
+        with open(tpath, encoding="utf-8") as f:
+            tt = json.load(f)
+        sub = [r.get("label_f3_subcode") for r in corpus]
+        rec_s = []
+        for r in corpus:
+            tr, got = r["trajectory"], False
+            for k, st in enumerate(tr):
+                if st.get("action") is None or st.get("action") not in TOOLS:
+                    got = _recovers(tr[k + 1:])
+                    break
+            rec_s.append(got and r["label_human"] == "S")
+        tgt = {
+            "lenient": fail,
+            "strict": [a or b for a, b in zip(fail, rec_s)],
+            "step-level": [fail[i] and not (hum[i] == "F6" or sub[i] == "F3c")
+                           for i in range(200)],
+            "outcome": None,
+        }
+        ok_all &= check("strict target size", sum(tgt["strict"]), 153)
+        ok_all &= check("step-level target size", sum(tgt["step-level"]), 87)
+        ok_all &= check("recovered malformations labelled S", sum(rec_s), 25)
+        fp_b = sorted(i for i in range(200) if Br1[i] and not fail[i])
+        ok_all &= check("B's lenient false positives are exactly that set",
+                        fp_b == sorted(i for i in range(200) if rec_s[i]), True)
+        sigs = {"B, schema": Br1, "B*, schema with exemption": Bxr1,
+                "C, consistency": Cr1, "B or C": [a or b for a, b in zip(Br1, Cr1)],
+                "B* or C": [a or b for a, b in zip(Bxr1, Cr1)]}
+        n_checked = 0
+        for row in tt["rows"]:
+            if row["target"] == "outcome":
+                continue          # demande le scorer de resultat, voir success_checker
+            flags, target = sigs[row["signal"]], tgt[row["target"]]
+            tp = sum(1 for i in range(200) if flags[i] and target[i])
+            fp = sum(1 for i in range(200) if flags[i] and not target[i])
+            pre = tp / (tp + fp) if tp + fp else 0.0
+            ok_all &= check("%s vs %s: TP" % (row["signal"][:12], row["target"]),
+                            tp, row["tp"])
+            ok_all &= check("%s vs %s: precision" % (row["signal"][:12], row["target"]),
+                            round(pre, 3), row["precision"])
+            n_checked += 1
+        print("       %d cells recomputed; the outcome column is checked by "
+              "success_checker.self_check()" % n_checked)
+    else:
+        print("     results/three_targets.json absent; run "
+              "code/experiments/three_targets.py")
 
     print("\n" + ("all reproduced" if ok_all else "MISMATCHES ABOVE — see MAPPING.md"))
     return 0 if ok_all else 1

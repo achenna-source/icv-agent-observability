@@ -45,8 +45,11 @@ the sole source of its 25 false alarms.
 
 **F2 against F7 on a borderline pivot.** Where it is arguable whether an invented value
 was computed with, readers diverge. Treating the F2 and F7 assignment as one decision
-raises kappa further, to 0.793, but it dissolves the pivot test, so the paper does not
-adopt it.
+raises kappa further, to 0.601, but it dissolves the pivot test, so the paper does not
+adopt it. An earlier version of this file gave 0.793 for that step. The figure was
+wrong: it kept the expected agreement of the seven-category scheme under an observed
+agreement that had already been collapsed. code/experiments/boundary_localisation.py
+recomputes both terms together and prints the whole ladder.
 
 ## What the annotator was and was not given
 

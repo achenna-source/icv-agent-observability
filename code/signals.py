@@ -12,6 +12,8 @@ step embeddings and a numeric contradiction test over the final answer.
 """
 import re
 
+from agent import NOT_FOUND_FORMS
+
 TOOLS = {"knowledge_base", "calculator", "finish"}
 _ARITH = set("0123456789+-*/(). ")
 _NUM = re.compile(r"\d[\d\s]{4,}")
@@ -82,8 +84,9 @@ def tier2(trajectory, encoder=None, threshold=0.92):
                     duplicate = True
     retrieved = set()
     for s in trajectory:
-        if s.get("action") == "knowledge_base" and s.get("observation") not in (
-                None, "Information non trouvée"):
+        if (s.get("action") == "knowledge_base"
+                and s.get("observation") is not None
+                and s.get("observation") not in NOT_FOUND_FORMS):
             retrieved |= _numbers(s.get("observation"))
     last = trajectory[-1]
     if last.get("action") == "finish" and last.get("input"):

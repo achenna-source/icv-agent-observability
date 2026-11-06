@@ -1,0 +1,252 @@
+{
+  "t000": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "Malformed step 2 is set aside; the final answer Paris is correct."
+  },
+  "t003": {
+    "f3_subcode": null,
+    "label": "F1b",
+    "note": "Step 3: an unrelated France-capital lookup is not fit to the Italy-capital sub-goal."
+  },
+  "t007": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "Malformed step 2 is set aside; calculator result is correct."
+  },
+  "t008": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "Malformed step 2 is set aside; 13 × 39 is correctly calculated."
+  },
+  "t020": {
+    "f3_subcode": null,
+    "label": "F5",
+    "note": "Step 2: finish emits an empty final answer."
+  },
+  "t024": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "Malformed step 2 is set aside; 13 × 79 is correctly calculated."
+  },
+  "t027": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "Retrieved Tokyo population is correctly reported with rounding."
+  },
+  "t028": {
+    "f3_subcode": null,
+    "label": "F1b",
+    "note": "Step 2: querying years of growth is unrelated to the requested Rome population."
+  },
+  "t029": {
+    "f3_subcode": null,
+    "label": "F5",
+    "note": "Step 2: finish emits an empty final answer."
+  },
+  "t042": {
+    "f3_subcode": null,
+    "label": "F5",
+    "note": "Step 2: finish emits an empty final answer."
+  },
+  "t046": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "Retrieved population is reported correctly."
+  },
+  "t048": {
+    "f3_subcode": null,
+    "label": "F5",
+    "note": "Step 2: finish emits an empty final answer."
+  },
+  "t050": {
+    "f3_subcode": null,
+    "label": "F2",
+    "note": "Step 2: unsupported London population is merely reported."
+  },
+  "t051": {
+    "f3_subcode": null,
+    "label": "F2",
+    "note": "Step 2: unsupported Lisbon population is merely reported."
+  },
+  "t052": {
+    "f3_subcode": null,
+    "label": "F2",
+    "note": "Step 2: unsupported Vienna population is merely reported."
+  },
+  "t056": {
+    "f3_subcode": null,
+    "label": "F2",
+    "note": "Step 2: unsupported London population is merely reported."
+  },
+  "t063": {
+    "f3_subcode": null,
+    "label": "F2",
+    "note": "Step 2: unsupported Lisbon population is merely reported."
+  },
+  "t068": {
+    "f3_subcode": null,
+    "label": "F2",
+    "note": "Step 2: unsupported London population is merely reported."
+  },
+  "t075": {
+    "f3_subcode": "F3c",
+    "label": "F3",
+    "note": "Step 2: France population is invented; only the capital Paris was retrieved."
+  },
+  "t081": {
+    "f3_subcode": "F3c",
+    "label": "F3",
+    "note": "Step 2: France population is invented; only the capital Paris was retrieved."
+  },
+  "t082": {
+    "f3_subcode": "F3b",
+    "label": "F3",
+    "note": "Step 1: combined query returns only the capital although the Algeria population is separately available."
+  },
+  "t091": {
+    "f3_subcode": "F3c",
+    "label": "F3",
+    "note": "Step 2: Spain population is invented; only the capital Madrid was retrieved."
+  },
+  "t092": {
+    "f3_subcode": "F3c",
+    "label": "F3",
+    "note": "Step 2: population of Brazil is invented; the capital Brasilia is retrieved and reported."
+  },
+  "t094": {
+    "f3_subcode": "F3b",
+    "label": "F3",
+    "note": "Step 1: combined query returns only the capital although the Algeria population is separately available."
+  },
+  "t107": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "The store lacks Lisbon population and the final answer truthfully says so."
+  },
+  "t113": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "The store lacks Lisbon population and the final answer truthfully says so."
+  },
+  "t117": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "The store lacks Oslo population and the final answer truthfully says it is unknown."
+  },
+  "t120": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "The store lacks Vienna population and the final answer truthfully says so."
+  },
+  "t122": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "The store lacks Dublin population and the final answer truthfully says so."
+  },
+  "t124": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "The store lacks London population and the final answer truthfully says so."
+  },
+  "t125": {
+    "f3_subcode": "F3a",
+    "label": "F3",
+    "note": "Step 2: the stated sum 2,680,000 is wrong; retrieved values sum to 2,620,000."
+  },
+  "t130": {
+    "f3_subcode": null,
+    "label": "F5",
+    "note": "Only malformed steps follow the correct calculations; no finish step, so the task remains open."
+  },
+  "t133": {
+    "f3_subcode": null,
+    "label": "F6",
+    "note": "Step 6: final answer says there is insufficient information, contradicting the completed calculation (2,560,000)."
+  },
+  "t138": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "Both populations are retrieved and the average is calculated correctly."
+  },
+  "t139": {
+    "f3_subcode": "F3b",
+    "label": "F3",
+    "note": "Step 1: Algiers lookup misses the available Alger population entry."
+  },
+  "t143": {
+    "f3_subcode": "F3a",
+    "label": "F3",
+    "note": "Step 2: the stated sum 4,800,000 is wrong; retrieved values sum to 4,820,000."
+  },
+  "t152": {
+    "f3_subcode": null,
+    "label": "F3",
+    "note": "Step 4: the comparison reverses the retrieved populations; Berlin, not Osaka, is larger."
+  },
+  "t153": {
+    "f3_subcode": "F3b",
+    "label": "F3",
+    "note": "Step 1: comparison query missed the two available city-population entries."
+  },
+  "t154": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "Malformed step 4 is set aside; final answer matches the retrieved values and calculation."
+  },
+  "t156": {
+    "f3_subcode": "F3b",
+    "label": "F3",
+    "note": "Step 1: comparison query misses population entries available separately for Alger and Madrid."
+  },
+  "t158": {
+    "f3_subcode": "F3b",
+    "label": "F3",
+    "note": "Step 1: comparison query misses the available Alger and Naples population entries."
+  },
+  "t160": {
+    "f3_subcode": "F3b",
+    "label": "F3",
+    "note": "Step 1: comparison query misses the available Madrid and Montreal population entries."
+  },
+  "t174": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "The repeated calculator call is redundant but does not continue until the budget runs out; final result is correct."
+  },
+  "t176": {
+    "f3_subcode": null,
+    "label": "F7",
+    "note": "Step 2: fabricated Athens/Berlin population figures feed the reported difference."
+  },
+  "t178": {
+    "f3_subcode": null,
+    "label": "F7",
+    "note": "Step 3: fabricated Vienna population is used in the subtraction."
+  },
+  "t183": {
+    "f3_subcode": null,
+    "label": "F7",
+    "note": "Step 3: fabricated London population is used to compute the final difference; later None steps are malformed."
+  },
+  "t186": {
+    "f3_subcode": null,
+    "label": "F7",
+    "note": "Step 3: fabricated Oslo population is used to compute the final difference."
+  },
+  "t187": {
+    "f3_subcode": null,
+    "label": "F7",
+    "note": "Step 3: fabricated Athens population is used to compute the final difference."
+  },
+  "t194": {
+    "f3_subcode": "F3c",
+    "label": "F3",
+    "note": "Step 4: final answer blames the malformed None call instead of reporting Vienna's absence; step 3 is malformed."
+  },
+  "t197": {
+    "f3_subcode": "F3c",
+    "label": "F3",
+    "note": "Step 4: final answer blames the malformed None call; London is absent and Barcelona's retrieved value is not given."
+  }
+}

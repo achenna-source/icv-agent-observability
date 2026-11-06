@@ -1,0 +1,65 @@
+{
+  "n_content": 97,
+  "readings": {
+    "F2 read on the tool argument": {
+      "exact": 66,
+      "accuracy": 0.68,
+      "pairs": {
+        "F2/F3": {
+          "n": 90,
+          "correct": 63,
+          "rate": 0.7
+        },
+        "F3/F6": {
+          "n": 76,
+          "correct": 57,
+          "rate": 0.75
+        },
+        "F2/F6": {
+          "n": 28,
+          "correct": 12,
+          "rate": 0.429
+        }
+      }
+    },
+    "F2 read on the final answer": {
+      "exact": 55,
+      "accuracy": 0.567,
+      "pairs": {
+        "F2/F3": {
+          "n": 90,
+          "correct": 52,
+          "rate": 0.578
+        },
+        "F3/F6": {
+          "n": 76,
+          "correct": 34,
+          "rate": 0.447
+        },
+        "F2/F6": {
+          "n": 28,
+          "correct": 24,
+          "rate": 0.857
+        }
+      }
+    }
+  },
+  "best_per_boundary": {
+    "F2/F3": 0.7,
+    "F3/F6": 0.75,
+    "F2/F6": 0.857
+  },
+  "majority_baseline": {
+    "F2/F3": 0.767,
+    "F3/F6": 0.908,
+    "F2/F6": 0.75
+  },
+  "rules": {
+    "F6": "the answer does not use a value the agent had obtained, either by asserting a different value of the same kind or by declining although every retrieval had succeeded",
+    "F2_argument": "a call to a registered tool whose argument introduces a term that neither the task nor any earlier observation supplies",
+    "F2_answer": "the final answer asserts a quantity that no observation supplied",
+    "F3": "neither of the above"
+  },
+  "verdict": "no rule read from the trace reproduces the F2, F3 and F6 boundaries, and on F2 against F3 and F3 against F6 the best rule does worse than assigning the more frequent category, so it carries no information about the boundary",
+  "note": "F2 against F7 is covered by verify_conventions.py, where two readings of the pivot test are refuted on the same corpus."
+}

@@ -1,0 +1,325 @@
+{
+  "counts": {
+    "n": 200,
+    "lenient": 128,
+    "strict": 153,
+    "step_level": 87,
+    "outcome": 119
+  },
+  "notes": {
+    "strict_precision_is_analytic": "The strict target is the lenient target widened by exactly the trajectories B flags and the lenient target forgives, so the precision of B and of B or C against it is 1.000 by construction. Their recalls and all of signal C's figures remain measurements.",
+    "step_level": "Failures whose category is defined by an intermediate step, that is the lenient target without F6 and without the F3c sub-code, partial or ungrounded answer, both of which are judged on the final answer.",
+    "form_defects": {
+      "any_of_the_four_schema_components": 62,
+      "step_naming_no_registered_tool": 49,
+      "recovered_among_those_49": 41,
+      "labelled_S_among_those_41": 25,
+      "missing_or_empty_argument": 10,
+      "unparseable_calculator_expression": 4,
+      "empty_final_answer": 11,
+      "carrying_F1": 0
+    }
+  },
+  "rows": [
+    {
+      "signal": "B, schema",
+      "target": "lenient",
+      "tp": 37,
+      "fp": 25,
+      "precision": 0.597,
+      "recall": 0.289,
+      "f1": 0.389,
+      "mcc": -0.06,
+      "precision_ci": [
+        0.465,
+        0.716
+      ],
+      "precision_analytic": false
+    },
+    {
+      "signal": "B, schema",
+      "target": "strict",
+      "tp": 62,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.405,
+      "f1": 0.577,
+      "mcc": 0.372,
+      "precision_ci": [
+        0.935,
+        1.0
+      ],
+      "precision_analytic": true
+    },
+    {
+      "signal": "B, schema",
+      "target": "step-level",
+      "tp": 28,
+      "fp": 34,
+      "precision": 0.452,
+      "recall": 0.322,
+      "f1": 0.376,
+      "mcc": 0.022,
+      "precision_ci": [
+        0.327,
+        0.582
+      ],
+      "precision_analytic": false
+    },
+    {
+      "signal": "B, schema",
+      "target": "outcome",
+      "tp": 33,
+      "fp": 29,
+      "precision": 0.532,
+      "recall": 0.277,
+      "f1": 0.365,
+      "mcc": -0.086,
+      "precision_ci": [
+        0.403,
+        0.658
+      ],
+      "precision_analytic": false
+    },
+    {
+      "signal": "B*, schema with exemption",
+      "target": "lenient",
+      "tp": 21,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.164,
+      "f1": 0.282,
+      "mcc": 0.257,
+      "precision_ci": [
+        0.798,
+        1.0
+      ],
+      "precision_analytic": false
+    },
+    {
+      "signal": "B*, schema with exemption",
+      "target": "strict",
+      "tp": 21,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.137,
+      "f1": 0.241,
+      "mcc": 0.19,
+      "precision_ci": [
+        0.798,
+        1.0
+      ],
+      "precision_analytic": false
+    },
+    {
+      "signal": "B*, schema with exemption",
+      "target": "step-level",
+      "tp": 20,
+      "fp": 1,
+      "precision": 0.952,
+      "recall": 0.23,
+      "f1": 0.37,
+      "mcc": 0.357,
+      "precision_ci": [
+        0.729,
+        0.993
+      ],
+      "precision_analytic": false
+    },
+    {
+      "signal": "B*, schema with exemption",
+      "target": "outcome",
+      "tp": 21,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.176,
+      "f1": 0.3,
+      "mcc": 0.283,
+      "precision_ci": [
+        0.798,
+        1.0
+      ],
+      "precision_analytic": false
+    },
+    {
+      "signal": "C, consistency",
+      "target": "lenient",
+      "tp": 39,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.305,
+      "f1": 0.467,
+      "mcc": 0.369,
+      "precision_ci": [
+        0.841,
+        1.0
+      ],
+      "precision_analytic": false
+    },
+    {
+      "signal": "C, consistency",
+      "target": "strict",
+      "tp": 39,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.255,
+      "f1": 0.406,
+      "mcc": 0.273,
+      "precision_ci": [
+        0.841,
+        1.0
+      ],
+      "precision_analytic": false
+    },
+    {
+      "signal": "C, consistency",
+      "target": "step-level",
+      "tp": 38,
+      "fp": 1,
+      "precision": 0.974,
+      "recall": 0.437,
+      "f1": 0.603,
+      "mcc": 0.535,
+      "precision_ci": [
+        0.8,
+        0.997
+      ],
+      "precision_analytic": false
+    },
+    {
+      "signal": "C, consistency",
+      "target": "outcome",
+      "tp": 38,
+      "fp": 1,
+      "precision": 0.974,
+      "recall": 0.319,
+      "f1": 0.481,
+      "mcc": 0.38,
+      "precision_ci": [
+        0.8,
+        0.997
+      ],
+      "precision_analytic": false
+    },
+    {
+      "signal": "B or C",
+      "target": "lenient",
+      "tp": 68,
+      "fp": 25,
+      "precision": 0.731,
+      "recall": 0.531,
+      "f1": 0.615,
+      "mcc": 0.177,
+      "precision_ci": [
+        0.611,
+        0.825
+      ],
+      "precision_analytic": false
+    },
+    {
+      "signal": "B or C",
+      "target": "strict",
+      "tp": 93,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.608,
+      "f1": 0.756,
+      "mcc": 0.517,
+      "precision_ci": [
+        0.943,
+        1.0
+      ],
+      "precision_analytic": true
+    },
+    {
+      "signal": "B or C",
+      "target": "step-level",
+      "tp": 59,
+      "fp": 34,
+      "precision": 0.634,
+      "recall": 0.678,
+      "f1": 0.656,
+      "mcc": 0.375,
+      "precision_ci": [
+        0.511,
+        0.742
+      ],
+      "precision_analytic": false
+    },
+    {
+      "signal": "B or C",
+      "target": "outcome",
+      "tp": 63,
+      "fp": 30,
+      "precision": 0.677,
+      "recall": 0.529,
+      "f1": 0.594,
+      "mcc": 0.157,
+      "precision_ci": [
+        0.555,
+        0.78
+      ],
+      "precision_analytic": false
+    },
+    {
+      "signal": "B* or C",
+      "target": "lenient",
+      "tp": 59,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.461,
+      "f1": 0.631,
+      "mcc": 0.485,
+      "precision_ci": [
+        0.898,
+        1.0
+      ],
+      "precision_analytic": false
+    },
+    {
+      "signal": "B* or C",
+      "target": "strict",
+      "tp": 59,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.386,
+      "f1": 0.557,
+      "mcc": 0.359,
+      "precision_ci": [
+        0.898,
+        1.0
+      ],
+      "precision_analytic": false
+    },
+    {
+      "signal": "B* or C",
+      "target": "step-level",
+      "tp": 57,
+      "fp": 2,
+      "precision": 0.966,
+      "recall": 0.655,
+      "f1": 0.781,
+      "mcc": 0.693,
+      "precision_ci": [
+        0.844,
+        0.993
+      ],
+      "precision_analytic": false
+    },
+    {
+      "signal": "B* or C",
+      "target": "outcome",
+      "tp": 58,
+      "fp": 1,
+      "precision": 0.983,
+      "recall": 0.487,
+      "f1": 0.652,
+      "mcc": 0.511,
+      "precision_ci": [
+        0.869,
+        0.998
+      ],
+      "precision_analytic": false
+    }
+  ]
+}

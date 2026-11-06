@@ -1,0 +1,71 @@
+{
+ "what_this_is": "Agreement between two human readers on the source-grounding axis, on the items the axis applies to. Trajectories with no final answer are a mechanical reading and are excluded; arithmetic-only tasks supply their own operands and are outside the axis, excluded from both readers rather than from one. The interval is a cluster bootstrap over task templates.",
+ "readers": [
+  "A",
+  "B"
+ ],
+ "n_total": 200,
+ "n_out_of_scope": 39,
+ "n_judged": 161,
+ "raw_agreement": 0.981,
+ "cohen_kappa": 0.961,
+ "ci_template": [
+  0.897,
+  1.0
+ ],
+ "bootstrap": {
+  "replicates": 10000,
+  "seed": 20261105,
+  "clusters": "task templates"
+ },
+ "cross_tab": {
+  "A=grounded|B=grounded": 94,
+  "A=grounded|B=ungrounded": 1,
+  "A=ungrounded|B=grounded": 2,
+  "A=ungrounded|B=ungrounded": 64
+ },
+ "disagreements": [
+  "t050",
+  "t070",
+  "t149"
+ ],
+ "by_reference_label_where_both_agree": {
+  "F2": {
+   "ungrounded": 19
+  },
+  "F3": {
+   "grounded": 30,
+   "ungrounded": 31
+  },
+  "F5": {
+   "grounded": 1
+  },
+  "F6": {
+   "grounded": 7
+  },
+  "F7": {
+   "ungrounded": 14,
+   "grounded": 2
+  },
+  "S": {
+   "grounded": 54
+  }
+ },
+ "f3_split_where_both_agree": {
+  "ungrounded": 31,
+  "grounded": 30
+ },
+ "f3_subcode_cross": {
+  "F3a/grounded": 8,
+  "F3a/ungrounded": 1,
+  "F3b/grounded": 16,
+  "F3b/ungrounded": 3,
+  "F3c/grounded": 6,
+  "F3c/ungrounded": 27
+ },
+ "identical_notes": 0,
+ "unsure": {
+  "A": 0,
+  "B": 0
+ }
+}

@@ -1,0 +1,56 @@
+{
+ "what_this_is": "The paper's signals scored against the source-grounding axis as a target, the axis being the agreed verdict of two independent human readers. Items the axis does not apply to are excluded, and items the readers disagree on are excluded rather than adjudicated. No language model takes part in the target.",
+ "n_items": 158,
+ "n_positive": 64,
+ "bootstrap": {
+  "replicates": 10000,
+  "seed": 20261105,
+  "clusters": "task templates"
+ },
+ "signals": {
+  "B, schema": {
+   "precision": 0.13,
+   "recall": 0.047,
+   "mcc": -0.231,
+   "false_alarms": 20,
+   "ci_template": [
+    -0.462,
+    -0.015
+   ],
+   "n_bootstrap_valid": 9965
+  },
+  "B*, exempted": {
+   "precision": null,
+   "recall": 0.0,
+   "mcc": NaN,
+   "false_alarms": 0,
+   "ci_template": [
+    null,
+    null
+   ],
+   "n_bootstrap_valid": 0
+  },
+  "C, consistency": {
+   "precision": 0.639,
+   "recall": 0.359,
+   "mcc": 0.259,
+   "false_alarms": 13,
+   "ci_template": [
+    -0.189,
+    0.624
+   ],
+   "n_bootstrap_valid": 9966
+  },
+  "B* or C": {
+   "precision": 0.639,
+   "recall": 0.359,
+   "mcc": 0.259,
+   "false_alarms": 13,
+   "ci_template": [
+    -0.189,
+    0.624
+   ],
+   "n_bootstrap_valid": 9966
+  }
+ }
+}

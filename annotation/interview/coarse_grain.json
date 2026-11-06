@@ -1,0 +1,298 @@
+{
+ "readers": [
+  "A",
+  "C",
+  "E",
+  "K"
+ ],
+ "n_items": 50,
+ "groupings": {
+  "FAB": [
+   "F2",
+   "F6",
+   "F7"
+  ],
+  "INC": [
+   "F3",
+   "F5"
+  ],
+  "note": "F1a and F1b collapse to F1, F4 and S unchanged"
+ },
+ "why": "The corpus draws each fault category from a single task template, so a reliability figure at the fine grain measures template separation in part. The coarse grain is the one this corpus supports. No reference label is rewritten by this analysis.",
+ "bootstrap": {
+  "replicates": 10000,
+  "seed": 20261105,
+  "clusters": "task templates"
+ },
+ "grains": {
+  "fine": {
+   "computed_label": {
+    "n_items": 50,
+    "pairwise": {
+     "A|C": 0.799,
+     "A|E": 0.844,
+     "A|K": 0.871,
+     "C|E": 0.8,
+     "C|K": 0.701,
+     "E|K": 0.767
+    },
+    "mean_pairwise_kappa": 0.797,
+    "fleiss": 0.796,
+    "unanimous": 36,
+    "disputed": [
+     "t003",
+     "t028",
+     "t125",
+     "t133",
+     "t139",
+     "t143",
+     "t152",
+     "t158",
+     "t176",
+     "t178",
+     "t183",
+     "t186",
+     "t194",
+     "t197"
+    ],
+    "vs_reference": {
+     "A": {
+      "kappa": 0.846,
+      "ci_template": [
+       0.721,
+       0.944
+      ]
+     },
+     "C": {
+      "kappa": 0.75,
+      "ci_template": [
+       0.519,
+       0.944
+      ]
+     },
+     "E": {
+      "kappa": 0.743,
+      "ci_template": [
+       0.532,
+       0.917
+      ]
+     },
+     "K": {
+      "kappa": 0.897,
+      "ci_template": [
+       0.772,
+       0.975
+      ]
+     }
+    }
+   },
+   "free_label": {
+    "n_items": 50,
+    "pairwise": {
+     "A|C": 0.822,
+     "A|E": 0.844,
+     "A|K": 0.871,
+     "C|E": 0.823,
+     "C|K": 0.772,
+     "E|K": 0.767
+    },
+    "mean_pairwise_kappa": 0.817,
+    "fleiss": 0.816,
+    "unanimous": 37,
+    "disputed": [
+     "t003",
+     "t028",
+     "t125",
+     "t133",
+     "t139",
+     "t143",
+     "t152",
+     "t176",
+     "t178",
+     "t183",
+     "t186",
+     "t194",
+     "t197"
+    ],
+    "vs_reference": {
+     "A": {
+      "kappa": 0.846,
+      "ci_template": [
+       0.721,
+       0.944
+      ]
+     },
+     "C": {
+      "kappa": 0.798,
+      "ci_template": [
+       0.611,
+       0.944
+      ]
+     },
+     "E": {
+      "kappa": 0.743,
+      "ci_template": [
+       0.532,
+       0.917
+      ]
+     },
+     "K": {
+      "kappa": 0.897,
+      "ci_template": [
+       0.772,
+       0.975
+      ]
+     }
+    }
+   }
+  },
+  "coarse": {
+   "computed_label": {
+    "n_items": 50,
+    "pairwise": {
+     "A|C": 0.821,
+     "A|E": 0.815,
+     "A|K": 0.909,
+     "C|E": 0.823,
+     "C|K": 0.767,
+     "E|K": 0.789
+    },
+    "mean_pairwise_kappa": 0.821,
+    "fleiss": 0.82,
+    "unanimous": 40,
+    "disputed": [
+     "t003",
+     "t028",
+     "t125",
+     "t133",
+     "t139",
+     "t143",
+     "t152",
+     "t158",
+     "t178",
+     "t183"
+    ],
+    "vs_reference": {
+     "A": {
+      "kappa": 0.878,
+      "ci_template": [
+       0.732,
+       0.97
+      ]
+     },
+     "C": {
+      "kappa": 0.881,
+      "ci_template": [
+       0.678,
+       1.0
+      ]
+     },
+     "E": {
+      "kappa": 0.758,
+      "ci_template": [
+       0.532,
+       0.93
+      ]
+     },
+     "K": {
+      "kappa": 0.881,
+      "ci_template": [
+       0.737,
+       0.971
+      ]
+     }
+    },
+    "disputes_resolved_by_grouping": [
+     "t176",
+     "t186",
+     "t194",
+     "t197"
+    ],
+    "disputes_surviving": [
+     "t003",
+     "t028",
+     "t125",
+     "t133",
+     "t139",
+     "t143",
+     "t152",
+     "t158",
+     "t178",
+     "t183"
+    ]
+   },
+   "free_label": {
+    "n_items": 50,
+    "pairwise": {
+     "A|C": 0.848,
+     "A|E": 0.815,
+     "A|K": 0.909,
+     "C|E": 0.85,
+     "C|K": 0.852,
+     "E|K": 0.789
+    },
+    "mean_pairwise_kappa": 0.844,
+    "fleiss": 0.844,
+    "unanimous": 41,
+    "disputed": [
+     "t003",
+     "t028",
+     "t125",
+     "t133",
+     "t139",
+     "t143",
+     "t152",
+     "t178",
+     "t183"
+    ],
+    "vs_reference": {
+     "A": {
+      "kappa": 0.878,
+      "ci_template": [
+       0.732,
+       0.97
+      ]
+     },
+     "C": {
+      "kappa": 0.909,
+      "ci_template": [
+       0.763,
+       1.0
+      ]
+     },
+     "E": {
+      "kappa": 0.758,
+      "ci_template": [
+       0.532,
+       0.93
+      ]
+     },
+     "K": {
+      "kappa": 0.881,
+      "ci_template": [
+       0.737,
+       0.971
+      ]
+     }
+    },
+    "disputes_resolved_by_grouping": [
+     "t176",
+     "t186",
+     "t194",
+     "t197"
+    ],
+    "disputes_surviving": [
+     "t003",
+     "t028",
+     "t125",
+     "t133",
+     "t139",
+     "t143",
+     "t152",
+     "t178",
+     "t183"
+    ]
+   }
+  }
+ }
+}

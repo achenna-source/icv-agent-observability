@@ -1,0 +1,71 @@
+{
+ "what_this_is": "Two measurements that turn the paper's defence into a result or refute it. The oracle ladder rebuilds the deterministic validator at four levels of access and scores each, so the baseline's advantage reads as a function of what it knows. The missed-failure list asks whether the paper's trace-only signals catch what the full oracle does not, which is the only place they can claim value of their own.",
+ "ladder": {
+  "L3 task+store": {
+   "precision": 0.983,
+   "recall": 0.922,
+   "mcc": 0.876,
+   "false_alarms": 2,
+   "tp": 118,
+   "fp": 2,
+   "fn": 10,
+   "tn": 70
+  },
+  "L2 store only": {
+   "precision": 0.774,
+   "recall": 0.75,
+   "mcc": 0.357,
+   "false_alarms": 28,
+   "tp": 96,
+   "fp": 28,
+   "fn": 32,
+   "tn": 44
+  },
+  "L1 task only": {
+   "precision": 0.767,
+   "recall": 0.898,
+   "mcc": 0.457,
+   "false_alarms": 35,
+   "tp": 115,
+   "fp": 35,
+   "fn": 13,
+   "tn": 37
+  },
+  "L0 trace only": {
+   "precision": 1.0,
+   "recall": 0.461,
+   "mcc": 0.485,
+   "false_alarms": 0,
+   "tp": 59,
+   "fp": 0,
+   "fn": 69,
+   "tn": 72
+  }
+ },
+ "advantage_of_full_oracle_over_trace_only": 0.391,
+ "cost_of_losing_the_task_template": -0.519,
+ "cost_of_losing_the_store": -0.419,
+ "missed_by_full_oracle": {
+  "n": 10,
+  "ids": [
+   "t003",
+   "t035",
+   "t047",
+   "t150",
+   "t152",
+   "t164",
+   "t182",
+   "t192",
+   "t194",
+   "t197"
+  ],
+  "by_category": {
+   "F6": 4,
+   "F3": 6
+  },
+  "caught_by_tier1": 5,
+  "caught_by_tier2": 0,
+  "caught_by_B_star_or_C": 0,
+  "caught_by_any_paper_signal": 5
+ }
+}

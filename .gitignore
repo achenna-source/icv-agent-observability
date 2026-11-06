@@ -1,2 +1,15 @@
 __pycache__/
 *.pyc
+# Ce qui ne doit jamais partir : les correspondances qui desanonymisent.
+annotation/interview/mapping_adjudication_DO_NOT_SHARE*.json
+annotation/panel/rater_mapping_DO_NOT_SHARE.json
+
+# annotation/sample_key_DO_NOT_SHARE.jsonl reste suivi a dessein. Son nom veut dire
+# « ne pas remettre a un annotateur ». Il ne porte que les etiquettes des 50 items que
+# data/trajectories_200.jsonl publie deja pour les 200, et huit scripts publies le
+# lisent, dont compute_agreement.py que le manuscrit cite.
+annotation/interview_sim_llm/
+annotation/llm_annotators/
+annotation/llm_profile_panel/
+annotation/panel_v3/
+annotation/sheet_r2_prefilled_LLM_draft.xlsx

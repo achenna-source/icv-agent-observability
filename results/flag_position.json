@@ -1,0 +1,4035 @@
+{
+  "summary": {
+    "n": 200,
+    "failures_lenient": 128,
+    "signals": {
+      "B": {
+        "flags": 62,
+        "true_positives": 37,
+        "before_terminal": 25,
+        "at_terminal": 12,
+        "median_index": 2
+      },
+      "Bx": {
+        "flags": 21,
+        "true_positives": 21,
+        "before_terminal": 9,
+        "at_terminal": 12,
+        "median_index": 2
+      },
+      "C": {
+        "flags": 39,
+        "true_positives": 39,
+        "before_terminal": 1,
+        "at_terminal": 38,
+        "median_index": 2
+      }
+    },
+    "C_components": {
+      "duplicate": 2,
+      "contradiction": 38
+    }
+  },
+  "per_trajectory": [
+    {
+      "id": "t000",
+      "label": "S",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": true,
+        "at": 1
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t001",
+      "label": "S",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": true,
+        "at": 1
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t002",
+      "label": "S",
+      "n_steps": 4,
+      "terminal": 3,
+      "B": {
+        "flag": true,
+        "at": 1
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t003",
+      "label": "F6",
+      "n_steps": 5,
+      "terminal": 4,
+      "B": {
+        "flag": true,
+        "at": 1
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t004",
+      "label": "F5",
+      "n_steps": 6,
+      "terminal": 5,
+      "B": {
+        "flag": true,
+        "at": 1
+      },
+      "Bx": {
+        "flag": true,
+        "at": 1
+      },
+      "C": {
+        "flag": true,
+        "at": 4,
+        "duplicate": true,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t005",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t006",
+      "label": "S",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": true,
+        "at": 1
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t007",
+      "label": "S",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": true,
+        "at": 1
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t008",
+      "label": "S",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": true,
+        "at": 1
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t009",
+      "label": "S",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": true,
+        "at": 1
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t010",
+      "label": "S",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": true,
+        "at": 1
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t011",
+      "label": "S",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": true,
+        "at": 1
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t012",
+      "label": "S",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": true,
+        "at": 1
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t013",
+      "label": "S",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": true,
+        "at": 1
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t014",
+      "label": "S",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": true,
+        "at": 1
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t015",
+      "label": "S",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": true,
+        "at": 1
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t016",
+      "label": "S",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": true,
+        "at": 1
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t017",
+      "label": "S",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": true,
+        "at": 1
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t018",
+      "label": "S",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": true,
+        "at": 1
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t019",
+      "label": "S",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": true,
+        "at": 1
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t020",
+      "label": "F5",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": true,
+        "at": 1
+      },
+      "Bx": {
+        "flag": true,
+        "at": 1
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t021",
+      "label": "S",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": true,
+        "at": 1
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t022",
+      "label": "S",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": true,
+        "at": 1
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t023",
+      "label": "S",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": true,
+        "at": 1
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t024",
+      "label": "S",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": true,
+        "at": 1
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t025",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t026",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t027",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t028",
+      "label": "F3",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t029",
+      "label": "F5",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": true,
+        "at": 1
+      },
+      "Bx": {
+        "flag": true,
+        "at": 1
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t030",
+      "label": "F5",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": true,
+        "at": 1
+      },
+      "Bx": {
+        "flag": true,
+        "at": 1
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t031",
+      "label": "F5",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": true,
+        "at": 1
+      },
+      "Bx": {
+        "flag": true,
+        "at": 1
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t032",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t033",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t034",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t035",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t036",
+      "label": "F5",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": true,
+        "at": 1
+      },
+      "Bx": {
+        "flag": true,
+        "at": 1
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t037",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t038",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t039",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t040",
+      "label": "F3",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t041",
+      "label": "F5",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": true,
+        "at": 1
+      },
+      "Bx": {
+        "flag": true,
+        "at": 1
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t042",
+      "label": "F5",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": true,
+        "at": 1
+      },
+      "Bx": {
+        "flag": true,
+        "at": 1
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t043",
+      "label": "F5",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": true,
+        "at": 1
+      },
+      "Bx": {
+        "flag": true,
+        "at": 1
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t044",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t045",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t046",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t047",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t048",
+      "label": "F5",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": true,
+        "at": 1
+      },
+      "Bx": {
+        "flag": true,
+        "at": 1
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t049",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t050",
+      "label": "F2",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t051",
+      "label": "F2",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 1,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t052",
+      "label": "F2",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 1,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t053",
+      "label": "F2",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 1,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t054",
+      "label": "F2",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t055",
+      "label": "S",
+      "n_steps": 5,
+      "terminal": 4,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t056",
+      "label": "F2",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t057",
+      "label": "F2",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 1,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t058",
+      "label": "F2",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 1,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t059",
+      "label": "F2",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 1,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t060",
+      "label": "F2",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t061",
+      "label": "S",
+      "n_steps": 5,
+      "terminal": 4,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t062",
+      "label": "F2",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t063",
+      "label": "F2",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 1,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t064",
+      "label": "F2",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 1,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t065",
+      "label": "F2",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 1,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t066",
+      "label": "F2",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t067",
+      "label": "S",
+      "n_steps": 5,
+      "terminal": 4,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t068",
+      "label": "F2",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t069",
+      "label": "F2",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 1,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t070",
+      "label": "F2",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 1,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t071",
+      "label": "F2",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 1,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t072",
+      "label": "F2",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t073",
+      "label": "S",
+      "n_steps": 5,
+      "terminal": 4,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t074",
+      "label": "F2",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t075",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t076",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t077",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t078",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t079",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t080",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t081",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t082",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t083",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t084",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t085",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t086",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t087",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t088",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t089",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t090",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t091",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t092",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t093",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t094",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t095",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t096",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t097",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t098",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t099",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t100",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t101",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t102",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t103",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t104",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t105",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t106",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t107",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t108",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t109",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t110",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t111",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t112",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t113",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t114",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t115",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t116",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t117",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t118",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t119",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t120",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t121",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t122",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t123",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t124",
+      "label": "S",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t125",
+      "label": "F3",
+      "n_steps": 4,
+      "terminal": 3,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 3,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t126",
+      "label": "F5",
+      "n_steps": 5,
+      "terminal": 4,
+      "B": {
+        "flag": true,
+        "at": 3
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t127",
+      "label": "F6",
+      "n_steps": 6,
+      "terminal": 5,
+      "B": {
+        "flag": true,
+        "at": 4
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t128",
+      "label": "S",
+      "n_steps": 4,
+      "terminal": 3,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t129",
+      "label": "F3",
+      "n_steps": 4,
+      "terminal": 3,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 3,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t130",
+      "label": "F5",
+      "n_steps": 6,
+      "terminal": 5,
+      "B": {
+        "flag": true,
+        "at": 4
+      },
+      "Bx": {
+        "flag": true,
+        "at": 4
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t131",
+      "label": "F5",
+      "n_steps": 4,
+      "terminal": 3,
+      "B": {
+        "flag": true,
+        "at": 3
+      },
+      "Bx": {
+        "flag": true,
+        "at": 3
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t132",
+      "label": "F3",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t133",
+      "label": "F6",
+      "n_steps": 6,
+      "terminal": 5,
+      "B": {
+        "flag": true,
+        "at": 4
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t134",
+      "label": "F3",
+      "n_steps": 5,
+      "terminal": 4,
+      "B": {
+        "flag": true,
+        "at": 3
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t135",
+      "label": "F3",
+      "n_steps": 4,
+      "terminal": 3,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 3,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t136",
+      "label": "F3",
+      "n_steps": 4,
+      "terminal": 3,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 3,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t137",
+      "label": "F3",
+      "n_steps": 4,
+      "terminal": 3,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 3,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t138",
+      "label": "S",
+      "n_steps": 4,
+      "terminal": 3,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t139",
+      "label": "F3",
+      "n_steps": 6,
+      "terminal": 5,
+      "B": {
+        "flag": true,
+        "at": 4
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 5,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t140",
+      "label": "F3",
+      "n_steps": 4,
+      "terminal": 3,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 3,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t141",
+      "label": "F3",
+      "n_steps": 4,
+      "terminal": 3,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 3,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t142",
+      "label": "F3",
+      "n_steps": 4,
+      "terminal": 3,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 3,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t143",
+      "label": "F3",
+      "n_steps": 4,
+      "terminal": 3,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 3,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t144",
+      "label": "F3",
+      "n_steps": 5,
+      "terminal": 4,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 4,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t145",
+      "label": "F3",
+      "n_steps": 6,
+      "terminal": 5,
+      "B": {
+        "flag": true,
+        "at": 5
+      },
+      "Bx": {
+        "flag": true,
+        "at": 5
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t146",
+      "label": "S",
+      "n_steps": 4,
+      "terminal": 3,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t147",
+      "label": "S",
+      "n_steps": 4,
+      "terminal": 3,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t148",
+      "label": "S",
+      "n_steps": 4,
+      "terminal": 3,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t149",
+      "label": "F3",
+      "n_steps": 5,
+      "terminal": 4,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 4,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t150",
+      "label": "F6",
+      "n_steps": 6,
+      "terminal": 5,
+      "B": {
+        "flag": true,
+        "at": 4
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t151",
+      "label": "F3",
+      "n_steps": 6,
+      "terminal": 5,
+      "B": {
+        "flag": true,
+        "at": 2
+      },
+      "Bx": {
+        "flag": true,
+        "at": 2
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t152",
+      "label": "F6",
+      "n_steps": 4,
+      "terminal": 3,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t153",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t154",
+      "label": "S",
+      "n_steps": 5,
+      "terminal": 4,
+      "B": {
+        "flag": true,
+        "at": 3
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t155",
+      "label": "S",
+      "n_steps": 5,
+      "terminal": 4,
+      "B": {
+        "flag": true,
+        "at": 3
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t156",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t157",
+      "label": "S",
+      "n_steps": 5,
+      "terminal": 4,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t158",
+      "label": "F6",
+      "n_steps": 5,
+      "terminal": 4,
+      "B": {
+        "flag": true,
+        "at": 3
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 4,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t159",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t160",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t161",
+      "label": "S",
+      "n_steps": 5,
+      "terminal": 4,
+      "B": {
+        "flag": true,
+        "at": 3
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t162",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t163",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t164",
+      "label": "F6",
+      "n_steps": 5,
+      "terminal": 4,
+      "B": {
+        "flag": true,
+        "at": 3
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t165",
+      "label": "F3",
+      "n_steps": 6,
+      "terminal": 5,
+      "B": {
+        "flag": true,
+        "at": 3
+      },
+      "Bx": {
+        "flag": true,
+        "at": 3
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t166",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t167",
+      "label": "F3",
+      "n_steps": 6,
+      "terminal": 5,
+      "B": {
+        "flag": true,
+        "at": 2
+      },
+      "Bx": {
+        "flag": true,
+        "at": 2
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t168",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t169",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t170",
+      "label": "F3",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t171",
+      "label": "F3",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t172",
+      "label": "F3",
+      "n_steps": 6,
+      "terminal": 5,
+      "B": {
+        "flag": true,
+        "at": 2
+      },
+      "Bx": {
+        "flag": true,
+        "at": 2
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t173",
+      "label": "F3",
+      "n_steps": 2,
+      "terminal": 1,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t174",
+      "label": "S",
+      "n_steps": 6,
+      "terminal": 5,
+      "B": {
+        "flag": true,
+        "at": 3
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t175",
+      "label": "F7",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 2,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t176",
+      "label": "F7",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t177",
+      "label": "F7",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t178",
+      "label": "F7",
+      "n_steps": 5,
+      "terminal": 4,
+      "B": {
+        "flag": true,
+        "at": 3
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 4,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t179",
+      "label": "F7",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t180",
+      "label": "F3",
+      "n_steps": 6,
+      "terminal": 5,
+      "B": {
+        "flag": true,
+        "at": 2
+      },
+      "Bx": {
+        "flag": true,
+        "at": 2
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t181",
+      "label": "F7",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 2,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t182",
+      "label": "F3",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t183",
+      "label": "F7",
+      "n_steps": 6,
+      "terminal": 5,
+      "B": {
+        "flag": true,
+        "at": 3
+      },
+      "Bx": {
+        "flag": true,
+        "at": 3
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t184",
+      "label": "F7",
+      "n_steps": 6,
+      "terminal": 5,
+      "B": {
+        "flag": true,
+        "at": 5
+      },
+      "Bx": {
+        "flag": true,
+        "at": 5
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t185",
+      "label": "F7",
+      "n_steps": 5,
+      "terminal": 4,
+      "B": {
+        "flag": true,
+        "at": 3
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 4,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t186",
+      "label": "F7",
+      "n_steps": 5,
+      "terminal": 4,
+      "B": {
+        "flag": true,
+        "at": 2
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 4,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t187",
+      "label": "F7",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 2,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t188",
+      "label": "F7",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 2,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t189",
+      "label": "F3",
+      "n_steps": 6,
+      "terminal": 5,
+      "B": {
+        "flag": true,
+        "at": 2
+      },
+      "Bx": {
+        "flag": true,
+        "at": 2
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t190",
+      "label": "F7",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 2,
+        "duplicate": true,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t191",
+      "label": "F7",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 2,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t192",
+      "label": "F3",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t193",
+      "label": "F3",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t194",
+      "label": "F3",
+      "n_steps": 4,
+      "terminal": 3,
+      "B": {
+        "flag": true,
+        "at": 2
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t195",
+      "label": "F7",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 2,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t196",
+      "label": "F7",
+      "n_steps": 4,
+      "terminal": 3,
+      "B": {
+        "flag": true,
+        "at": 2
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 3,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t197",
+      "label": "F3",
+      "n_steps": 4,
+      "terminal": 3,
+      "B": {
+        "flag": true,
+        "at": 2
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": false,
+        "at": null,
+        "duplicate": false,
+        "contradiction": false
+      }
+    },
+    {
+      "id": "t198",
+      "label": "F7",
+      "n_steps": 3,
+      "terminal": 2,
+      "B": {
+        "flag": false,
+        "at": null
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 2,
+        "duplicate": false,
+        "contradiction": true
+      }
+    },
+    {
+      "id": "t199",
+      "label": "F7",
+      "n_steps": 4,
+      "terminal": 3,
+      "B": {
+        "flag": true,
+        "at": 2
+      },
+      "Bx": {
+        "flag": false,
+        "at": null
+      },
+      "C": {
+        "flag": true,
+        "at": 3,
+        "duplicate": false,
+        "contradiction": true
+      }
+    }
+  ]
+}

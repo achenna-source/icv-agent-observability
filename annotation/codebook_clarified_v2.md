@@ -1,0 +1,121 @@
+# Instructions for the second annotator
+
+You are labelling agent trajectories for a study on how LLM agents fail. Your labels will be
+compared with a first annotator's labels to measure how reproducible the labelling scheme is.
+**You should not try to guess what the first annotator decided.** Disagreement is informative;
+a forced match is not. Work alone, and do not discuss individual items with the other authors
+until your sheet is submitted.
+
+Time needed: roughly 3–4 hours for 50 trajectories, including breaks. Split it over two
+sittings if you prefer — annotation quality drops sharply when tired.
+
+## What you receive
+
+- `sample_packet.md` — 50 trajectories, each with the task, the ground-truth answer from the
+  knowledge base, every step the agent took, and its final answer.
+- `annotations_annotator2.xlsx` — the sheet to fill in. Open it in Excel or LibreOffice.
+  The `label` column has a dropdown, so a mistyped code is refused; the second tab holds
+  the codebook and the order of the checks. Return this file as it is, renamed or not.
+  (A plain `annotations_annotator2.csv` is provided as a fallback. If you use it, note
+  that Excel in some locales saves it with semicolons; that is handled, but the .xlsx is
+  the safer route.)
+- The codebook (category definitions and worked examples).
+
+## The procedure
+
+For each trajectory, first decide whether it **succeeded**: did the agent's final answer match
+the ground truth? If yes, and no fault occurred along the way, label it `S`.
+
+If it failed, apply the decision procedure **in this order** and stop at the first rule that
+fires. The label is the category of the *first observable fault*, not the state the trajectory
+ends in — a trajectory that mishandles a retrieved value and then also returns nothing is a
+reasoning error (F3), not a termination error (F5).
+
+| Order | Check | Label |
+|---|---|---|
+| 1 | The agent called a tool that does not exist in the registered tool set | `F1a` |
+| 2 | The agent called an existing tool that does not fit the sub-goal, when a better one was available | `F1b` |
+| 3 | Arguments are well formed but contain a value absent from the knowledge base, **and** that value is not later used as the pivot of the final result | `F2` |
+| 4 | The agent repeats an equivalent step without progress until the budget runs out (verbatim, or rephrased but functionally the same) | `F4` |
+| 5 | The agent stops, or emits an empty/`None` final answer, before finishing | `F5` |
+| 6 | The final answer contradicts a value the agent itself produced earlier | `F6` |
+| 7 | The agent fabricates a value absent from the sources and uses it as the **pivot** of the final computation (shown in a calculation, or reconstructible from the final number) | `F7` |
+| 8 | None of the above, and the answer is wrong or incomplete — the residual category | `F3` |
+
+For `F3`, add a sub-code in the `notes` column if it is clear: `F3a` wrong calculation over
+correctly retrieved values, `F3b` failed or misdirected retrieval of a fact that was present
+(e.g. querying the wrong key), `F3c` partial or ungrounded answer.
+
+## The three judgment calls
+
+Most items are mechanical. Three predicates need your judgment, and these are exactly the ones
+we want measured:
+
+**Tool fitness (rule 2).** "Unfit" means a competent solver would not have chosen it for that
+sub-goal — not merely that a different tool would also have worked.
+
+**Semantic repetition (rule 4).** Two steps are equivalent if they pursue the same sub-goal by
+the same means, even when the wording differs. A genuine follow-up query on the same entity is
+not a repetition.
+
+**The pivot test (rules 3 vs 7).** This is the distinction that separates `F2` from `F7`. Ask:
+does the fabricated value *carry through* into the final result? If the agent invents a
+population figure and then divides it by something to produce its answer, that is `F7`. If it
+invents a value, gets an error or ignores it, and reaches its answer another way, that is `F2`.
+
+## The confidence column
+
+Mark `high` when the rule fired cleanly, `low` when you hesitated between two categories.
+Low-confidence items are the ones we will look at when we adjudicate disagreements, and they
+tell us which parts of the codebook are ambiguous. Do not leave it blank.
+
+## The notes column
+
+One line, when useful: which step contained the fault, or which two categories you were torn
+between. This is what makes adjudication fast rather than a re-annotation.
+
+## What not to do
+
+Do not skip items you find hard — a `low` confidence label on a hard item is far more useful
+than a blank. Do not go back and revise earlier labels after your understanding shifts; if the
+codebook felt wrong at item 40, note it, and we will handle it in adjudication. Do not look at
+the detection signals' output, the first annotator's labels, or the paper's results tables.
+
+## Conventions that resolve the three recurring conflicts
+
+The four rules below are part of the procedure. Apply them before the ordered checks
+above, because they decide which fault the ordered checks are applied to.
+
+**A malformed step never determines the label.** A step whose action names no registered
+tool is a malformation: a defect in the form of the call, not a diagnosis of what the
+agent was trying to do. It is *recovered* when some later step calls a registered tool
+and some later step terminates with a non-empty final answer. Whether recovered or not,
+a malformation never gives the trajectory its label. Set it aside and label the
+trajectory on the first fault that is not a malformation. If no such fault exists and the
+final answer is correct, the trajectory is `S`. If no such fault exists and the answer is
+wrong, label it `F5` when the trajectory ends with sub-goals still open, and `F3`
+otherwise.
+
+**The first fault in time governs, not the first rule in the table.** Where two faults of
+different kinds occur, the label comes from the one that occurs earliest in the
+trajectory, and the ordered table then tells you which category that fault falls into.
+The table orders the checks; it does not rank the faults.
+
+**The pivot test requires a computation.** `F7` applies when a fabricated value is used
+as an input to a computation whose result is the final answer. A fabricated value that is
+merely reported, and not computed with, is `F2` when it appears in the argument of a call
+the agent made, and `F3`, with the sub-code `F3c`, when it appears only in the final
+answer. What separates the two is where the invention enters the trajectory. `F2` is a
+hallucinated argument, so the invented value has to sit in an argument the agent passed
+to a tool, whereas an invented value that only ever reaches the final answer was passed
+to nothing and leaves the answer ungrounded. The input of `finish` is the final answer
+and not a tool argument, so a value invented there is `F3c` and not `F2`. Where no value
+is fabricated at all and the answer is simply wrong or incomplete, the label is `F3`. A
+fabrication that stays inside a thought, never entering an argument and never reaching
+the final answer, is not a fabricated datum under either rule.
+
+**A truthful report of absence is a success.** Some tasks ask for information the
+knowledge base does not hold. Where the store genuinely lacks it and the agent's final
+answer says so without asserting any invented value, the trajectory is `S`. It is not
+`F5`, because the sub-goal is closed rather than abandoned, and it is not `F3`, because
+nothing was mishandled.

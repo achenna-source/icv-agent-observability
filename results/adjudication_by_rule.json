@@ -1,0 +1,230 @@
+{
+  "n_disagreements": 27,
+  "settled": 9,
+  "still_open": 18,
+  "by_rule": {
+    "C1": 9
+  },
+  "confirms_annotator1": 9,
+  "raw_before": 0.46,
+  "raw_after": 0.64,
+  "cases": [
+    {
+      "id": "t075",
+      "annotator1": "F3",
+      "annotator2": "F7",
+      "adjudicated": null,
+      "rule": null,
+      "agrees_with_annotator1": null
+    },
+    {
+      "id": "t063",
+      "annotator1": "F2",
+      "annotator2": "F7",
+      "adjudicated": null,
+      "rule": null,
+      "agrees_with_annotator1": null
+    },
+    {
+      "id": "t003",
+      "annotator1": "F6",
+      "annotator2": "F1a",
+      "adjudicated": "F6",
+      "rule": "C1, a malformation never determines the label",
+      "agrees_with_annotator1": true
+    },
+    {
+      "id": "t050",
+      "annotator1": "F2",
+      "annotator2": "F7",
+      "adjudicated": null,
+      "rule": null,
+      "agrees_with_annotator1": null
+    },
+    {
+      "id": "t091",
+      "annotator1": "F3",
+      "annotator2": "F7",
+      "adjudicated": null,
+      "rule": null,
+      "agrees_with_annotator1": null
+    },
+    {
+      "id": "t154",
+      "annotator1": "S",
+      "annotator2": "F1a",
+      "adjudicated": "S",
+      "rule": "C1, a malformation never determines the label",
+      "agrees_with_annotator1": true
+    },
+    {
+      "id": "t052",
+      "annotator1": "F2",
+      "annotator2": "F7",
+      "adjudicated": null,
+      "rule": null,
+      "agrees_with_annotator1": null
+    },
+    {
+      "id": "t056",
+      "annotator1": "F2",
+      "annotator2": "F7",
+      "adjudicated": null,
+      "rule": null,
+      "agrees_with_annotator1": null
+    },
+    {
+      "id": "t139",
+      "annotator1": "F3",
+      "annotator2": "F7",
+      "adjudicated": null,
+      "rule": null,
+      "agrees_with_annotator1": null
+    },
+    {
+      "id": "t092",
+      "annotator1": "F3",
+      "annotator2": "F7",
+      "adjudicated": null,
+      "rule": null,
+      "agrees_with_annotator1": null
+    },
+    {
+      "id": "t133",
+      "annotator1": "F6",
+      "annotator2": "F1a",
+      "adjudicated": "F6",
+      "rule": "C1, a malformation never determines the label",
+      "agrees_with_annotator1": true
+    },
+    {
+      "id": "t094",
+      "annotator1": "F3",
+      "annotator2": "F7",
+      "adjudicated": null,
+      "rule": null,
+      "agrees_with_annotator1": null
+    },
+    {
+      "id": "t028",
+      "annotator1": "F3",
+      "annotator2": "F2",
+      "adjudicated": null,
+      "rule": null,
+      "agrees_with_annotator1": null
+    },
+    {
+      "id": "t158",
+      "annotator1": "F6",
+      "annotator2": "F7",
+      "adjudicated": null,
+      "rule": null,
+      "agrees_with_annotator1": null
+    },
+    {
+      "id": "t008",
+      "annotator1": "S",
+      "annotator2": "F1a",
+      "adjudicated": "S",
+      "rule": "C1, a malformation never determines the label",
+      "agrees_with_annotator1": true
+    },
+    {
+      "id": "t194",
+      "annotator1": "F3",
+      "annotator2": "F2",
+      "adjudicated": null,
+      "rule": null,
+      "agrees_with_annotator1": null
+    },
+    {
+      "id": "t152",
+      "annotator1": "F6",
+      "annotator2": "F3",
+      "adjudicated": null,
+      "rule": null,
+      "agrees_with_annotator1": null
+    },
+    {
+      "id": "t051",
+      "annotator1": "F2",
+      "annotator2": "F7",
+      "adjudicated": null,
+      "rule": null,
+      "agrees_with_annotator1": null
+    },
+    {
+      "id": "t000",
+      "annotator1": "S",
+      "annotator2": "F1a",
+      "adjudicated": "S",
+      "rule": "C1, a malformation never determines the label",
+      "agrees_with_annotator1": true
+    },
+    {
+      "id": "t007",
+      "annotator1": "S",
+      "annotator2": "F1a",
+      "adjudicated": "S",
+      "rule": "C1, a malformation never determines the label",
+      "agrees_with_annotator1": true
+    },
+    {
+      "id": "t068",
+      "annotator1": "F2",
+      "annotator2": "F7",
+      "adjudicated": null,
+      "rule": null,
+      "agrees_with_annotator1": null
+    },
+    {
+      "id": "t081",
+      "annotator1": "F3",
+      "annotator2": "F7",
+      "adjudicated": null,
+      "rule": null,
+      "agrees_with_annotator1": null
+    },
+    {
+      "id": "t174",
+      "annotator1": "S",
+      "annotator2": "F1a",
+      "adjudicated": "S",
+      "rule": "C1, a malformation never determines the label",
+      "agrees_with_annotator1": true
+    },
+    {
+      "id": "t082",
+      "annotator1": "F3",
+      "annotator2": "F7",
+      "adjudicated": null,
+      "rule": null,
+      "agrees_with_annotator1": null
+    },
+    {
+      "id": "t024",
+      "annotator1": "S",
+      "annotator2": "F1a",
+      "adjudicated": "S",
+      "rule": "C1, a malformation never determines the label",
+      "agrees_with_annotator1": true
+    },
+    {
+      "id": "t130",
+      "annotator1": "F5",
+      "annotator2": "F1a",
+      "adjudicated": "F5",
+      "rule": "C1, a malformation never determines the label",
+      "agrees_with_annotator1": true
+    },
+    {
+      "id": "t197",
+      "annotator1": "F3",
+      "annotator2": "F2",
+      "adjudicated": null,
+      "rule": null,
+      "agrees_with_annotator1": null
+    }
+  ],
+  "note": "adjudication by written rule only; no case is decided by hand, and the cases no convention excludes are reported as open"
+}

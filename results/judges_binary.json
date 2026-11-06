@@ -1,0 +1,119 @@
+{
+ "what_this_is": "Every judge and every ICV signal reduced to the same binary decision, failure against success, and scored on the same metric, corpus and target. A judge says failure when its code is not S. On the binary decision a judge is no longer penalised by the granularity of its own task, so this comparison is more favourable to the judges than the per-category agreement the paper reports.",
+ "n_items": 200,
+ "n_failures": 128,
+ "base_rate": 0.64,
+ "bootstrap": {
+  "replicates": 10000,
+  "seed": 20261105,
+  "clusters": "task templates"
+ },
+ "rows": {
+  "7B judge, Qwen": {
+   "group": "judges",
+   "precision": 0.65,
+   "recall": 0.609,
+   "mcc": 0.026,
+   "false_alarms": 42,
+   "true_positives": 78,
+   "ci_template": [
+    -0.348,
+    0.383
+   ]
+  },
+  "32B judge, French": {
+   "group": "judges",
+   "precision": 0.906,
+   "recall": 0.977,
+   "mcc": 0.826,
+   "false_alarms": 13,
+   "true_positives": 125,
+   "ci_template": [
+    0.733,
+    0.907
+   ]
+  },
+  "32B judge, English": {
+   "group": "judges",
+   "precision": 0.921,
+   "recall": 0.906,
+   "mcc": 0.763,
+   "false_alarms": 10,
+   "true_positives": 116,
+   "ci_template": [
+    0.557,
+    0.955
+   ]
+  },
+  "7B judge, Falcon3": {
+   "group": "judges",
+   "precision": 0.671,
+   "recall": 0.398,
+   "mcc": 0.051,
+   "false_alarms": 25,
+   "true_positives": 51,
+   "ci_template": [
+    -0.413,
+    0.486
+   ]
+  },
+  "ICV B, schema": {
+   "group": "ICV signals",
+   "precision": 0.597,
+   "recall": 0.289,
+   "mcc": -0.06,
+   "false_alarms": 25,
+   "true_positives": 37,
+   "ci_template": [
+    -0.518,
+    0.395
+   ]
+  },
+  "ICV B*, exempted": {
+   "group": "ICV signals",
+   "precision": 1.0,
+   "recall": 0.164,
+   "mcc": 0.257,
+   "false_alarms": 0,
+   "true_positives": 21,
+   "ci_template": [
+    0.111,
+    0.446
+   ]
+  },
+  "ICV C, consistency": {
+   "group": "ICV signals",
+   "precision": 1.0,
+   "recall": 0.297,
+   "mcc": 0.363,
+   "false_alarms": 0,
+   "true_positives": 38,
+   "ci_template": [
+    0.148,
+    0.552
+   ]
+  },
+  "ICV B* or C": {
+   "group": "ICV signals",
+   "precision": 1.0,
+   "recall": 0.461,
+   "mcc": 0.485,
+   "false_alarms": 0,
+   "true_positives": 59,
+   "ci_template": [
+    0.245,
+    0.705
+   ]
+  }
+ },
+ "best_judge": "32B judge, French",
+ "best_icv": "ICV B* or C",
+ "best_judge_minus_best_icv": {
+  "point": 0.341,
+  "ci_template_paired": [
+   0.08,
+   0.596
+  ],
+  "includes_zero": false
+ }
+}

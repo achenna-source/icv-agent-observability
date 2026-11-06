@@ -1,0 +1,93 @@
+{
+  "n": 200,
+  "conventions": {
+    "C1": {
+      "claim": "aucune trajectoire contenant une malformation ne porte F1",
+      "holds": true,
+      "required": true,
+      "evidence": {
+        "trajectoires avec une malformation": 49,
+        "dont la premiere est reprise": 41,
+        "parmi les reprises, etiquetees S": 25,
+        "etiquettes portees par ces trajectoires": {
+          "S": 25,
+          "F6": 6,
+          "F5": 3,
+          "F3": 8,
+          "F7": 7
+        }
+      }
+    },
+    "C2": {
+      "claim": "une malformation repetee n'est jamais etiquetee F4",
+      "holds": true,
+      "required": true,
+      "evidence": {
+        "trajectoires avec au moins deux malformations": 6,
+        "leurs etiquettes": {
+          "S": 1,
+          "F5": 2,
+          "F3": 1,
+          "F7": 2
+        },
+        "F4 dans tout le corpus": 0
+      }
+    },
+    "C3": {
+      "claim": "une regle lue de la trace separe F2 de F7 (rapportee, non requise)",
+      "holds": false,
+      "required": false,
+      "evidence": {
+        "F7, trajectoires": 18,
+        "F7 avec un appel calculator": 4,
+        "F2, trajectoires": 21,
+        "F2 avec un appel calculator": 0,
+        "lecture a, le calculateur separe": false,
+        "forme numerique des reponses F7": {
+          "novel number, not reconstructible": 11,
+          "no number in the answer": 5,
+          "every number came from an observation": 2
+        },
+        "forme numerique des reponses F2": {
+          "no number in the answer": 9,
+          "novel number, not reconstructible": 12
+        },
+        "lecture b, la forme numerique separe": false,
+        "cause de fond": "F2 n'apparait que dans T2 et F7 que dans T7, donc le corpus ne met jamais les deux categories en concurrence ; voir boundary_map.py"
+      }
+    },
+    "C4": {
+      "claim": "un refus veridique sans valeur avancee est etiquete S",
+      "holds": true,
+      "required": true,
+      "evidence": {
+        "trajectoires correspondantes": 21,
+        "leurs etiquettes": {
+          "S": 21
+        }
+      }
+    },
+    "C5": {
+      "claim": "dans T7, l'absence de toute valeur exploitable donne F3 et non F7 (exploratoire, non requise)",
+      "holds": true,
+      "required": false,
+      "evidence": {
+        "trajectoires de T7 etiquetees F3 ou F7": 25,
+        "dont F3": 7,
+        "trajectoires classees correctement par la regle": 22,
+        "taux de la regle": 0.88,
+        "base de la categorie majoritaire": 0.72,
+        "p de permutation intra-paire, recherche de predicat incluse": 0.012,
+        "p corrige sur les six frontieres examinees": 0.072,
+        "trajectoires du corpus ou le predicat vaut": 73,
+        "leurs etiquettes": {
+          "S": 30,
+          "F3": 22,
+          "F2": 21
+        },
+        "portee": "cette decision seulement. Le predicat vaut pour 73 trajectoires, dont 30 succes et 21 F2, donc il ne porte aucun sens par lui-meme et ne vaut que comme depart entre F3 et F7, apres que la decision a ete reduite a ces deux categories"
+      }
+    }
+  },
+  "all_hold": true
+}

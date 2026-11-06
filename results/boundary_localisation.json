@@ -1,0 +1,67 @@
+{
+  "n": 50,
+  "kappa": 0.37,
+  "raw": 0.46,
+  "expected": 0.143,
+  "disagreements": 27,
+  "inside_block": 18,
+  "on_F1": 9,
+  "elsewhere": 0,
+  "block_detail": {
+    "F3->F7": 7,
+    "F2->F7": 6,
+    "F3->F2": 3,
+    "F6->F7": 1,
+    "F6->F3": 1
+  },
+  "f1_detail": {
+    "F6->F1a": 2,
+    "S->F1a": 6,
+    "F5->F1a": 1
+  },
+  "ladder": [
+    {
+      "step": "as submitted, seven categories",
+      "kappa": 0.37,
+      "raw": 0.46,
+      "expected": 0.143
+    },
+    {
+      "step": "recovery convention, a recovered malformation is not F1",
+      "kappa": 0.477,
+      "raw": 0.58,
+      "expected": 0.197
+    },
+    {
+      "step": "  and F2 against F7 taken as one decision",
+      "kappa": 0.601,
+      "raw": 0.7,
+      "expected": 0.249
+    },
+    {
+      "step": "  and the whole block F2, F3, F6, F7 taken as one",
+      "kappa": 0.891,
+      "raw": 0.94,
+      "expected": 0.452
+    },
+    {
+      "step": "F2 against F7 as one decision, without the recovery convention",
+      "kappa": 0.478,
+      "raw": 0.58,
+      "expected": 0.195
+    },
+    {
+      "step": "the block as one, without the recovery convention",
+      "kappa": 0.701,
+      "raw": 0.82,
+      "expected": 0.398
+    }
+  ],
+  "submitted_figure_check": {
+    "claimed": 0.793,
+    "correct": 0.601,
+    "with_stale_expected_agreement": 0.65,
+    "block_with_stale_expected_agreement": 0.79,
+    "verdict": "the 0.793 reported in the submitted version does not reproduce; it is approached only by keeping the seven-category expected agreement in the denominator of a collapsed numerator"
+  }
+}

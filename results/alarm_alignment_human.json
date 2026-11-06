@@ -1,0 +1,202 @@
+{
+ "what_this_is": "Alarm-to-fault alignment measured against a human index of the first faulty step, taken from the independent round of four readers, on the failures that round covers. No language model takes part in the target. The figure is small by construction and the target's own reproducibility is reported beside it, because a statement of the form 'the alarm lands exactly on the fault in n cases' is measured against a target that four readers do not always agree on.",
+ "n_failures_in_corpus": 128,
+ "n_failures_covered": 35,
+ "n_used": 31,
+ "excluded_not_settled": [
+  "t082",
+  "t094",
+  "t183",
+  "t187"
+ ],
+ "target_reproducibility": {
+  "readers": [
+   "A",
+   "C",
+   "E",
+   "K"
+  ],
+  "exact": 21,
+  "within_one_step": 27,
+  "n": 35
+ },
+ "alignment": {
+  "B, schema validation": {
+   "true_positives": 13,
+   "exact": 4,
+   "at_or_before": 7,
+   "median_offset": 0,
+   "offsets": {
+    "-1": 2,
+    "0": 4,
+    "5": 1,
+    "4": 1,
+    "3": 4,
+    "-2": 1
+   },
+   "items": {
+    "t003": {
+     "alarm_step": 2,
+     "fault_step": 3,
+     "offset": -1
+    },
+    "t020": {
+     "alarm_step": 2,
+     "fault_step": 2,
+     "offset": 0
+    },
+    "t029": {
+     "alarm_step": 2,
+     "fault_step": 2,
+     "offset": 0
+    },
+    "t042": {
+     "alarm_step": 2,
+     "fault_step": 2,
+     "offset": 0
+    },
+    "t048": {
+     "alarm_step": 2,
+     "fault_step": 2,
+     "offset": 0
+    },
+    "t130": {
+     "alarm_step": 5,
+     "fault_step": 0,
+     "offset": 5
+    },
+    "t133": {
+     "alarm_step": 5,
+     "fault_step": 6,
+     "offset": -1
+    },
+    "t139": {
+     "alarm_step": 5,
+     "fault_step": 1,
+     "offset": 4
+    },
+    "t158": {
+     "alarm_step": 4,
+     "fault_step": 1,
+     "offset": 3
+    },
+    "t178": {
+     "alarm_step": 4,
+     "fault_step": 1,
+     "offset": 3
+    },
+    "t186": {
+     "alarm_step": 3,
+     "fault_step": 5,
+     "offset": -2
+    },
+    "t194": {
+     "alarm_step": 3,
+     "fault_step": 0,
+     "offset": 3
+    },
+    "t197": {
+     "alarm_step": 3,
+     "fault_step": 0,
+     "offset": 3
+    }
+   }
+  },
+  "B*, schema with exemption": {
+   "true_positives": 5,
+   "exact": 4,
+   "at_or_before": 4,
+   "median_offset": 0,
+   "offsets": {
+    "0": 4,
+    "5": 1
+   },
+   "items": {
+    "t020": {
+     "alarm_step": 2,
+     "fault_step": 2,
+     "offset": 0
+    },
+    "t029": {
+     "alarm_step": 2,
+     "fault_step": 2,
+     "offset": 0
+    },
+    "t042": {
+     "alarm_step": 2,
+     "fault_step": 2,
+     "offset": 0
+    },
+    "t048": {
+     "alarm_step": 2,
+     "fault_step": 2,
+     "offset": 0
+    },
+    "t130": {
+     "alarm_step": 5,
+     "fault_step": 0,
+     "offset": 5
+    }
+   }
+  },
+  "C, consistency": {
+   "true_positives": 9,
+   "exact": 4,
+   "at_or_before": 4,
+   "median_offset": 2,
+   "offsets": {
+    "0": 4,
+    "2": 2,
+    "5": 1,
+    "4": 2
+   },
+   "items": {
+    "t051": {
+     "alarm_step": 2,
+     "fault_step": 2,
+     "offset": 0
+    },
+    "t052": {
+     "alarm_step": 2,
+     "fault_step": 2,
+     "offset": 0
+    },
+    "t063": {
+     "alarm_step": 2,
+     "fault_step": 2,
+     "offset": 0
+    },
+    "t125": {
+     "alarm_step": 4,
+     "fault_step": 2,
+     "offset": 2
+    },
+    "t139": {
+     "alarm_step": 6,
+     "fault_step": 1,
+     "offset": 5
+    },
+    "t143": {
+     "alarm_step": 4,
+     "fault_step": 2,
+     "offset": 2
+    },
+    "t158": {
+     "alarm_step": 5,
+     "fault_step": 1,
+     "offset": 4
+    },
+    "t178": {
+     "alarm_step": 5,
+     "fault_step": 1,
+     "offset": 4
+    },
+    "t186": {
+     "alarm_step": 5,
+     "fault_step": 5,
+     "offset": 0
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,78 @@
+{
+  "n_items": 50,
+  "n_clusters": 44,
+  "models": {
+    "A": "opus",
+    "B": "sonnet",
+    "C": "haiku",
+    "D": "fable"
+  },
+  "raters": {
+    "A": {
+      "model": "opus",
+      "kappa_before": 0.439,
+      "kappa_after": 0.726,
+      "raw_before": 0.52,
+      "raw_after": 0.78,
+      "gain": 0.287,
+      "gain_ci": [
+        0.119,
+        0.452
+      ]
+    },
+    "B": {
+      "model": "sonnet",
+      "kappa_before": 0.333,
+      "kappa_after": 0.677,
+      "raw_before": 0.44,
+      "raw_after": 0.74,
+      "gain": 0.344,
+      "gain_ci": [
+        0.149,
+        0.528
+      ]
+    },
+    "C": {
+      "model": "haiku",
+      "kappa_before": 0.276,
+      "kappa_after": 0.703,
+      "raw_before": 0.36,
+      "raw_after": 0.76,
+      "gain": 0.427,
+      "gain_ci": [
+        0.262,
+        0.594
+      ]
+    },
+    "D": {
+      "model": "fable",
+      "kappa_before": 0.375,
+      "kappa_after": 0.7,
+      "raw_before": 0.46,
+      "raw_after": 0.76,
+      "gain": 0.325,
+      "gain_ci": [
+        0.149,
+        0.491
+      ]
+    }
+  },
+  "notes": {
+    "what_changed": "361 words stating four conventions: a malformation never determines the label, the first fault in time governs, the pivot test requires a computation, and a truthful report of absence is a success.",
+    "what_was_held_fixed": "the same 50 items, the same four models one per rater, the same isolation, no access to the reference labels or the detector outputs",
+    "these_are_llm_raters": "The four raters are Claude models, not people. This measures whether the written procedure is reproducible by independent readers, not whether it is reproducible by humans."
+  },
+  "fleiss": {
+    "before": 0.607,
+    "after": 0.84,
+    "gain": 0.233
+  },
+  "human_second_annotator_before": {
+    "kappa": 0.37,
+    "ci": [
+      0.235,
+      0.509
+    ],
+    "raw": 0.46
+  }
+}

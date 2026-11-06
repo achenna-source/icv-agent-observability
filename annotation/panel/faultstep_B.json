@@ -1,0 +1,642 @@
+{
+ "t003": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Step 1 calls tool None; final Florence contradicts observed Rome."
+ },
+ "t004": {
+  "first_faulty_step": 1,
+  "grounded": "empty",
+  "note": "Step 1 calls nonexistent tool None; never finishes."
+ },
+ "t020": {
+  "first_faulty_step": 1,
+  "grounded": "empty",
+  "note": "finish called with empty answer despite computed 361."
+ },
+ "t028": {
+  "first_faulty_step": 1,
+  "grounded": "yes",
+  "note": "Irrelevant growth query after 2800000 found; final refuses needlessly."
+ },
+ "t040": {
+  "first_faulty_step": 1,
+  "grounded": "yes",
+  "note": "Irrelevant growth query after 2800000 found; final refuses needlessly."
+ },
+ "t029": {
+  "first_faulty_step": 1,
+  "grounded": "empty",
+  "note": "finish called with empty answer after value found."
+ },
+ "t030": {
+  "first_faulty_step": 1,
+  "grounded": "empty",
+  "note": "finish called with empty answer after value found."
+ },
+ "t031": {
+  "first_faulty_step": 1,
+  "grounded": "empty",
+  "note": "finish called with empty answer after value found."
+ },
+ "t036": {
+  "first_faulty_step": 1,
+  "grounded": "empty",
+  "note": "finish called with empty answer after value found."
+ },
+ "t041": {
+  "first_faulty_step": 1,
+  "grounded": "empty",
+  "note": "finish called with empty answer after value found."
+ },
+ "t042": {
+  "first_faulty_step": 1,
+  "grounded": "empty",
+  "note": "finish called with empty answer after value found."
+ },
+ "t043": {
+  "first_faulty_step": 1,
+  "grounded": "empty",
+  "note": "finish called with empty answer after value found."
+ },
+ "t048": {
+  "first_faulty_step": 1,
+  "grounded": "empty",
+  "note": "finish called with empty answer after value found."
+ },
+ "t033": {
+  "first_faulty_step": 0,
+  "grounded": "yes",
+  "note": "Queried Napoli, not naples; missed existing fact; reports not found."
+ },
+ "t045": {
+  "first_faulty_step": 0,
+  "grounded": "yes",
+  "note": "Queried Napoli, not naples; missed existing fact; reports not found."
+ },
+ "t035": {
+  "first_faulty_step": 0,
+  "grounded": "no",
+  "note": "Accented montréal query missed key; 1,7 million unsupported by observations."
+ },
+ "t047": {
+  "first_faulty_step": 0,
+  "grounded": "no",
+  "note": "Accented montréal query missed key; 1,7 million unsupported by observations."
+ },
+ "t050": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Londres absent; final invents 8 millions."
+ },
+ "t056": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Londres absent; final invents 8 millions."
+ },
+ "t062": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Londres absent; final invents 8 millions."
+ },
+ "t068": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Londres absent; final invents 8 millions."
+ },
+ "t074": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Londres absent; final invents 8 millions."
+ },
+ "t051": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Lisbonne absent (odd query borderline); final invents 500 000."
+ },
+ "t057": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Lisbonne absent (odd query borderline); final invents 500 000."
+ },
+ "t063": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Lisbonne absent (odd query borderline); final invents 500 000."
+ },
+ "t069": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Lisbonne absent (odd query borderline); final invents 500 000."
+ },
+ "t052": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Vienne absent; final invents 180 000."
+ },
+ "t058": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Vienne absent; final invents 180 000."
+ },
+ "t064": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Vienne absent; final invents 180 000."
+ },
+ "t070": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Vienne absent; final invents 180 000."
+ },
+ "t053": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Athenes absent; final invents 300 000 historical figure."
+ },
+ "t059": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Athenes absent; final invents 300 000 historical figure."
+ },
+ "t065": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Athenes absent; final invents 300 000 historical figure."
+ },
+ "t071": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Athenes absent; final invents 300 000 historical figure."
+ },
+ "t054": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Dublin absent; final invents 890,000."
+ },
+ "t060": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Dublin absent; final invents 890,000."
+ },
+ "t066": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Dublin absent; final invents 890,000."
+ },
+ "t072": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Dublin absent; final invents 890,000."
+ },
+ "t075": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Capital observed; population 67 millions never retrieved, invented."
+ },
+ "t076": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Capital observed; population 3,7 millions never retrieved, invented."
+ },
+ "t077": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Capital observed; population 127 millions never retrieved, invented."
+ },
+ "t078": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Capital observed; population 60 millions never retrieved, invented."
+ },
+ "t079": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Capital observed; population 47,3 millions never retrieved, invented."
+ },
+ "t080": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Capital observed; population 21,8 millions never retrieved, invented."
+ },
+ "t081": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Capital observed; population 67 millions never retrieved, invented."
+ },
+ "t082": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Capital observed; population 3,7 millions never retrieved, invented."
+ },
+ "t083": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Capital observed; population 127 millions never retrieved, invented."
+ },
+ "t084": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Capital observed; population 60 millions never retrieved, invented."
+ },
+ "t085": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Capital observed; population 47,3 millions never retrieved, invented."
+ },
+ "t086": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Capital observed; population 21,8 millions never retrieved, invented."
+ },
+ "t087": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Capital observed; population 67 millions never retrieved, invented."
+ },
+ "t088": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Capital observed; population 3,7 millions never retrieved, invented."
+ },
+ "t089": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Capital observed; population 127 millions never retrieved, invented."
+ },
+ "t090": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Capital observed; population 60 millions never retrieved, invented."
+ },
+ "t091": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Capital observed; population 47,3 millions never retrieved, invented."
+ },
+ "t092": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Capital observed; population 21,8 millions never retrieved, invented."
+ },
+ "t093": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Capital observed; population 67 millions never retrieved, invented."
+ },
+ "t094": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Capital observed; population 3,7 millions never retrieved, invented."
+ },
+ "t095": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Capital observed; population 127 millions never retrieved, invented."
+ },
+ "t096": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Capital observed; population 60 millions never retrieved, invented."
+ },
+ "t097": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Capital observed; population 47,3 millions never retrieved, invented."
+ },
+ "t098": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Capital observed; population 21,8 millions never retrieved, invented."
+ },
+ "t099": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Capital observed; population 67 millions never retrieved, invented."
+ },
+ "t125": {
+  "first_faulty_step": 1,
+  "grounded": "yes",
+  "note": "Thought states wrong sum 2680000; final 335000 comes from wrong arithmetic."
+ },
+ "t126": {
+  "first_faulty_step": 2,
+  "grounded": "yes",
+  "note": "Calculator expression lacks parentheses; final is error text from observation."
+ },
+ "t127": {
+  "first_faulty_step": 4,
+  "grounded": "yes",
+  "note": "Step 4 calls tool None after correct 2010000; final claims no division."
+ },
+ "t129": {
+  "first_faulty_step": 2,
+  "grounded": "yes",
+  "note": "Operator precedence error: a + b / 2 instead of (a+b)/2."
+ },
+ "t130": {
+  "first_faulty_step": 4,
+  "grounded": "empty",
+  "note": "Step 4 calls tool None after correct 7240000; no final answer."
+ },
+ "t131": {
+  "first_faulty_step": 1,
+  "grounded": "empty",
+  "note": "Step 1 thought asserts unsupported sum 22700000; finish empty."
+ },
+ "t132": {
+  "first_faulty_step": 1,
+  "grounded": "yes",
+  "note": "Queried barcelona instead of barcelone; wrongly gives up."
+ },
+ "t133": {
+  "first_faulty_step": 4,
+  "grounded": "yes",
+  "note": "Step 4 calls tool None after correct 2560000; final refuses."
+ },
+ "t134": {
+  "first_faulty_step": 1,
+  "grounded": "yes",
+  "note": "Queried barcelona, not barcelone; gives up wrongly."
+ },
+ "t135": {
+  "first_faulty_step": 1,
+  "grounded": "yes",
+  "note": "Step 1 thought invents sum 4656789; wrong final average."
+ },
+ "t136": {
+  "first_faulty_step": 1,
+  "grounded": "yes",
+  "note": "Step 1 thought invents sum 8380000; wrong final."
+ },
+ "t137": {
+  "first_faulty_step": 2,
+  "grounded": "yes",
+  "note": "Precedence error in calculator expression."
+ },
+ "t139": {
+  "first_faulty_step": 0,
+  "grounded": "yes",
+  "note": "Queried Algiers not alger; later invents 1000000 for Alger."
+ },
+ "t140": {
+  "first_faulty_step": 1,
+  "grounded": "yes",
+  "note": "Step 1 thought states wrong sum 878000; wrong final."
+ },
+ "t141": {
+  "first_faulty_step": 1,
+  "grounded": "yes",
+  "note": "Step 1 thought invents 3500000 for Berlin; wrong sum."
+ },
+ "t142": {
+  "first_faulty_step": 1,
+  "grounded": "yes",
+  "note": "Step 1 thought invents sum 4900000; later sum also wrong."
+ },
+ "t143": {
+  "first_faulty_step": 1,
+  "grounded": "yes",
+  "note": "Step 1 thought invents sum 4800000 before Barcelone observed."
+ },
+ "t144": {
+  "first_faulty_step": 0,
+  "grounded": "yes",
+  "note": "Queried Algiers not alger; later uses invented value 1."
+ },
+ "t145": {
+  "first_faulty_step": 1,
+  "grounded": "empty",
+  "note": "Queried barcelona not barcelone; finish input None."
+ },
+ "t149": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Queried barcelona; final 720000 not in any observation."
+ },
+ "t150": {
+  "first_faulty_step": 0,
+  "grounded": "yes",
+  "note": "Query not a population lookup; wrong winner Barcelone later."
+ },
+ "t151": {
+  "first_faulty_step": 0,
+  "grounded": "empty",
+  "note": "Step 0 query not a population lookup; never answers."
+ },
+ "t152": {
+  "first_faulty_step": 3,
+  "grounded": "yes",
+  "note": "Data correct but final names Osaka most populous; Berlin larger."
+ },
+ "t153": {
+  "first_faulty_step": 0,
+  "grounded": "yes",
+  "note": "Step 0 query malformed, not a population lookup; final gives up."
+ },
+ "t156": {
+  "first_faulty_step": 0,
+  "grounded": "yes",
+  "note": "Step 0 query malformed; final gives up wrongly."
+ },
+ "t158": {
+  "first_faulty_step": 0,
+  "grounded": "yes",
+  "note": "Malformed query; later calc uses invented Alger 1587423."
+ },
+ "t159": {
+  "first_faulty_step": 0,
+  "grounded": "yes",
+  "note": "Malformed query; final gives up wrongly."
+ },
+ "t160": {
+  "first_faulty_step": 0,
+  "grounded": "yes",
+  "note": "Malformed query; final gives up wrongly."
+ },
+ "t162": {
+  "first_faulty_step": 0,
+  "grounded": "yes",
+  "note": "Malformed query; final gives up wrongly."
+ },
+ "t163": {
+  "first_faulty_step": 0,
+  "grounded": "yes",
+  "note": "Malformed query; final gives up wrongly."
+ },
+ "t164": {
+  "first_faulty_step": 3,
+  "grounded": "yes",
+  "note": "Step 3 calls tool None; final wrongly names Osaka larger."
+ },
+ "t165": {
+  "first_faulty_step": 0,
+  "grounded": "empty",
+  "note": "Malformed query; later uses invented 13M and 21M; no final."
+ },
+ "t166": {
+  "first_faulty_step": 0,
+  "grounded": "yes",
+  "note": "Malformed query; final gives up wrongly."
+ },
+ "t167": {
+  "first_faulty_step": 0,
+  "grounded": "empty",
+  "note": "Malformed query; never answers; Toronto invented in thought."
+ },
+ "t168": {
+  "first_faulty_step": 0,
+  "grounded": "no",
+  "note": "Malformed query; final asserts Alger larger without retrieval."
+ },
+ "t169": {
+  "first_faulty_step": 0,
+  "grounded": "yes",
+  "note": "Malformed query; final gives up wrongly."
+ },
+ "t170": {
+  "first_faulty_step": 0,
+  "grounded": "no",
+  "note": "Malformed query; final invents 10 million gap."
+ },
+ "t171": {
+  "first_faulty_step": 0,
+  "grounded": "no",
+  "note": "Malformed query; final invents 13M, 5M, 8M."
+ },
+ "t172": {
+  "first_faulty_step": 0,
+  "grounded": "empty",
+  "note": "Malformed query; calculator syntax errors; no final answer."
+ },
+ "t173": {
+  "first_faulty_step": 0,
+  "grounded": "yes",
+  "note": "Malformed query; final gives up wrongly."
+ },
+ "t175": {
+  "first_faulty_step": 2,
+  "grounded": "no",
+  "note": "Vienne absent; final invents 1850000 (step 1 thought borderline)."
+ },
+ "t176": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Step 1 thought invents Athens 372 000; final 3,4 millions unsupported."
+ },
+ "t177": {
+  "first_faulty_step": 2,
+  "grounded": "no",
+  "note": "Londres absent; final invents difference, truncated to 150."
+ },
+ "t178": {
+  "first_faulty_step": 0,
+  "grounded": "no",
+  "note": "Queried Viëtnime, wrong entity; final uses invented 2784000."
+ },
+ "t179": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Step 1 thought invents Londres 8,9 million; final 5,5 million unsupported."
+ },
+ "t180": {
+  "first_faulty_step": 2,
+  "grounded": "empty",
+  "note": "Invents 32 million, then tool None; no final."
+ },
+ "t181": {
+  "first_faulty_step": 2,
+  "grounded": "no",
+  "note": "Dublin absent; final invents 150000 (step 1 thought borderline)."
+ },
+ "t182": {
+  "first_faulty_step": 1,
+  "grounded": "yes",
+  "note": "Accented montréal query missed key; placeholder final, no invented value."
+ },
+ "t183": {
+  "first_faulty_step": 2,
+  "grounded": "empty",
+  "note": "Invents Londres 875423 in calculation; no final answer."
+ },
+ "t184": {
+  "first_faulty_step": 0,
+  "grounded": "empty",
+  "note": "Queried Allemagne, not lisbonne; invents Lisbonne 1480000; no final."
+ },
+ "t185": {
+  "first_faulty_step": 2,
+  "grounded": "yes",
+  "note": "Invents Dublin 5834926; final value is only calculator output."
+ },
+ "t186": {
+  "first_faulty_step": 2,
+  "grounded": "no",
+  "note": "Invents Oslo 543987; final 20 millions and 456 013 unsupported."
+ },
+ "t187": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Step 1 thought invents Athens 375 000; final 1725000 unsupported."
+ },
+ "t188": {
+  "first_faulty_step": 2,
+  "grounded": "no",
+  "note": "Dublin absent; final invents 580000 (step 1 thought borderline)."
+ },
+ "t189": {
+  "first_faulty_step": 1,
+  "grounded": "empty",
+  "note": "Queried barcelona, not barcelone; never finishes."
+ },
+ "t190": {
+  "first_faulty_step": 1,
+  "grounded": "no",
+  "note": "Step 1 thought invents difference 178 000 before any basis."
+ },
+ "t191": {
+  "first_faulty_step": 2,
+  "grounded": "no",
+  "note": "Oslo absent; final invents 2574000."
+ },
+ "t192": {
+  "first_faulty_step": 1,
+  "grounded": "yes",
+  "note": "Accented montréal query missed key; final honestly reports unavailable."
+ },
+ "t193": {
+  "first_faulty_step": 0,
+  "grounded": "no",
+  "note": "Queried Viëno, wrong entity; final invents 10 million."
+ },
+ "t194": {
+  "first_faulty_step": 2,
+  "grounded": "yes",
+  "note": "Invents Vienne 2748961; final only reports tool None error."
+ },
+ "t195": {
+  "first_faulty_step": 2,
+  "grounded": "no",
+  "note": "Dublin absent; final invents 387691."
+ },
+ "t196": {
+  "first_faulty_step": 2,
+  "grounded": "no",
+  "note": "Oslo absent; invents 385274; final 574726 unsupported."
+ },
+ "t197": {
+  "first_faulty_step": 2,
+  "grounded": "yes",
+  "note": "Invents Londres difference 458000; final only reports tool error."
+ },
+ "t198": {
+  "first_faulty_step": 2,
+  "grounded": "no",
+  "note": "Lisbonne absent; invents 1375000; final 1825000 unsupported."
+ },
+ "t199": {
+  "first_faulty_step": 2,
+  "grounded": "no",
+  "note": "Oslo absent; final invents 2510000."
+ }
+}

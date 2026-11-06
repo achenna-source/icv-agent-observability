@@ -1,0 +1,135 @@
+{
+  "n": 128,
+  "raters": {
+    "A": "opus",
+    "B": "sonnet",
+    "C": "fable"
+  },
+  "notes": {
+    "annotators_are_llms": "The three annotators are Claude models, not people. They received an isolated packet with the task, the numbered steps, the final answer and the complete store, and neither the reference labels nor the detector outputs.",
+    "why_not_a_rule": "Deriving the faulty step by a mechanical rule would score the detectors against a target a detector produced.",
+    "human_reference_pending": "The first annotator's own pass over the same 128 failures is prepared and not yet returned; it will be the human reference for both judgements."
+  },
+  "agreement": {
+    "grounded_unanimous": 127,
+    "grounded_pairwise": {
+      "opus|sonnet": 128,
+      "opus|fable": 127,
+      "sonnet|fable": 127
+    },
+    "step_unanimous": 112,
+    "step_within_one": 128
+  },
+  "grounded_ties": [],
+  "alignment": {
+    "B, schema": {
+      "true_positives": 37,
+      "exact": 15,
+      "at_or_before": 15,
+      "after": 22,
+      "median_offset": 1,
+      "offsets": {
+        "0": 15,
+        "1": 8,
+        "2": 7,
+        "4": 3,
+        "3": 3,
+        "5": 1
+      }
+    },
+    "B*, schema with exemption": {
+      "true_positives": 21,
+      "exact": 11,
+      "at_or_before": 11,
+      "after": 10,
+      "median_offset": 0,
+      "offsets": {
+        "0": 11,
+        "2": 5,
+        "4": 1,
+        "3": 1,
+        "1": 2,
+        "5": 1
+      }
+    },
+    "C, consistency": {
+      "true_positives": 39,
+      "exact": 13,
+      "at_or_before": 13,
+      "after": 26,
+      "median_offset": 1,
+      "offsets": {
+        "3": 4,
+        "0": 13,
+        "2": 9,
+        "1": 9,
+        "5": 1,
+        "4": 3
+      }
+    }
+  },
+  "grounded_by_label": {
+    "F6": {
+      "no": 1,
+      "yes": 6
+    },
+    "F5": {
+      "empty": 12,
+      "yes": 1
+    },
+    "F3": {
+      "yes": 30,
+      "no": 32,
+      "empty": 7
+    },
+    "F2": {
+      "no": 21
+    },
+    "F7": {
+      "no": 15,
+      "empty": 2,
+      "yes": 1
+    }
+  },
+  "f3c_check": {
+    "n": 34,
+    "counts": {
+      "yes": 6,
+      "no": 27,
+      "empty": 1
+    }
+  },
+  "grounding_target": {
+    "size": 69,
+    "rows": {
+      "B, schema": {
+        "tp": 5,
+        "fp": 57,
+        "precision": 0.081,
+        "recall": 0.072,
+        "mcc": -0.373
+      },
+      "B*, schema with exemption": {
+        "tp": 0,
+        "fp": 21,
+        "precision": 0.0,
+        "recall": 0.0,
+        "mcc": -0.249
+      },
+      "C, consistency": {
+        "tp": 25,
+        "fp": 14,
+        "precision": 0.641,
+        "recall": 0.362,
+        "mcc": 0.306
+      },
+      "B or C": {
+        "tp": 26,
+        "fp": 67,
+        "precision": 0.28,
+        "recall": 0.377,
+        "mcc": -0.128
+      }
+    }
+  }
+}

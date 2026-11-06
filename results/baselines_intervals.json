@@ -1,0 +1,82 @@
+{
+ "what_this_is": "Cluster-bootstrap intervals for the comparison of Section VI.C. Each replicate resamples the eight task templates and recomputes every validator on the same clusters, so a paired difference does not inherit the variance the validators share. Eight clusters give wide intervals, which is a property of this benchmark and not of the method.",
+ "n_items": 200,
+ "n_clusters": 8,
+ "replicates": 10000,
+ "seed": 20261105,
+ "validators": {
+  "recompute": {
+   "mcc": 0.876,
+   "ci_template": [
+    0.722,
+    0.967
+   ]
+  },
+  "store only": {
+   "mcc": 0.357,
+   "ci_template": [
+    -0.07,
+    0.714
+   ]
+  },
+  "task only": {
+   "mcc": 0.457,
+   "ci_template": [
+    0.057,
+    0.738
+   ]
+  },
+  "trace only": {
+   "mcc": 0.485,
+   "ci_template": [
+    0.245,
+    0.705
+   ]
+  },
+  "recompute + trace only": {
+   "mcc": 0.876,
+   "ci_template": [
+    0.722,
+    0.967
+   ]
+  }
+ },
+ "paired_differences": {
+  "recompute - trace only": {
+   "point": 0.391,
+   "ci_template": [
+    0.162,
+    0.632
+   ],
+   "includes_zero": false,
+   "what": "la recomputation contre la meilleure configuration du papier"
+  },
+  "recompute + trace only - recompute": {
+   "point": 0.0,
+   "ci_template": [
+    0.0,
+    0.0
+   ],
+   "includes_zero": true,
+   "what": "la composition contre la recomputation seule"
+  },
+  "trace only - store only": {
+   "point": 0.128,
+   "ci_template": [
+    -0.324,
+    0.579
+   ],
+   "includes_zero": true,
+   "what": "la trajectoire seule contre l'oracle prive du gabarit"
+  },
+  "trace only - task only": {
+   "point": 0.028,
+   "ci_template": [
+    -0.413,
+    0.529
+   ],
+   "includes_zero": true,
+   "what": "la trajectoire seule contre l'oracle prive du magasin"
+  }
+ }
+}

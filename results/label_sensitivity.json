@@ -1,0 +1,192 @@
+{
+ "what_this_is": "Detection figures rescored on the fifty double-labelled items against three references: the released labels, the second annotator, and the adjudicated panel of the independent round. No released label is rewritten here.",
+ "n_items": 50,
+ "n_items_panel": 50,
+ "panel": {
+  "unanimous": 37,
+  "adjudicated": 13,
+  "undecided_excluded": [],
+  "settled_by": {
+   "t003": "EXT",
+   "t028": "EXT",
+   "t125": "AC",
+   "t133": "AC",
+   "t139": "AC",
+   "t143": "AC",
+   "t152": "AC",
+   "t176": "AC",
+   "t178": "AC",
+   "t183": "EXT",
+   "t186": "AC",
+   "t194": "AC",
+   "t197": "AC"
+  },
+  "readers": [
+   "A",
+   "C",
+   "E",
+   "K"
+  ]
+ },
+ "base_rate": {
+  "annotator1": 0.7,
+  "annotator2": 0.82,
+  "panel": 0.7
+ },
+ "detectors": {
+  "Tier 1 (B)": {
+   "annotator1": {
+    "precision": 0.7,
+    "mcc": 0.0,
+    "false_alarms": 6
+   },
+   "annotator2": {
+    "precision": 1.0,
+    "mcc": 0.383,
+    "false_alarms": 0
+   },
+   "panel": {
+    "precision": 0.7,
+    "mcc": 0.0,
+    "false_alarms": 6
+   }
+  },
+  "Tier 2 (C)": {
+   "annotator1": {
+    "precision": 1.0,
+    "mcc": 0.327,
+    "false_alarms": 0
+   },
+   "annotator2": {
+    "precision": 1.0,
+    "mcc": 0.234,
+    "false_alarms": 0
+   },
+   "panel": {
+    "precision": 1.0,
+    "mcc": 0.327,
+    "false_alarms": 0
+   }
+  },
+  "B or C": {
+   "annotator1": {
+    "precision": 0.769,
+    "mcc": 0.157,
+    "false_alarms": 6
+   },
+   "annotator2": {
+    "precision": 1.0,
+    "mcc": 0.488,
+    "false_alarms": 0
+   },
+   "panel": {
+    "precision": 0.769,
+    "mcc": 0.157,
+    "false_alarms": 6
+   }
+  },
+  "B* (exempt)": {
+   "annotator1": {
+    "precision": 1.0,
+    "mcc": 0.242,
+    "false_alarms": 0
+   },
+   "annotator2": {
+    "precision": 1.0,
+    "mcc": 0.173,
+    "false_alarms": 0
+   },
+   "panel": {
+    "precision": 1.0,
+    "mcc": 0.242,
+    "false_alarms": 0
+   }
+  },
+  "B* or C": {
+   "annotator1": {
+    "precision": 1.0,
+    "mcc": 0.449,
+    "false_alarms": 0
+   },
+   "annotator2": {
+    "precision": 1.0,
+    "mcc": 0.321,
+    "false_alarms": 0
+   },
+   "panel": {
+    "precision": 1.0,
+    "mcc": 0.449,
+    "false_alarms": 0
+   }
+  },
+  "32B judge": {
+   "annotator1": {
+    "precision": 0.944,
+    "mcc": 0.855,
+    "false_alarms": 2
+   },
+   "annotator2": {
+    "precision": 0.972,
+    "mcc": 0.635,
+    "false_alarms": 1
+   },
+   "panel": {
+    "precision": 0.944,
+    "mcc": 0.855,
+    "false_alarms": 2
+   }
+  }
+ },
+ "spans": {
+  "Tier 1 (B)": {
+   "precision": 0.3,
+   "mcc": 0.383
+  },
+  "Tier 2 (C)": {
+   "precision": 0.0,
+   "mcc": 0.093
+  },
+  "B or C": {
+   "precision": 0.231,
+   "mcc": 0.33
+  },
+  "B* (exempt)": {
+   "precision": 0.0,
+   "mcc": 0.069
+  },
+  "B* or C": {
+   "precision": 0.0,
+   "mcc": 0.128
+  },
+  "32B judge": {
+   "precision": 0.028,
+   "mcc": 0.22
+  }
+ },
+ "best_by_mcc": {
+  "annotator1": "32B judge",
+  "annotator2": "32B judge",
+  "panel": "32B judge"
+ },
+ "ranking_holds": true,
+ "judges": {
+  "annotator 1": {
+   "7B judge": 0.129,
+   "32B judge": 0.421
+  },
+  "annotator 2": {
+   "7B judge": 0.191,
+   "32B judge": 0.202
+  },
+  "the panel": {
+   "7B judge": 0.063,
+   "32B judge": 0.419
+  }
+ },
+ "between_references": {
+  "annotator1_vs_annotator2": 0.37,
+  "annotator1_vs_panel": 0.749,
+  "annotator2_vs_panel": 0.263
+ },
+ "note": "The detector columns under the released labels and under the panel coincide because the panel's relabellings all move one failure category to another and never cross the failure against success line the detectors are scored on. The second annotator's column differs because that reader labels nine malformation items as F1a where the released labels call them successes, which is the case the recovery convention now settles."
+}

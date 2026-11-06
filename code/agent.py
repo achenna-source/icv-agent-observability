@@ -58,6 +58,16 @@ def calculator(expr):
         return "Erreur: %s" % e
 
 
+NOT_FOUND = "Information non trouvee"
+# La meme chaine sous ses deux orthographes. Le corpus publie porte la forme accentuee,
+# produite par la version qui l'a genere ; cette version ecrit la forme sans accent. Les
+# deux sont reconnues par les detecteurs, pour qu'une regeneration et le corpus publie
+# soient lus de la meme facon. Aucun chiffre des resultats n'en depend : la chaine ne
+# contient aucun chiffre, donc l'inclure ou non dans les valeurs retrouvees est sans
+# effet. Le controle est dans experiments/sentinel_check.py.
+NOT_FOUND_FORMS = (NOT_FOUND, "Information non trouvée")
+
+
 def make_knowledge_base(kb):
     """All query words must appear in a key for it to match; otherwise the store
     returns not-found. This is the behaviour behind the F3b exonym cases."""
@@ -66,7 +76,7 @@ def make_knowledge_base(kb):
         for k, v in kb.items():
             if all(w in q for w in k.split()):
                 return v
-        return "Information non trouvee"
+        return NOT_FOUND
     return knowledge_base
 
 

@@ -1,0 +1,40 @@
+{
+  "rule1_reachability": {
+    "steps": 599,
+    "malformed_steps": 60,
+    "steps_naming_a_nonexistent_tool": 0
+  },
+  "trajectories_with_a_malformation": {
+    "n": 49,
+    "recovered": 41,
+    "labelled_F1": 0,
+    "reference_labels": {
+      "S": 25,
+      "F6": 6,
+      "F5": 3,
+      "F3": 8,
+      "F7": 7
+    }
+  },
+  "literal_table_contradiction": {
+    "trajectories": 49,
+    "share_of_corpus": 0.245,
+    "table_label": "F1a",
+    "reference_labels_F1": 0
+  },
+  "literal_reading_ceiling_on_the_50": {
+    "with_a_malformation": 16,
+    "raw_agreement": 0.68,
+    "kappa": 0.622
+  },
+  "F1_disagreements": {
+    "n": 9,
+    "written_by_annotator2": 9,
+    "written_by_annotator1": 0,
+    "pairs": {
+      "F6/F1": 2,
+      "S/F1": 6,
+      "F5/F1": 1
+    }
+  }
+}

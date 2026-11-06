@@ -1,0 +1,15 @@
+LOCALISATION DU DESACCORD
+
+  4 annotateurs, 50 trajectoires communes
+  14 trajectoires ou l'etiquette calculee differe
+
+  premiere question divergente :
+    f7                                                       5
+    f1a                                                      3
+    f6                                                       3
+    f1b                                                      2
+    f4                                                       1
+
+  Cette colonne est ce que la feuille Excel ne pouvait pas donner :
+  un desaccord se rapporte a la question qui l'a cause, donc a la
+  phrase du codebook a reecrire, et non seulement a deux codes.

@@ -1,0 +1,119 @@
+{
+  "n": 115,
+  "counts": {
+    "F6": 7,
+    "F3": 69,
+    "F2": 21,
+    "F7": 18
+  },
+  "templates_by_label": {
+    "F2": [
+      "T2"
+    ],
+    "F3": [
+      "T1",
+      "T3",
+      "T5",
+      "T6",
+      "T7"
+    ],
+    "F6": [
+      "T0",
+      "T5",
+      "T6"
+    ],
+    "F7": [
+      "T7"
+    ]
+  },
+  "pairs": [
+    {
+      "pair": "F2/F3",
+      "shared_templates": [],
+      "n_shared": 0,
+      "n_all": 90,
+      "testable": false,
+      "note": "the two categories never occur in the same template, so this corpus never forces a choice between them"
+    },
+    {
+      "pair": "F2/F6",
+      "shared_templates": [],
+      "n_shared": 0,
+      "n_all": 28,
+      "testable": false,
+      "note": "the two categories never occur in the same template, so this corpus never forces a choice between them"
+    },
+    {
+      "pair": "F2/F7",
+      "shared_templates": [],
+      "n_shared": 0,
+      "n_all": 39,
+      "testable": false,
+      "note": "the two categories never occur in the same template, so this corpus never forces a choice between them"
+    },
+    {
+      "pair": "F3/F6",
+      "shared_templates": [
+        "T5",
+        "T6"
+      ],
+      "n_shared": 37,
+      "n_first": 31,
+      "testable": true,
+      "best_rate": 0.838,
+      "baseline": 0.838,
+      "gain": 0.0,
+      "predicate": "the trajectory contains a malformed step",
+      "direction": "F3 when it does not hold",
+      "reproduces": false
+    },
+    {
+      "pair": "F3/F7",
+      "shared_templates": [
+        "T7"
+      ],
+      "n_shared": 25,
+      "n_first": 7,
+      "testable": true,
+      "best_rate": 0.88,
+      "baseline": 0.72,
+      "gain": 0.16,
+      "predicate": "no usable value was ever obtained",
+      "direction": "F3 when it holds",
+      "reproduces": true
+    },
+    {
+      "pair": "F6/F7",
+      "shared_templates": [],
+      "n_shared": 0,
+      "n_all": 25,
+      "testable": false,
+      "note": "the two categories never occur in the same template, so this corpus never forces a choice between them"
+    }
+  ],
+  "n_testable": 2,
+  "n_reproducing": 1,
+  "protocol": "for each pair, every predicate is tried in both directions and the best is kept after seeing the labels, which overstates what a rule written in advance would achieve",
+  "predicates": [
+    "a retrieval came back on an absence",
+    "a tool argument introduces a term from nowhere",
+    "no usable value was ever obtained",
+    "that quantity is not reconstructible from the retrieved values",
+    "the answer carries a quantity no observation supplied",
+    "the answer conflicts with a value the agent held",
+    "the calculator is called",
+    "the final answer asserts a value",
+    "the final answer declines",
+    "the final answer is empty or absent",
+    "the trajectory contains a malformed step",
+    "the trajectory runs more than three steps",
+    "two or more retrievals succeeded"
+  ],
+  "multiplicity": {
+    "pairs_examined": 6,
+    "best_within_pair_p": 0.012,
+    "family_wise_p": 0.072,
+    "consequence": "no boundary in the block is established once the search over six pairs is accounted for"
+  },
+  "verdict": "of the six boundaries inside the block the reviewer names, this corpus exercises only 2, because F2 occurs in one template and F7 in another; of those exercised, 1 exceed the majority baseline even under a post hoc choice of rule"
+}

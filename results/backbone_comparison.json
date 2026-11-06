@@ -1,0 +1,237 @@
+{
+ "what_this_is": "Two agent backbones on the same 200 task statements, compared on what can be compared without labels: the agent's own behaviour, each signal's firing rate with a cluster-bootstrap interval, and whether a signal fires on the same tasks under both backbones. Detection quality is reported only for a corpus that carries labels, and the second does not until a labelling round is run.",
+ "first": "trajectories_200.jsonl",
+ "second": "trajectories_200_falcon3_7b.jsonl",
+ "n_items": 200,
+ "bootstrap": {
+  "replicates": 10000,
+  "seed": 20261105,
+  "clusters": "task templates"
+ },
+ "behaviour": {
+  "first": {
+   "mean_steps": 3.0,
+   "at_budget": 16,
+   "no_finish": 10,
+   "unregistered_steps": 60,
+   "trajectories_with_unregistered": 49
+  },
+  "second": {
+   "mean_steps": 4.52,
+   "at_budget": 82,
+   "no_finish": 81,
+   "unregistered_steps": 16,
+   "trajectories_with_unregistered": 12
+  }
+ },
+ "store": {
+  "first": {
+   "calls": 276,
+   "served": 137,
+   "served_share": 0.496,
+   "distinct_unserved": 55,
+   "unserved_english_capital": 1
+  },
+  "second": {
+   "calls": 576,
+   "served": 171,
+   "served_share": 0.297,
+   "distinct_unserved": 86,
+   "unserved_english_capital": 17
+  }
+ },
+ "firing": {
+  "B, schema": {
+   "rate_first": 0.31,
+   "ci_first": [
+    0.11,
+    0.535
+   ],
+   "rate_second": 0.255,
+   "ci_second": [
+    0.06,
+    0.485
+   ],
+   "both": 10,
+   "only_first": 52,
+   "only_second": 41,
+   "neither": 97,
+   "agreement": 0.535,
+   "phi": -0.144
+  },
+  "B*, exempted": {
+   "rate_first": 0.105,
+   "ci_first": [
+    0.04,
+    0.18
+   ],
+   "rate_second": 0.255,
+   "ci_second": [
+    0.06,
+    0.485
+   ],
+   "both": 3,
+   "only_first": 18,
+   "only_second": 48,
+   "neither": 131,
+   "agreement": 0.67,
+   "phi": -0.088
+  },
+  "C, consistency": {
+   "rate_first": 0.19,
+   "ci_first": [
+    0.06,
+    0.37
+   ],
+   "rate_second": 0.115,
+   "ci_second": [
+    0.03,
+    0.22
+   ],
+   "both": 3,
+   "only_first": 35,
+   "only_second": 20,
+   "neither": 142,
+   "agreement": 0.725,
+   "phi": -0.055
+  },
+  "B* or C": {
+   "rate_first": 0.295,
+   "ci_first": [
+    0.12,
+    0.47
+   ],
+   "rate_second": 0.345,
+   "ci_second": [
+    0.105,
+    0.615
+   ],
+   "both": 27,
+   "only_first": 32,
+   "only_second": 42,
+   "neither": 99,
+   "agreement": 0.63,
+   "phi": 0.153
+  }
+ },
+ "schema_cause": {
+  "first": {
+   "action absente": 47,
+   "outil inconnu": 0,
+   "argument vide": 10,
+   "calculator illisible": 4,
+   "finish vide": 1
+  },
+  "second": {
+   "action absente": 0,
+   "outil inconnu": 12,
+   "argument vide": 0,
+   "calculator illisible": 39,
+   "finish vide": 0
+  }
+ },
+ "detour_exemption": {
+  "first": {
+   "detours": 49,
+   "recovered": 41,
+   "b": 62,
+   "b_star": 21,
+   "exempted": 41
+  },
+  "second": {
+   "detours": 12,
+   "recovered": 0,
+   "b": 51,
+   "b_star": 51,
+   "exempted": 0
+  }
+ },
+ "per_template": {
+  "T0": {
+   "n": 25,
+   "b1": 0.96,
+   "b2": 0.0,
+   "bc1": 0.08,
+   "bc2": 0.0
+  },
+  "T1": {
+   "n": 25,
+   "b1": 0.32,
+   "b2": 0.0,
+   "bc1": 0.32,
+   "bc2": 0.0
+  },
+  "T2": {
+   "n": 25,
+   "b1": 0.0,
+   "b2": 0.48,
+   "bc1": 0.48,
+   "bc2": 0.84
+  },
+  "T3": {
+   "n": 25,
+   "b1": 0.0,
+   "b2": 0.16,
+   "bc1": 0.0,
+   "bc2": 0.32
+  },
+  "T4": {
+   "n": 25,
+   "b1": 0.0,
+   "b2": 0.48,
+   "bc1": 0.0,
+   "bc2": 0.48
+  },
+  "T5": {
+   "n": 25,
+   "b1": 0.32,
+   "b2": 0.0,
+   "bc1": 0.6,
+   "bc2": 0.12
+  },
+  "T6": {
+   "n": 25,
+   "b1": 0.44,
+   "b2": 0.0,
+   "bc1": 0.2,
+   "bc2": 0.0
+  },
+  "T7": {
+   "n": 25,
+   "b1": 0.44,
+   "b2": 0.92,
+   "bc1": 0.68,
+   "bc2": 1.0
+  }
+ },
+ "detection_quality": {
+  "first": {
+   "B, schema": {
+    "precision": 0.597,
+    "recall": 0.289,
+    "mcc": -0.06,
+    "false_alarms": 25
+   },
+   "B*, exempted": {
+    "precision": 1.0,
+    "recall": 0.164,
+    "mcc": 0.257,
+    "false_alarms": 0
+   },
+   "C, consistency": {
+    "precision": 1.0,
+    "recall": 0.297,
+    "mcc": 0.363,
+    "false_alarms": 0
+   },
+   "B* or C": {
+    "precision": 1.0,
+    "recall": 0.461,
+    "mcc": 0.485,
+    "false_alarms": 0
+   }
+  },
+  "second": null
+ },
+ "what_this_cannot_say": "A signal firing at the same rate on both corpora may be catching different faults on each. Only labels on the second corpus would settle that, and that is why the labelling round is the step after this one."
+}

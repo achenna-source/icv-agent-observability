@@ -1,0 +1,204 @@
+{
+ "what_this_is": "Inexpensive deterministic validators asked for by reviewer 7, measured against the paper's own signals on the same 200 trajectories and the same metric. The validators numbered 1 to 4 read the task template and the knowledge base as well as the trace; the paper's signals read the trace alone. The comparison is therefore not between equals, and the column that says what each one reads is part of the result.",
+ "n_items": 200,
+ "n_failures": 128,
+ "base_rate": 0.64,
+ "best_overall": "1 recompute",
+ "best_trace_only": "B* or C",
+ "increment_over_recompute": {
+  "1 + tier1": -0.226,
+  "1 + B*vC": 0.0
+ },
+ "validators": {
+  "1 recompute": {
+   "reads": "task + store",
+   "precision": 0.983,
+   "recall": 0.922,
+   "mcc": 0.876,
+   "false_alarms": 2,
+   "n_flagged": 120,
+   "tp": 118,
+   "fp": 2,
+   "fn": 10,
+   "tn": 70,
+   "recall_by_category": {
+    "F2": 1.0,
+    "F3": 0.913,
+    "F5": 1.0,
+    "F6": 0.429,
+    "F7": 1.0
+   }
+  },
+  "2 operation": {
+   "reads": "task",
+   "precision": 1.0,
+   "recall": 0.375,
+   "mcc": 0.421,
+   "false_alarms": 0,
+   "n_flagged": 48,
+   "tp": 48,
+   "fp": 0,
+   "fn": 80,
+   "tn": 72,
+   "recall_by_category": {
+    "F2": 0.0,
+    "F3": 0.435,
+    "F5": 0.154,
+    "F6": 0.286,
+    "F7": 0.778
+   }
+  },
+  "3 grounded": {
+   "reads": "task + store",
+   "precision": 0.979,
+   "recall": 0.734,
+   "mcc": 0.679,
+   "false_alarms": 2,
+   "n_flagged": 96,
+   "tp": 94,
+   "fp": 2,
+   "fn": 34,
+   "tn": 70,
+   "recall_by_category": {
+    "F2": 0.81,
+    "F3": 0.681,
+    "F5": 0.923,
+    "F6": 0.143,
+    "F7": 0.944
+   }
+  },
+  "4 answerable": {
+   "reads": "task + store",
+   "precision": 1.0,
+   "recall": 0.289,
+   "mcc": 0.357,
+   "false_alarms": 0,
+   "n_flagged": 37,
+   "tp": 37,
+   "fp": 0,
+   "fn": 91,
+   "tn": 72,
+   "recall_by_category": {
+    "F2": 0.81,
+    "F3": 0.043,
+    "F5": 0.0,
+    "F6": 0.0,
+    "F7": 0.944
+   }
+  },
+  "1 or 3": {
+   "reads": "task + store",
+   "precision": 0.983,
+   "recall": 0.922,
+   "mcc": 0.876,
+   "false_alarms": 2,
+   "n_flagged": 120,
+   "tp": 118,
+   "fp": 2,
+   "fn": 10,
+   "tn": 70,
+   "recall_by_category": {
+    "F2": 1.0,
+    "F3": 0.913,
+    "F5": 1.0,
+    "F6": 0.429,
+    "F7": 1.0
+   }
+  },
+  "tier1 (B)": {
+   "reads": "trace only",
+   "precision": 0.597,
+   "recall": 0.289,
+   "mcc": -0.06,
+   "false_alarms": 25,
+   "n_flagged": 62,
+   "tp": 37,
+   "fp": 25,
+   "fn": 91,
+   "tn": 47,
+   "recall_by_category": {
+    "F2": 0.0,
+    "F3": 0.159,
+    "F5": 1.0,
+    "F6": 0.857,
+    "F7": 0.389
+   }
+  },
+  "tier2 (C)": {
+   "reads": "trace only",
+   "precision": 1.0,
+   "recall": 0.297,
+   "mcc": 0.363,
+   "false_alarms": 0,
+   "n_flagged": 38,
+   "tp": 38,
+   "fp": 0,
+   "fn": 90,
+   "tn": 72,
+   "recall_by_category": {
+    "F2": 0.571,
+    "F3": 0.174,
+    "F5": 0.0,
+    "F6": 0.143,
+    "F7": 0.722
+   }
+  },
+  "B* or C": {
+   "reads": "trace only",
+   "precision": 1.0,
+   "recall": 0.461,
+   "mcc": 0.485,
+   "false_alarms": 0,
+   "n_flagged": 59,
+   "tp": 59,
+   "fp": 0,
+   "fn": 69,
+   "tn": 72,
+   "recall_by_category": {
+    "F2": 0.571,
+    "F3": 0.275,
+    "F5": 0.923,
+    "F6": 0.143,
+    "F7": 0.833
+   }
+  },
+  "1 + tier1": {
+   "reads": "task + store",
+   "precision": 0.82,
+   "recall": 0.961,
+   "mcc": 0.65,
+   "false_alarms": 27,
+   "n_flagged": 150,
+   "tp": 123,
+   "fp": 27,
+   "fn": 5,
+   "tn": 45,
+   "recall_by_category": {
+    "F2": 1.0,
+    "F3": 0.942,
+    "F5": 1.0,
+    "F6": 0.857,
+    "F7": 1.0
+   }
+  },
+  "1 + B*vC": {
+   "reads": "task + store",
+   "precision": 0.983,
+   "recall": 0.922,
+   "mcc": 0.876,
+   "false_alarms": 2,
+   "n_flagged": 120,
+   "tp": 118,
+   "fp": 2,
+   "fn": 10,
+   "tn": 70,
+   "recall_by_category": {
+    "F2": 1.0,
+    "F3": 0.913,
+    "F5": 1.0,
+    "F6": 0.429,
+    "F7": 1.0
+   }
+  }
+ }
+}

@@ -1,0 +1,720 @@
+{
+  "annotators": [
+    "A",
+    "C",
+    "E",
+    "K"
+  ],
+  "n_shared": 50,
+  "first_divergent_question": {
+    "f1b": 2,
+    "f7": 5,
+    "f1a": 3,
+    "f6": 3,
+    "f4": 1
+  },
+  "items": {
+    "t003": {
+      "labels": {
+        "A": "F3",
+        "C": "F2",
+        "E": "F3",
+        "K": "F1b"
+      },
+      "first_divergent_question": "f1b",
+      "answers": {
+        "A": {
+          "correct": "n",
+          "first_fault_step": 3,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "n"
+        },
+        "C": {
+          "correct": "n",
+          "first_fault_step": 5,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "y"
+        },
+        "E": {
+          "correct": "n",
+          "first_fault_step": 3,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "n"
+        },
+        "K": {
+          "correct": "n",
+          "first_fault_step": 3,
+          "f1a": "n",
+          "f1b": "y"
+        }
+      }
+    },
+    "t028": {
+      "labels": {
+        "A": "F3",
+        "C": "F3",
+        "E": "F3",
+        "K": "F1b"
+      },
+      "first_divergent_question": "f1b",
+      "answers": {
+        "A": {
+          "correct": "n",
+          "first_fault_step": 2,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "n"
+        },
+        "C": {
+          "correct": "n",
+          "first_fault_step": 3,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "n"
+        },
+        "E": {
+          "correct": "n",
+          "first_fault_step": 2,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "n"
+        },
+        "K": {
+          "correct": "n",
+          "first_fault_step": 2,
+          "f1a": "n",
+          "f1b": "y"
+        }
+      }
+    },
+    "t125": {
+      "labels": {
+        "A": "F3",
+        "C": "F7",
+        "E": "F7",
+        "K": "F3"
+      },
+      "first_divergent_question": "f7",
+      "answers": {
+        "A": {
+          "correct": "n",
+          "first_fault_step": 2,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "n"
+        },
+        "C": {
+          "correct": "n",
+          "first_fault_step": 2,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "y"
+        },
+        "E": {
+          "correct": "n",
+          "first_fault_step": 2,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "y"
+        },
+        "K": {
+          "correct": "n",
+          "first_fault_step": 2,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "n"
+        }
+      }
+    },
+    "t133": {
+      "labels": {
+        "A": "F6",
+        "C": "F6",
+        "E": "F5",
+        "K": "F6"
+      },
+      "first_divergent_question": "f1a",
+      "answers": {
+        "A": {
+          "correct": "n",
+          "first_fault_step": 6,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "y"
+        },
+        "C": {
+          "correct": "n",
+          "first_fault_step": 6,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "y"
+        },
+        "E": {
+          "correct": "n",
+          "first_fault_step": 0,
+          "open_subgoals": "y"
+        },
+        "K": {
+          "correct": "n",
+          "first_fault_step": 6,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "y"
+        }
+      }
+    },
+    "t139": {
+      "labels": {
+        "A": "F7",
+        "C": "F7",
+        "E": "F3",
+        "K": "F3"
+      },
+      "first_divergent_question": "f7",
+      "answers": {
+        "A": {
+          "correct": "n",
+          "first_fault_step": 3,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "y"
+        },
+        "C": {
+          "correct": "n",
+          "first_fault_step": 1,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "y"
+        },
+        "E": {
+          "correct": "n",
+          "first_fault_step": 1,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "n"
+        },
+        "K": {
+          "correct": "n",
+          "first_fault_step": 1,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "n"
+        }
+      }
+    },
+    "t143": {
+      "labels": {
+        "A": "F3",
+        "C": "F7",
+        "E": "F7",
+        "K": "F3"
+      },
+      "first_divergent_question": "f7",
+      "answers": {
+        "A": {
+          "correct": "n",
+          "first_fault_step": 2,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "n"
+        },
+        "C": {
+          "correct": "n",
+          "first_fault_step": 2,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "y"
+        },
+        "E": {
+          "correct": "n",
+          "first_fault_step": 2,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "y"
+        },
+        "K": {
+          "correct": "n",
+          "first_fault_step": 2,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "n"
+        }
+      }
+    },
+    "t152": {
+      "labels": {
+        "A": "F3",
+        "C": "F6",
+        "E": "F3",
+        "K": "F3"
+      },
+      "first_divergent_question": "f6",
+      "answers": {
+        "A": {
+          "correct": "n",
+          "first_fault_step": 3,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "n"
+        },
+        "C": {
+          "correct": "n",
+          "first_fault_step": 4,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "y"
+        },
+        "E": {
+          "correct": "n",
+          "first_fault_step": 3,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "n"
+        },
+        "K": {
+          "correct": "n",
+          "first_fault_step": 4,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "n"
+        }
+      }
+    },
+    "t158": {
+      "labels": {
+        "A": "F3",
+        "C": "F7",
+        "E": "F3",
+        "K": "F3"
+      },
+      "first_divergent_question": "f7",
+      "answers": {
+        "A": {
+          "correct": "n",
+          "first_fault_step": 1,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "n"
+        },
+        "C": {
+          "correct": "n",
+          "first_fault_step": 1,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "y"
+        },
+        "E": {
+          "correct": "n",
+          "first_fault_step": 1,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "n"
+        },
+        "K": {
+          "correct": "n",
+          "first_fault_step": 1,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "n"
+        }
+      }
+    },
+    "t176": {
+      "labels": {
+        "A": "F7",
+        "C": "F6",
+        "E": "F7",
+        "K": "F7"
+      },
+      "first_divergent_question": "f6",
+      "answers": {
+        "A": {
+          "correct": "n",
+          "first_fault_step": 2,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "y"
+        },
+        "C": {
+          "correct": "n",
+          "first_fault_step": 3,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "y"
+        },
+        "E": {
+          "correct": "n",
+          "first_fault_step": 2,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "y"
+        },
+        "K": {
+          "correct": "n",
+          "first_fault_step": 2,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "y"
+        }
+      }
+    },
+    "t178": {
+      "labels": {
+        "A": "F7",
+        "C": "F7",
+        "E": "F3",
+        "K": "F7"
+      },
+      "first_divergent_question": "f7",
+      "answers": {
+        "A": {
+          "correct": "n",
+          "first_fault_step": 3,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "y"
+        },
+        "C": {
+          "correct": "n",
+          "first_fault_step": 3,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "y"
+        },
+        "E": {
+          "correct": "n",
+          "first_fault_step": 1,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "n"
+        },
+        "K": {
+          "correct": "n",
+          "first_fault_step": 3,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "y"
+        }
+      }
+    },
+    "t183": {
+      "labels": {
+        "A": "F7",
+        "C": "F4",
+        "E": "F4",
+        "K": "F7"
+      },
+      "first_divergent_question": "f4",
+      "answers": {
+        "A": {
+          "correct": "n",
+          "first_fault_step": 5,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "y"
+        },
+        "C": {
+          "correct": "n",
+          "first_fault_step": 3,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "y"
+        },
+        "E": {
+          "correct": "n",
+          "first_fault_step": 5,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "y"
+        },
+        "K": {
+          "correct": "n",
+          "first_fault_step": 3,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "y"
+        }
+      }
+    },
+    "t186": {
+      "labels": {
+        "A": "F7",
+        "C": "F6",
+        "E": "F7",
+        "K": "F7"
+      },
+      "first_divergent_question": "f6",
+      "answers": {
+        "A": {
+          "correct": "n",
+          "first_fault_step": 5,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "y"
+        },
+        "C": {
+          "correct": "n",
+          "first_fault_step": 5,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "y"
+        },
+        "E": {
+          "correct": "n",
+          "first_fault_step": 5,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "y"
+        },
+        "K": {
+          "correct": "n",
+          "first_fault_step": 1,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "y"
+        }
+      }
+    },
+    "t194": {
+      "labels": {
+        "A": "F5",
+        "C": "F5",
+        "E": "F5",
+        "K": "F3"
+      },
+      "first_divergent_question": "f1a",
+      "answers": {
+        "A": {
+          "correct": "n",
+          "first_fault_step": 0,
+          "open_subgoals": "y"
+        },
+        "C": {
+          "correct": "n",
+          "first_fault_step": 0,
+          "open_subgoals": "y"
+        },
+        "E": {
+          "correct": "n",
+          "first_fault_step": 0,
+          "open_subgoals": "y"
+        },
+        "K": {
+          "correct": "n",
+          "first_fault_step": 4,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "n"
+        }
+      }
+    },
+    "t197": {
+      "labels": {
+        "A": "F5",
+        "C": "F5",
+        "E": "F5",
+        "K": "F3"
+      },
+      "first_divergent_question": "f1a",
+      "answers": {
+        "A": {
+          "correct": "n",
+          "first_fault_step": 0,
+          "open_subgoals": "y"
+        },
+        "C": {
+          "correct": "n",
+          "first_fault_step": 0,
+          "open_subgoals": "y"
+        },
+        "E": {
+          "correct": "n",
+          "first_fault_step": 0,
+          "open_subgoals": "y"
+        },
+        "K": {
+          "correct": "n",
+          "first_fault_step": 4,
+          "f1a": "n",
+          "f1b": "n",
+          "f2": "n",
+          "f4": "n",
+          "f5": "n",
+          "f6": "n",
+          "f7": "n"
+        }
+      }
+    }
+  }
+}

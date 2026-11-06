@@ -1,0 +1,252 @@
+{
+  "t000": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": ""
+  },
+  "t003": {
+    "f3_subcode": null,
+    "label": "F2",
+    "note": "Step 5: Florence is invented and contradicts the earlier retrieved capital Rome; the final answer contains no grounded value."
+  },
+  "t007": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": ""
+  },
+  "t008": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": ""
+  },
+  "t020": {
+    "f3_subcode": null,
+    "label": "F5",
+    "note": "Step 2: finish is called with an empty final-answer input."
+  },
+  "t024": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": ""
+  },
+  "t027": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": ""
+  },
+  "t028": {
+    "f3_subcode": "F3c",
+    "label": "F3",
+    "note": "Step 3: the final answer fails to report the Rome population already retrieved in step 1."
+  },
+  "t029": {
+    "f3_subcode": null,
+    "label": "F5",
+    "note": "Step 2: finish is called with an empty final-answer input."
+  },
+  "t042": {
+    "f3_subcode": null,
+    "label": "F5",
+    "note": "Step 2: finish is called with an empty final-answer input."
+  },
+  "t046": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": ""
+  },
+  "t048": {
+    "f3_subcode": null,
+    "label": "F5",
+    "note": "Step 2: finish is called with an empty final-answer input after retrieving Mumbai's population."
+  },
+  "t050": {
+    "f3_subcode": null,
+    "label": "F2",
+    "note": "Step 2: London population of 8 million is invented; no requested population value was retrieved."
+  },
+  "t051": {
+    "f3_subcode": null,
+    "label": "F2",
+    "note": "Step 2: Lisbon population of approximately 500,000 is invented after the store returned no result."
+  },
+  "t052": {
+    "f3_subcode": null,
+    "label": "F2",
+    "note": "Step 2: Vienna population of 180,000 is invented; no requested population value was retrieved."
+  },
+  "t056": {
+    "f3_subcode": null,
+    "label": "F2",
+    "note": "Step 2: London population of 8 million is invented and is the only value in the answer."
+  },
+  "t063": {
+    "f3_subcode": null,
+    "label": "F2",
+    "note": "Step 2: Lisbon population of approximately 500,000 is invented after the store returned no result."
+  },
+  "t068": {
+    "f3_subcode": null,
+    "label": "F2",
+    "note": "Step 2: London population of 8 million is invented and is the only value in the answer."
+  },
+  "t075": {
+    "f3_subcode": "F3c",
+    "label": "F3",
+    "note": "Step 2: Paris is retrieved as the capital, but the national population of 67 million is invented."
+  },
+  "t081": {
+    "f3_subcode": "F3c",
+    "label": "F3",
+    "note": "Step 2: Paris is retrieved as the capital, but France's population of 67 million is invented."
+  },
+  "t082": {
+    "f3_subcode": "F3c",
+    "label": "F3",
+    "note": "Step 2: the capital is retrieved, but the population 3.7 million is invented."
+  },
+  "t091": {
+    "f3_subcode": "F3c",
+    "label": "F3",
+    "note": "Step 2: the capital Madrid is retrieved, but Spain's population of 47.3 million is invented."
+  },
+  "t092": {
+    "f3_subcode": "F3c",
+    "label": "F3",
+    "note": "Step 2: Brasilia is retrieved as the capital, but Brazil's population of 21.8 million is invented."
+  },
+  "t094": {
+    "f3_subcode": "F3c",
+    "label": "F3",
+    "note": "Step 2: the capital is retrieved, but the population 3.7 million is invented."
+  },
+  "t107": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": ""
+  },
+  "t113": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": ""
+  },
+  "t117": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": ""
+  },
+  "t120": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": ""
+  },
+  "t122": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": ""
+  },
+  "t124": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": ""
+  },
+  "t125": {
+    "f3_subcode": null,
+    "label": "F7",
+    "note": "Step 2: the invented sum 2,680,000 (and resulting intermediate 1,340,000) is used in the final calculation."
+  },
+  "t130": {
+    "f3_subcode": null,
+    "label": "F5",
+    "note": "The calculations are complete, but the trajectory ends without a finish step or final answer."
+  },
+  "t133": {
+    "f3_subcode": null,
+    "label": "F6",
+    "note": "Step 6: the final answer says the data are insufficient despite the retrieved populations and completed average of 2,560,000."
+  },
+  "t138": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": ""
+  },
+  "t139": {
+    "f3_subcode": null,
+    "label": "F7",
+    "note": "Step 1: 'Algiers' misses the available 'Alger' population entry; a fabricated value is later used in the average."
+  },
+  "t143": {
+    "f3_subcode": null,
+    "label": "F7",
+    "note": "Step 2: the invented sum 4,800,000 is used as the input to the final division."
+  },
+  "t152": {
+    "f3_subcode": null,
+    "label": "F6",
+    "note": "Step 4: the final answer says Osaka is more populated, contradicting the retrieved populations and the negative subtraction result."
+  },
+  "t153": {
+    "f3_subcode": "F3b",
+    "label": "F3",
+    "note": "Step 1: the combined comparison query misses two populations that are available separately."
+  },
+  "t154": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": ""
+  },
+  "t156": {
+    "f3_subcode": "F3b",
+    "label": "F3",
+    "note": "Step 1: the comparison query is misdirected although both city populations are available separately."
+  },
+  "t158": {
+    "f3_subcode": null,
+    "label": "F7",
+    "note": "Step 1: the combined query misses Alger's available population; a fabricated Alger value is later used in the calculation."
+  },
+  "t160": {
+    "f3_subcode": "F3b",
+    "label": "F3",
+    "note": "Step 1: the comparison query is misdirected although Madrid and Montreal populations are available separately."
+  },
+  "t174": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "The repeated calculator call follows a malformed step, but the correct result is then returned; it does not continue to budget exhaustion."
+  },
+  "t176": {
+    "f3_subcode": null,
+    "label": "F6",
+    "note": "Step 3: the final answer uses invented Athens data and states Berlin has 3.8 million, contradicting the retrieved 3.6 million."
+  },
+  "t178": {
+    "f3_subcode": null,
+    "label": "F7",
+    "note": "Step 3: invented population 2,784,000 is used as an input to the subtraction."
+  },
+  "t183": {
+    "f3_subcode": null,
+    "label": "F4",
+    "note": "Step 3: invented London population 875,423 is used in the subtraction; the same calculation is then repeated and no finish occurs."
+  },
+  "t186": {
+    "f3_subcode": null,
+    "label": "F6",
+    "note": "Step 5: the final difference conflicts with the previously retrieved Paris population and uses invented data."
+  },
+  "t187": {
+    "f3_subcode": null,
+    "label": "F7",
+    "note": "Step 3: the final difference uses the invented Athens population of 375,000."
+  },
+  "t194": {
+    "f3_subcode": null,
+    "label": "F5",
+    "note": "Only malformed step 3 precedes the finish; the requested difference remains unanswered."
+  },
+  "t197": {
+    "f3_subcode": null,
+    "label": "F5",
+    "note": "Only malformed step 3 precedes the finish; the population difference remains unanswered because London is absent."
+  }
+}

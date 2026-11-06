@@ -1,0 +1,154 @@
+{
+  "n_items": 50,
+  "categories": [
+    "F1",
+    "F2",
+    "F3",
+    "F5",
+    "F6",
+    "F7",
+    "S"
+  ],
+  "vs_author": {
+    "human_2": {
+      "raw": 0.46,
+      "kappa": 0.37,
+      "ci": [
+        0.235,
+        0.509
+      ]
+    },
+    "llm_A": {
+      "raw": 0.52,
+      "kappa": 0.439,
+      "ci": [
+        0.298,
+        0.589
+      ]
+    },
+    "llm_B": {
+      "raw": 0.44,
+      "kappa": 0.333,
+      "ci": [
+        0.176,
+        0.484
+      ]
+    },
+    "llm_C": {
+      "raw": 0.36,
+      "kappa": 0.276,
+      "ci": [
+        0.152,
+        0.41
+      ]
+    },
+    "llm_D": {
+      "raw": 0.46,
+      "kappa": 0.375,
+      "ci": [
+        0.239,
+        0.514
+      ]
+    },
+    "panel_majority": {
+      "raw": 0.46,
+      "kappa": 0.378,
+      "ci": [
+        0.242,
+        0.516
+      ]
+    },
+    "adjudicated": {
+      "raw": 0.48,
+      "kappa": 0.397,
+      "ci": [
+        0.26,
+        0.538
+      ]
+    }
+  },
+  "pairwise": {
+    "humain n2|LLM A": {
+      "raw": 0.94,
+      "kappa": 0.922
+    },
+    "humain n2|LLM B": {
+      "raw": 0.54,
+      "kappa": 0.429
+    },
+    "humain n2|LLM C": {
+      "raw": 0.82,
+      "kappa": 0.766
+    },
+    "humain n2|LLM D": {
+      "raw": 0.88,
+      "kappa": 0.845
+    },
+    "LLM A|LLM B": {
+      "raw": 0.52,
+      "kappa": 0.407
+    },
+    "LLM A|LLM C": {
+      "raw": 0.8,
+      "kappa": 0.742
+    },
+    "LLM A|LLM D": {
+      "raw": 0.88,
+      "kappa": 0.846
+    },
+    "LLM B|LLM C": {
+      "raw": 0.56,
+      "kappa": 0.46
+    },
+    "LLM B|LLM D": {
+      "raw": 0.6,
+      "kappa": 0.503
+    },
+    "LLM C|LLM D": {
+      "raw": 0.78,
+      "kappa": 0.719
+    }
+  },
+  "notes": {
+    "what_this_is": "Four independent LLM annotators, one per model, given exactly the two documents handed to the human second annotator, in an isolated directory without the reference labels, the detector outputs or the paper.",
+    "what_this_is_not": "This is not the human multi-annotator round. It bounds how far the codebook is reproducible by independent readers that are language models, not how far it is reproducible by people.",
+    "correlated_errors": "All four are Claude models, so their errors are not independent in the way four human readers' would be."
+  },
+  "majority_ties": [
+    "t186"
+  ],
+  "fleiss_llm_panel": 0.607,
+  "per_author_category": {
+    "S": {
+      "F1": 18,
+      "S": 29,
+      "F3": 7,
+      "F2": 6
+    },
+    "F6": {
+      "F1": 8,
+      "F6": 5,
+      "F7": 2,
+      "F3": 1
+    },
+    "F5": {
+      "F5": 16,
+      "F1": 4
+    },
+    "F3": {
+      "F3": 21,
+      "F2": 4,
+      "F5": 1,
+      "F7": 29,
+      "F1": 5
+    },
+    "F2": {
+      "F7": 22,
+      "F2": 2
+    },
+    "F7": {
+      "F7": 16,
+      "F1": 4
+    }
+  }
+}

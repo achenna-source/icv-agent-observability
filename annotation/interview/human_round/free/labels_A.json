@@ -1,0 +1,252 @@
+{
+  "t000": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "The capital was retrieved and correctly returned; the malformed None step is excluded."
+  },
+  "t003": {
+    "f3_subcode": "F3b",
+    "label": "F3",
+    "note": "Step 3: after retrieving Rome, the agent misdirects retrieval to the capital of France; the final Florence answer also conflicts with the retrieved Rome value."
+  },
+  "t007": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "The calculator returned 903; the only additional step was malformed and is excluded."
+  },
+  "t008": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "The calculator returned 507; the malformed None step is excluded."
+  },
+  "t020": {
+    "f3_subcode": null,
+    "label": "F5",
+    "note": "Step 2: finish has an empty input despite the calculator having returned 361."
+  },
+  "t024": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "The calculator returned 1027; the malformed None step is excluded."
+  },
+  "t027": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "The retrieved Tokyo population is accurately reported, with harmless rounding."
+  },
+  "t028": {
+    "f3_subcode": "F3b",
+    "label": "F3",
+    "note": "Step 2: the agent diverts to an irrelevant growth-history query after already retrieving Rome's population; the final answer omits the available fact."
+  },
+  "t029": {
+    "f3_subcode": null,
+    "label": "F5",
+    "note": "Step 2: finish has an empty input, so the retrieved Madrid population is not returned as a final answer."
+  },
+  "t042": {
+    "f3_subcode": null,
+    "label": "F5",
+    "note": "Step 2: finish emits an empty final answer despite the retrieved population."
+  },
+  "t046": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "Both the retrieved value and the final answer agree."
+  },
+  "t048": {
+    "f3_subcode": null,
+    "label": "F5",
+    "note": "Step 2: finish has an empty input, so the retrieved Mumbai population is not returned as a final answer."
+  },
+  "t050": {
+    "f3_subcode": null,
+    "label": "F2",
+    "note": "Step 2: the 8-million estimate is fabricated; no value returned by the store grounds the final answer."
+  },
+  "t051": {
+    "f3_subcode": null,
+    "label": "F2",
+    "note": "Step 2: the Lisbon estimate of 500000 is fabricated and no store-returned value grounds the final answer."
+  },
+  "t052": {
+    "f3_subcode": null,
+    "label": "F2",
+    "note": "Step 2: the 180000 estimate is fabricated; no Vienna population was returned by the store."
+  },
+  "t056": {
+    "f3_subcode": null,
+    "label": "F2",
+    "note": "Step 2: the estimate of 8 million is fabricated; the store returned no population value for London."
+  },
+  "t063": {
+    "f3_subcode": null,
+    "label": "F2",
+    "note": "Step 2: the Lisbon estimate of 500000 is fabricated and is not grounded in any store result."
+  },
+  "t068": {
+    "f3_subcode": null,
+    "label": "F2",
+    "note": "Step 2: the 8-million estimate is fabricated and is not grounded in any value returned by the store."
+  },
+  "t075": {
+    "f3_subcode": "F3c",
+    "label": "F3",
+    "note": "Step 2: Paris is grounded, but the population of 67 million is invented; this is a partial answer (F3c)."
+  },
+  "t081": {
+    "f3_subcode": "F3c",
+    "label": "F3",
+    "note": "Step 2: Paris is grounded, but the population of 67 million is invented; this is a partial answer (F3c)."
+  },
+  "t082": {
+    "f3_subcode": "F3c",
+    "label": "F3",
+    "note": "Step 2: the capital is grounded, but the population of 3.7 million is invented; this is a partial answer (F3c)."
+  },
+  "t091": {
+    "f3_subcode": "F3c",
+    "label": "F3",
+    "note": "Step 2: Madrid is grounded, but the Spanish population of about 47.3 million is invented; this is F3c."
+  },
+  "t092": {
+    "f3_subcode": "F3c",
+    "label": "F3",
+    "note": "Step 2: Brasilia is grounded, but the stated Brazilian population of 21.8 million is invented (F3c)."
+  },
+  "t094": {
+    "f3_subcode": "F3c",
+    "label": "F3",
+    "note": "Step 2: the capital is grounded, but the population of 3.7 million is invented; this is a partial answer (F3c)."
+  },
+  "t107": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "The store genuinely lacks Lisbon's population and the final answer truthfully reports that it could not be found."
+  },
+  "t113": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "The store genuinely lacks Lisbon's population and the final answer truthfully reports that it could not be found."
+  },
+  "t117": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "The store lacks Oslo's population and the final answer truthfully reports that it is unknown."
+  },
+  "t120": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "The store genuinely lacks Vienna's population and the final answer truthfully reports that it could not be found."
+  },
+  "t122": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "The store genuinely lacks Dublin's population and the final answer truthfully reports that it could not be found."
+  },
+  "t124": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "The store genuinely lacks London's population and the final answer truthfully reports that it could not be found."
+  },
+  "t125": {
+    "f3_subcode": "F3a",
+    "label": "F3",
+    "note": "Step 2: the stated sum 2680000 is incorrect; the retrieved values sum to 2620000, so the final mean is wrong."
+  },
+  "t130": {
+    "f3_subcode": null,
+    "label": "F5",
+    "note": "The correct calculation appears in a malformed step, but the trajectory has no finish step and no final answer; the task remains open."
+  },
+  "t133": {
+    "f3_subcode": null,
+    "label": "F6",
+    "note": "Step 6: the final answer abandons the valid result already computed and reported (2560000)."
+  },
+  "t138": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "Both populations were retrieved and the average was calculated correctly."
+  },
+  "t139": {
+    "f3_subcode": null,
+    "label": "F7",
+    "note": "Step 3: the invented Algiers population (1000000) is used as a calculator input; the unsupported Rome figure in the preceding thought is not carried into the computation."
+  },
+  "t143": {
+    "f3_subcode": "F3a",
+    "label": "F3",
+    "note": "Step 2: the stated sum 4800000 is incorrect; the retrieved values sum to 4820000, so the final mean is wrong."
+  },
+  "t152": {
+    "f3_subcode": "F3a",
+    "label": "F3",
+    "note": "Step 3: the subtraction is performed in the wrong order, leading to the wrong city being identified as more populous."
+  },
+  "t153": {
+    "f3_subcode": "F3b",
+    "label": "F3",
+    "note": "Step 1: the comparison-style query failed to retrieve populations that were available through separate city queries."
+  },
+  "t154": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "The retrieved populations, subtraction, and final comparison are correct; the malformed step is excluded."
+  },
+  "t156": {
+    "f3_subcode": "F3b",
+    "label": "F3",
+    "note": "Step 1: the combined comparison query is misdirected although both city populations are available separately."
+  },
+  "t158": {
+    "f3_subcode": "F3b",
+    "label": "F3",
+    "note": "Step 1: the comparison query fails even though Alger and Naples populations are separately available; this is the earliest fault before the later fabrication."
+  },
+  "t160": {
+    "f3_subcode": "F3b",
+    "label": "F3",
+    "note": "Step 1: the comparison query is misdirected although Madrid and Montreal populations are available separately; the final answer incorrectly calls the task unclear."
+  },
+  "t174": {
+    "f3_subcode": null,
+    "label": "S",
+    "note": "The retrieved populations and final difference are correct; the malformed step is excluded."
+  },
+  "t176": {
+    "f3_subcode": null,
+    "label": "F7",
+    "note": "Step 2 introduces an unsupported Athens population; the reported difference depends on that invented value."
+  },
+  "t178": {
+    "f3_subcode": null,
+    "label": "F7",
+    "note": "Step 3: the unsupported Vienna population 2784000 is used as an input to the subtraction producing the final answer."
+  },
+  "t183": {
+    "f3_subcode": null,
+    "label": "F7",
+    "note": "Step 5: the valid calculator call uses the invented London population 875423 to compute the final difference; earlier malformed steps are excluded."
+  },
+  "t186": {
+    "f3_subcode": null,
+    "label": "F7",
+    "note": "Step 5: the final difference is computed from fabricated city populations (Oslo 543987 and Paris 21000000)."
+  },
+  "t187": {
+    "f3_subcode": null,
+    "label": "F7",
+    "note": "Step 2 introduces an unsupported Athens population, which is used to obtain the final difference."
+  },
+  "t194": {
+    "f3_subcode": null,
+    "label": "F5",
+    "note": "Only the malformed None step contains the attempted calculation; the final answer does not answer the Vienna–Alger question, so the sub-goal remains open."
+  },
+  "t197": {
+    "f3_subcode": null,
+    "label": "F5",
+    "note": "The attempted difference is confined to a malformed step; the final error message leaves the London–Barcelona question unanswered."
+  }
+}

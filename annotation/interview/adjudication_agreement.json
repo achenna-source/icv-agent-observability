@@ -1,0 +1,287 @@
+{
+  "readers": [
+    "A",
+    "C",
+    "E",
+    "K"
+  ],
+  "n_readers": 4,
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 20261105,
+    "clusters": "task templates"
+  },
+  "what_this_is": "Human inter-annotator agreement on the fifty, before and after a blind adjudication. The pre-adjudication figure is the one comparable to the published 0.370 and the only one that measures the codebook. The post-adjudication figure measures what a panel achieves and is higher by construction.",
+  "sets": {
+    "computed": {
+      "n_items": 50,
+      "n_adjudicated": 14,
+      "n_left_undecided": [],
+      "before": {
+        "vs_reference": {
+          "A": {
+            "raw": 0.88,
+            "kappa": 0.846,
+            "ci_template": [
+              0.721,
+              0.944
+            ]
+          },
+          "C": {
+            "raw": 0.8,
+            "kappa": 0.75,
+            "ci_template": [
+              0.519,
+              0.944
+            ]
+          },
+          "E": {
+            "raw": 0.8,
+            "kappa": 0.743,
+            "ci_template": [
+              0.532,
+              0.917
+            ]
+          },
+          "K": {
+            "raw": 0.92,
+            "kappa": 0.897,
+            "ci_template": [
+              0.772,
+              0.975
+            ]
+          }
+        },
+        "pairwise": {
+          "A|C": {
+            "raw": 0.84,
+            "kappa": 0.799
+          },
+          "A|E": {
+            "raw": 0.88,
+            "kappa": 0.844
+          },
+          "A|K": {
+            "raw": 0.9,
+            "kappa": 0.871
+          },
+          "C|E": {
+            "raw": 0.84,
+            "kappa": 0.8
+          },
+          "C|K": {
+            "raw": 0.76,
+            "kappa": 0.701
+          },
+          "E|K": {
+            "raw": 0.82,
+            "kappa": 0.767
+          }
+        },
+        "mean_pairwise_kappa": 0.797,
+        "fleiss": 0.796,
+        "unanimous": 36
+      },
+      "after": {
+        "vs_reference": {
+          "A": {
+            "raw": 0.8,
+            "kappa": 0.749,
+            "ci_template": [
+              0.529,
+              0.913
+            ]
+          },
+          "C": {
+            "raw": 0.8,
+            "kappa": 0.749,
+            "ci_template": [
+              0.529,
+              0.913
+            ]
+          },
+          "E": {
+            "raw": 0.8,
+            "kappa": 0.749,
+            "ci_template": [
+              0.529,
+              0.913
+            ]
+          },
+          "K": {
+            "raw": 0.8,
+            "kappa": 0.749,
+            "ci_template": [
+              0.529,
+              0.913
+            ]
+          }
+        },
+        "pairwise": {
+          "A|C": {
+            "raw": 1.0,
+            "kappa": 1.0
+          },
+          "A|E": {
+            "raw": 1.0,
+            "kappa": 1.0
+          },
+          "A|K": {
+            "raw": 1.0,
+            "kappa": 1.0
+          },
+          "C|E": {
+            "raw": 1.0,
+            "kappa": 1.0
+          },
+          "C|K": {
+            "raw": 1.0,
+            "kappa": 1.0
+          },
+          "E|K": {
+            "raw": 1.0,
+            "kappa": 1.0
+          }
+        },
+        "mean_pairwise_kappa": 1.0,
+        "fleiss": 1.0,
+        "unanimous": 50
+      }
+    },
+    "free": {
+      "n_items": 50,
+      "n_adjudicated": 13,
+      "n_left_undecided": [],
+      "before": {
+        "vs_reference": {
+          "A": {
+            "raw": 0.88,
+            "kappa": 0.846,
+            "ci_template": [
+              0.721,
+              0.944
+            ]
+          },
+          "C": {
+            "raw": 0.84,
+            "kappa": 0.798,
+            "ci_template": [
+              0.611,
+              0.944
+            ]
+          },
+          "E": {
+            "raw": 0.8,
+            "kappa": 0.743,
+            "ci_template": [
+              0.532,
+              0.917
+            ]
+          },
+          "K": {
+            "raw": 0.92,
+            "kappa": 0.897,
+            "ci_template": [
+              0.772,
+              0.975
+            ]
+          }
+        },
+        "pairwise": {
+          "A|C": {
+            "raw": 0.86,
+            "kappa": 0.822
+          },
+          "A|E": {
+            "raw": 0.88,
+            "kappa": 0.844
+          },
+          "A|K": {
+            "raw": 0.9,
+            "kappa": 0.871
+          },
+          "C|E": {
+            "raw": 0.86,
+            "kappa": 0.823
+          },
+          "C|K": {
+            "raw": 0.82,
+            "kappa": 0.772
+          },
+          "E|K": {
+            "raw": 0.82,
+            "kappa": 0.767
+          }
+        },
+        "mean_pairwise_kappa": 0.817,
+        "fleiss": 0.816,
+        "unanimous": 37
+      },
+      "after": {
+        "vs_reference": {
+          "A": {
+            "raw": 0.8,
+            "kappa": 0.749,
+            "ci_template": [
+              0.529,
+              0.913
+            ]
+          },
+          "C": {
+            "raw": 0.8,
+            "kappa": 0.749,
+            "ci_template": [
+              0.529,
+              0.913
+            ]
+          },
+          "E": {
+            "raw": 0.8,
+            "kappa": 0.749,
+            "ci_template": [
+              0.529,
+              0.913
+            ]
+          },
+          "K": {
+            "raw": 0.8,
+            "kappa": 0.749,
+            "ci_template": [
+              0.529,
+              0.913
+            ]
+          }
+        },
+        "pairwise": {
+          "A|C": {
+            "raw": 1.0,
+            "kappa": 1.0
+          },
+          "A|E": {
+            "raw": 1.0,
+            "kappa": 1.0
+          },
+          "A|K": {
+            "raw": 1.0,
+            "kappa": 1.0
+          },
+          "C|E": {
+            "raw": 1.0,
+            "kappa": 1.0
+          },
+          "C|K": {
+            "raw": 1.0,
+            "kappa": 1.0
+          },
+          "E|K": {
+            "raw": 1.0,
+            "kappa": 1.0
+          }
+        },
+        "mean_pairwise_kappa": 1.0,
+        "fleiss": 1.0,
+        "unanimous": 50
+      }
+    }
+  }
+}
