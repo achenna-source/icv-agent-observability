@@ -1,0 +1,106 @@
+       6.6  stderr  0.00s - Debugger warning: It seems that frozen modules are being used, which may
+       6.6  stderr  0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+       6.6  stderr  0.00s - to python to disable frozen modules.
+       6.6  stderr  0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+       7.2  stderr  0.00s - Debugger warning: It seems that frozen modules are being used, which may
+       7.2  stderr  0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+       7.2  stderr  0.00s - to python to disable frozen modules.
+       7.2  stderr  0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+      15.0  stdout  modules loaded from the tag: agent, signals, benchmark, success_checker
+      15.0  stdout  gpus: 2
+      15.8  stdout  generator self-check : {'generated': 200, 'generated_unmatched': 0, 'corpus': 200, 'corpus_unmatched': 0, 'pools_within_declared': True}
+      15.8  stdout  checker self-check   : {'human_successes': 72, 'recovered': 72, 'correct_answer_despite_fault': 9, 'their_labels': ['F3', 'F6']}
+      15.9  stdout  
+      15.9  stdout  both frozen components verify; the published run gives A 93 and B 101
+      15.9  stdout  arms defined | retry probability 0.2280 | cap 2 | hard ceiling 10
+      15.9  stdout  blind note, 11 words : Observation: Reprise demandee a l'etape precedente, sans diagnostic. Reprends cette etape.
+      33.9  stderr  Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+      33.9  stderr  
+      33.9  stderr  Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+      35.8  stderr  [transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+      35.8  stderr  
+      35.8  stderr  [transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+      61.1  stdout  Qwen/Qwen2.5-1.5B-Instruct loaded | tasks 200 | templates {'T0': 25, 'T1': 25, 'T2': 25, 'T3': 25, 'T4': 25, 'T5': 25, 'T6': 25, 'T7': 25}
+     163.1  stdout     [A baseline]  25/200  102 s  finish so far 25
+     437.7  stdout     [A baseline]  50/200  376 s  finish so far 50
+     944.2  stdout     [A baseline]  75/200  883 s  finish so far 70
+    1510.1  stdout     [A baseline] 100/200  1449 s  finish so far 95
+    1795.5  stdout     [A baseline] 125/200  1734 s  finish so far 120
+    2416.6  stdout     [A baseline] 150/200  2355 s  finish so far 144
+    3107.7  stdout     [A baseline] 175/200  3046 s  finish so far 169
+    3575.4  stdout     [A baseline] 200/200  3514 s  finish so far 194
+    3575.4  stdout     [A baseline] {'arm': 'A baseline', 'seconds': 3514.1, 'calls': 706, 'prompt_tokens': 150540, 'new_tokens': 65401, 'generated_steps': 706, 'retries': 0, 'reaches_finish': 194}
+    3696.7  stdout     [B targeted]  25/200  121 s  finish so far 25
+    3975.9  stdout     [B targeted]  50/200  400 s  finish so far 50
+    4451.8  stdout     [B targeted]  75/200  876 s  finish so far 75
+    5065.9  stdout     [B targeted] 100/200  1490 s  finish so far 100
+    5360.7  stdout     [B targeted] 125/200  1785 s  finish so far 125
+    6019.4  stdout     [B targeted] 150/200  2444 s  finish so far 149
+    6795.8  stdout     [B targeted] 175/200  3220 s  finish so far 174
+    7449.2  stdout     [B targeted] 200/200  3874 s  finish so far 192
+    7449.2  stdout     [B targeted] {'arm': 'B targeted', 'seconds': 3873.9, 'calls': 826, 'prompt_tokens': 207055, 'new_tokens': 71080, 'generated_steps': 826, 'retries': 161, 'reaches_finish': 192}
+    7449.2  stdout  
+    7449.2  stdout  signals consulted during arm B : tier1 585, tier2 241
+    7584.5  stdout     [C1 blind]  25/200  135 s  finish so far 25
+    7934.4  stdout     [C1 blind]  50/200  485 s  finish so far 50
+    8476.3  stdout     [C1 blind]  75/200  1027 s  finish so far 71
+    9036.4  stdout     [C1 blind] 100/200  1587 s  finish so far 96
+    9434.4  stdout     [C1 blind] 125/200  1985 s  finish so far 121
+   10099.1  stdout     [C1 blind] 150/200  2650 s  finish so far 145
+   10813.3  stdout     [C1 blind] 175/200  3364 s  finish so far 170
+   11277.8  stdout     [C1 blind] 200/200  3829 s  finish so far 194
+   11277.8  stdout     [C1 blind] {'arm': 'C1 blind', 'seconds': 3828.6, 'calls': 760, 'prompt_tokens': 174773, 'new_tokens': 70271, 'generated_steps': 760, 'retries': 143, 'reaches_finish': 194}
+   11277.8  stdout  
+   11277.8  stdout  no detector was consulted during arm C1: tier1 0, tier2 0
+   11448.9  stdout     [C2 count-matched]  25/200  171 s  finish so far 23
+   11718.3  stdout     [C2 count-matched]  50/200  440 s  finish so far 48
+   12307.4  stdout     [C2 count-matched]  75/200  1029 s  finish so far 73
+   12921.3  stdout     [C2 count-matched] 100/200  1643 s  finish so far 98
+   13234.3  stdout     [C2 count-matched] 125/200  1956 s  finish so far 123
+   13918.6  stdout     [C2 count-matched] 150/200  2641 s  finish so far 148
+   14657.0  stdout     [C2 count-matched] 175/200  3379 s  finish so far 173
+   15268.6  stdout     [C2 count-matched] 200/200  3991 s  finish so far 196
+   15268.6  stdout     [C2 count-matched] {'arm': 'C2 count-matched', 'seconds': 3990.8, 'calls': 816, 'prompt_tokens': 198504, 'new_tokens': 73427, 'generated_steps': 816, 'retries': 161, 'reaches_finish': 196}
+   15268.6  stdout  
+   15268.6  stdout  retries wanted 161, retries spent 161 (the balance of a task whose drawn positions fall beyond its trajectory is spent on its terminating step)
+   15268.8  stdout  arm A   success  93/200 = 46.5%
+   15268.8  stdout  arm B   success 101/200 = 50.5%
+   15268.8  stdout  arm C1  success  76/200 = 38.0%
+   15268.8  stdout  arm C2  success  94/200 = 47.0%
+   15268.8  stdout  
+   15268.8  stdout  pair           diff   fixed   broken   disc.        p     IC95 by template
+   15268.8  stdout  B - C1       +0.125      32        7      39   0.0001  [+0.065, +0.175]
+   15269.1  stdout  C1 - A       -0.085       6       23      29   0.0023  [-0.140, -0.030]
+   15269.1  stdout  B - A        +0.040      13        5      18   0.0963  [-0.015, +0.105]
+   15269.4  stdout  C2 - C1      +0.090      25        7      32   0.0021  [+0.005, +0.170]
+   15269.4  stdout  C2 - A       +0.005      11       10      21   1.0000  [-0.070, +0.095]
+   15269.4  stdout  B - C2       +0.035      18       11      29   0.2649  [-0.025, +0.110]
+   15269.4  stdout  
+   15269.4  stdout  arm                  seconds     steps   retries   new tok    finish
+   15269.4  stdout  A baseline              3514       706         0     65401       194
+   15269.4  stdout  B targeted              3874       826       161     71080       192
+   15269.4  stdout  C1 blind                3829       760       143     70271       194
+   15269.4  stdout  C2 count-matched        3991       816       161     73427       196
+   15269.4  stdout  
+   15269.4  stdout  tmpl       A      B     C1     C2
+   15269.4  stdout  T0        25     23     24     22
+   15269.4  stdout  T1        21     21     16     21
+   15269.4  stdout  T2         0      5      1      7
+   15269.4  stdout  T3        10     14      9      7
+   15269.4  stdout  T4        20     20     15     20
+   15269.4  stdout  T5         3      4      2      5
+   15269.4  stdout  T6        12     12      8     11
+   15269.4  stdout  T7         2      2      1      1
+   15269.4  stdout  
+   15269.4  stdout  PRIMARY, targeted against blind at a matched budget: +0.125, 32 fixed against 7 broken, p = 0.0001, interval [+0.065, +0.175]
+   15269.4  stdout  targeting is ahead of blind retry at a matched budget on this benchmark
+   15269.4  stdout  
+   15269.4  stdout  written: retry_baseline_result.json
+   15274.7  stderr  /usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+   15274.7  stderr    cells[i][c] = re.sub('\\\\\|', '|', cell)
+   15274.8  stderr  /usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+   15274.8  stderr    text = re.sub(r'_', '\_', text) # Escape underscores in display text
+   15275.6  stderr  [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+   15275.7  stderr  [NbConvertApp] Writing 151257 bytes to __notebook__.ipynb
+   15278.2  stderr  [NbConvertApp] Converting notebook __notebook__.ipynb to html
+   15278.8  stderr  [NbConvertApp] Writing 477785 bytes to __results__.html

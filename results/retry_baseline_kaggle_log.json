@@ -1,0 +1,107 @@
+[{"stream_name":"stderr","time":6.64174963,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.641804434,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.64180914,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.641811786,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":7.198661162,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.198690815,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.198697259,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.198701758,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":15.020722247,"data":"modules loaded from the tag: agent, signals, benchmark, success_checker\n"}
+,{"stream_name":"stdout","time":15.02074884,"data":"gpus: 2\n"}
+,{"stream_name":"stdout","time":15.823546987,"data":"generator self-check : {'generated': 200, 'generated_unmatched': 0, 'corpus': 200, 'corpus_unmatched': 0, 'pools_within_declared': True}\n"}
+,{"stream_name":"stdout","time":15.823588783,"data":"checker self-check   : {'human_successes': 72, 'recovered': 72, 'correct_answer_despite_fault': 9, 'their_labels': ['F3', 'F6']}\n"}
+,{"stream_name":"stdout","time":15.876777616,"data":"\n"}
+,{"stream_name":"stdout","time":15.876817368,"data":"both frozen components verify; the published run gives A 93 and B 101\n"}
+,{"stream_name":"stdout","time":15.900928128,"data":"arms defined | retry probability 0.2280 | cap 2 | hard ceiling 10\n"}
+,{"stream_name":"stdout","time":15.900943667,"data":"blind note, 11 words : Observation: Reprise demandee a l'etape precedente, sans diagnostic. Reprends cette etape.\n"}
+,{"stream_name":"stderr","time":33.94646939,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":33.946510267,"data":"\n"}
+,{"stream_name":"stderr","time":33.946515604,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":35.840410016999996,"data":"[transformers] `torch_dtype` is deprecated! Use `dtype` instead!\n"}
+,{"stream_name":"stderr","time":35.840438405,"data":"\n"}
+,{"stream_name":"stderr","time":35.840443457,"data":"[transformers] `torch_dtype` is deprecated! Use `dtype` instead!\n"}
+,{"stream_name":"stdout","time":61.059599891,"data":"Qwen/Qwen2.5-1.5B-Instruct loaded | tasks 200 | templates {'T0': 25, 'T1': 25, 'T2': 25, 'T3': 25, 'T4': 25, 'T5': 25, 'T6': 25, 'T7': 25}\n"}
+,{"stream_name":"stdout","time":163.080068586,"data":"   [A baseline]  25/200  102 s  finish so far 25\n"}
+,{"stream_name":"stdout","time":437.705043612,"data":"   [A baseline]  50/200  376 s  finish so far 50\n"}
+,{"stream_name":"stdout","time":944.234515224,"data":"   [A baseline]  75/200  883 s  finish so far 70\n"}
+,{"stream_name":"stdout","time":1510.113994368,"data":"   [A baseline] 100/200  1449 s  finish so far 95\n"}
+,{"stream_name":"stdout","time":1795.534267296,"data":"   [A baseline] 125/200  1734 s  finish so far 120\n"}
+,{"stream_name":"stdout","time":2416.571139659,"data":"   [A baseline] 150/200  2355 s  finish so far 144\n"}
+,{"stream_name":"stdout","time":3107.742215161,"data":"   [A baseline] 175/200  3046 s  finish so far 169\n"}
+,{"stream_name":"stdout","time":3575.413236336,"data":"   [A baseline] 200/200  3514 s  finish so far 194\n"}
+,{"stream_name":"stdout","time":3575.413296593,"data":"   [A baseline] {'arm': 'A baseline', 'seconds': 3514.1, 'calls': 706, 'prompt_tokens': 150540, 'new_tokens': 65401, 'generated_steps': 706, 'retries': 0, 'reaches_finish': 194}\n"}
+,{"stream_name":"stdout","time":3696.743300632,"data":"   [B targeted]  25/200  121 s  finish so far 25\n"}
+,{"stream_name":"stdout","time":3975.8702264,"data":"   [B targeted]  50/200  400 s  finish so far 50\n"}
+,{"stream_name":"stdout","time":4451.75702919,"data":"   [B targeted]  75/200  876 s  finish so far 75\n"}
+,{"stream_name":"stdout","time":5065.902942064,"data":"   [B targeted] 100/200  1490 s  finish so far 100\n"}
+,{"stream_name":"stdout","time":5360.668505089,"data":"   [B targeted] 125/200  1785 s  finish so far 125\n"}
+,{"stream_name":"stdout","time":6019.397417863,"data":"   [B targeted] 150/200  2444 s  finish so far 149\n"}
+,{"stream_name":"stdout","time":6795.810618529,"data":"   [B targeted] 175/200  3220 s  finish so far 174\n"}
+,{"stream_name":"stdout","time":7449.15873646,"data":"   [B targeted] 200/200  3874 s  finish so far 192\n"}
+,{"stream_name":"stdout","time":7449.158794582,"data":"   [B targeted] {'arm': 'B targeted', 'seconds': 3873.9, 'calls': 826, 'prompt_tokens': 207055, 'new_tokens': 71080, 'generated_steps': 826, 'retries': 161, 'reaches_finish': 192}\n"}
+,{"stream_name":"stdout","time":7449.158802943,"data":"\n"}
+,{"stream_name":"stdout","time":7449.158808121,"data":"signals consulted during arm B : tier1 585, tier2 241\n"}
+,{"stream_name":"stdout","time":7584.540924506,"data":"   [C1 blind]  25/200  135 s  finish so far 25\n"}
+,{"stream_name":"stdout","time":7934.382371142,"data":"   [C1 blind]  50/200  485 s  finish so far 50\n"}
+,{"stream_name":"stdout","time":8476.337631602,"data":"   [C1 blind]  75/200  1027 s  finish so far 71\n"}
+,{"stream_name":"stdout","time":9036.431693521,"data":"   [C1 blind] 100/200  1587 s  finish so far 96\n"}
+,{"stream_name":"stdout","time":9434.366995266,"data":"   [C1 blind] 125/200  1985 s  finish so far 121\n"}
+,{"stream_name":"stdout","time":10099.104865073,"data":"   [C1 blind] 150/200  2650 s  finish so far 145\n"}
+,{"stream_name":"stdout","time":10813.338727127,"data":"   [C1 blind] 175/200  3364 s  finish so far 170\n"}
+,{"stream_name":"stdout","time":11277.750094026,"data":"   [C1 blind] 200/200  3829 s  finish so far 194\n"}
+,{"stream_name":"stdout","time":11277.75013254,"data":"   [C1 blind] {'arm': 'C1 blind', 'seconds': 3828.6, 'calls': 760, 'prompt_tokens': 174773, 'new_tokens': 70271, 'generated_steps': 760, 'retries': 143, 'reaches_finish': 194}\n"}
+,{"stream_name":"stdout","time":11277.750138736,"data":"\n"}
+,{"stream_name":"stdout","time":11277.750142923,"data":"no detector was consulted during arm C1: tier1 0, tier2 0\n"}
+,{"stream_name":"stdout","time":11448.882276654,"data":"   [C2 count-matched]  25/200  171 s  finish so far 23\n"}
+,{"stream_name":"stdout","time":11718.299096903,"data":"   [C2 count-matched]  50/200  440 s  finish so far 48\n"}
+,{"stream_name":"stdout","time":12307.421663539,"data":"   [C2 count-matched]  75/200  1029 s  finish so far 73\n"}
+,{"stream_name":"stdout","time":12921.318935542,"data":"   [C2 count-matched] 100/200  1643 s  finish so far 98\n"}
+,{"stream_name":"stdout","time":13234.291538751,"data":"   [C2 count-matched] 125/200  1956 s  finish so far 123\n"}
+,{"stream_name":"stdout","time":13918.579877776,"data":"   [C2 count-matched] 150/200  2641 s  finish so far 148\n"}
+,{"stream_name":"stdout","time":14657.01372105,"data":"   [C2 count-matched] 175/200  3379 s  finish so far 173\n"}
+,{"stream_name":"stdout","time":15268.573399919,"data":"   [C2 count-matched] 200/200  3991 s  finish so far 196\n"}
+,{"stream_name":"stdout","time":15268.573441288,"data":"   [C2 count-matched] {'arm': 'C2 count-matched', 'seconds': 3990.8, 'calls': 816, 'prompt_tokens': 198504, 'new_tokens': 73427, 'generated_steps': 816, 'retries': 161, 'reaches_finish': 196}\n"}
+,{"stream_name":"stdout","time":15268.573448795,"data":"\n"}
+,{"stream_name":"stdout","time":15268.573453872,"data":"retries wanted 161, retries spent 161 (the balance of a task whose drawn positions fall beyond its trajectory is spent on its terminating step)\n"}
+,{"stream_name":"stdout","time":15268.795755425,"data":"arm A   success  93/200 = 46.5%\n"}
+,{"stream_name":"stdout","time":15268.795794014,"data":"arm B   success 101/200 = 50.5%\n"}
+,{"stream_name":"stdout","time":15268.795800402,"data":"arm C1  success  76/200 = 38.0%\n"}
+,{"stream_name":"stdout","time":15268.795806053,"data":"arm C2  success  94/200 = 47.0%\n"}
+,{"stream_name":"stdout","time":15268.795811582,"data":"\n"}
+,{"stream_name":"stdout","time":15268.795816556,"data":"pair           diff   fixed   broken   disc.        p     IC95 by template\n"}
+,{"stream_name":"stdout","time":15268.795821853,"data":"B - C1       +0.125      32        7      39   0.0001  [+0.065, +0.175]\n"}
+,{"stream_name":"stdout","time":15269.142560392,"data":"C1 - A       -0.085       6       23      29   0.0023  [-0.140, -0.030]\n"}
+,{"stream_name":"stdout","time":15269.142600832,"data":"B - A        +0.040      13        5      18   0.0963  [-0.015, +0.105]\n"}
+,{"stream_name":"stdout","time":15269.353477723,"data":"C2 - C1      +0.090      25        7      32   0.0021  [+0.005, +0.170]\n"}
+,{"stream_name":"stdout","time":15269.353514081,"data":"C2 - A       +0.005      11       10      21   1.0000  [-0.070, +0.095]\n"}
+,{"stream_name":"stdout","time":15269.353520405,"data":"B - C2       +0.035      18       11      29   0.2649  [-0.025, +0.110]\n"}
+,{"stream_name":"stdout","time":15269.353525186,"data":"\n"}
+,{"stream_name":"stdout","time":15269.353529703,"data":"arm                  seconds     steps   retries   new tok    finish\n"}
+,{"stream_name":"stdout","time":15269.353534755,"data":"A baseline              3514       706         0     65401       194\n"}
+,{"stream_name":"stdout","time":15269.353540166,"data":"B targeted              3874       826       161     71080       192\n"}
+,{"stream_name":"stdout","time":15269.353545183,"data":"C1 blind                3829       760       143     70271       194\n"}
+,{"stream_name":"stdout","time":15269.353549265,"data":"C2 count-matched        3991       816       161     73427       196\n"}
+,{"stream_name":"stdout","time":15269.353553539,"data":"\n"}
+,{"stream_name":"stdout","time":15269.353557433,"data":"tmpl       A      B     C1     C2\n"}
+,{"stream_name":"stdout","time":15269.35356178,"data":"T0        25     23     24     22\n"}
+,{"stream_name":"stdout","time":15269.353566461,"data":"T1        21     21     16     21\n"}
+,{"stream_name":"stdout","time":15269.353571278,"data":"T2         0      5      1      7\n"}
+,{"stream_name":"stdout","time":15269.35357571,"data":"T3        10     14      9      7\n"}
+,{"stream_name":"stdout","time":15269.353579842,"data":"T4        20     20     15     20\n"}
+,{"stream_name":"stdout","time":15269.353583863,"data":"T5         3      4      2      5\n"}
+,{"stream_name":"stdout","time":15269.35358804,"data":"T6        12     12      8     11\n"}
+,{"stream_name":"stdout","time":15269.353592563,"data":"T7         2      2      1      1\n"}
+,{"stream_name":"stdout","time":15269.353597801,"data":"\n"}
+,{"stream_name":"stdout","time":15269.353602221,"data":"PRIMARY, targeted against blind at a matched budget: +0.125, 32 fixed against 7 broken, p = 0.0001, interval [+0.065, +0.175]\n"}
+,{"stream_name":"stdout","time":15269.353618107,"data":"targeting is ahead of blind retry at a matched budget on this benchmark\n"}
+,{"stream_name":"stdout","time":15269.354724764,"data":"\n"}
+,{"stream_name":"stdout","time":15269.354746304,"data":"written: retry_baseline_result.json\n"}
+,{"stream_name":"stderr","time":15274.672289338,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":15274.672325088,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":15274.825641728,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":15274.825674243,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":15275.584952546,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":15275.679368621,"data":"[NbConvertApp] Writing 151257 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":15278.191870261,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":15278.782931958,"data":"[NbConvertApp] Writing 477785 bytes to __results__.html\n"}
+]
